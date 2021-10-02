@@ -1,18 +1,19 @@
-<% @diaries.each do |diary| %>
-  <div class="p-8">
+<div class="p-8">
     <div class="bg-natural rounded-3xl shadow-lg">
       <div class="p-16">
         <div>
           <h1 class="font-bold text-lg text-dark-black mb-1">月</h1>
-          <h1 class="font-bold text-lg text-dark-black mb-1 text-center"><%= link_to diary.title, diary_path(diary) %></h1>
+          <h1 class="font-bold text-lg text-dark-black mb-1 text-center"><%= @diary.title %></h1>
         </div>
         <div class="mt-8 text-center">
-          <p class="text-gray-600"><%= diary.text %></p>
+          <p class="text-gray-600"><%= @diary.text %></p>
           <button class="mt-6 bg-dark-black text-natural hover:bg-white hover:text-dark-black rounded-full px-12 py-3 shadow-lg focus:outline-none">
-            <%= link_to 'チェック', diary_path(diary) %>
+            編集
+          </button>
+          <button class="mt-6 bg-dark-black text-natural hover:bg-white hover:text-dark-black rounded-full px-12 py-3 shadow-lg focus:outline-none">
+            削除
           </button>
         </div>
       </div>
     </div>
   </div>
-<% end %>

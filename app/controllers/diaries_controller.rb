@@ -13,6 +13,10 @@ class DiariesController < ApplicationController
     redirect_to root_path, notice: "筆記開示を登録しました。"
   end
 
+  def show
+    @diary = Diary.find(params[:id])
+  end
+
   private
 
   def diary_params
