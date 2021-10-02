@@ -1,41 +1,21 @@
 <div class="w-full max-w-xs">
-  <form class="bg-white rounded px-8 pt-6 pb-8 mb-4">
-    <div class="mb-4">
-      <label class="block text-gray-600 text-sm font-semibold mb-2" for="title">
-        Title
-      </label>
-      <input
-        class="bg-gray-100 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-        id="title"
-        type="text"
-        placeholder="Protocol 3"
-      />
-    </div>
-    <div class="mb-4">
-      <label
-        class="block text-gray-600 text-sm font-semibold mb-2"
-        for="username"
-      >
-        Description
-      </label>
-      <textarea
-        rows="4"
-        cols="50"
-        class="bg-gray-100 p-1 appearance-none border rounded w-full text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-        id="description"
-        type="text"
-      />
-      </textarea>
-    </div>
-        <div class="flex items-center justify-between">
-      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
-        Create post
-      </button>
-      <%= link_to 'home', root_path, class: "inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" %>
-    </div>
-  </form>
+  <div class="bg-white rounded px-8 pt-6 pb-8 mb-4">
+    <%= form_with model: @diary, local: true do |f| %>
+      <div class="mb-4">
+        <%= f.label :title, class: "block text-gray-600 text-sm font-semibold mb-2", for: "title" %>
+        <%= f.text_field :title, class: "bg-gray-100 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+      </div>
+      <div class="mb-4">
+        <%= f.label :text, class: "block text-gray-600 text-sm font-semibold mb-2", for: "text" %>
+        <%= f.text_area :text, class: "bg-gray-100 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+      </div>
+      <div class="flex items-center justify-between">
+        <%= f.submit nil, class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" %>
+        <%= link_to 'home', root_path, class: "inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" %>
+      </div>
+    <% end %>
+  </div>
 </div>
-
 
 <!-- component -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.2.2/cdn.js" defer></script>
