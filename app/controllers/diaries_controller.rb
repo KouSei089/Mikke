@@ -17,6 +17,16 @@ class DiariesController < ApplicationController
     @diary = Diary.find(params[:id])
   end
 
+  def edit
+    @diary = Diary.find(params[:id])
+  end
+
+  def update
+    diary = Diary.find(params[:id])
+    diary.update!(diary_params)
+    redirect_to root_path, notice: "筆記開示を編集しました。"
+  end
+
   private
 
   def diary_params
