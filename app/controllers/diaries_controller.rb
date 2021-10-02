@@ -27,6 +27,12 @@ class DiariesController < ApplicationController
     redirect_to root_path, notice: "筆記開示を編集しました。"
   end
 
+  def destroy
+    diary = Diary.find(params[:id])
+    diary.destroy
+    redirect_to root_path, notice: "筆記開示を削除しました。"
+  end
+
   private
 
   def diary_params

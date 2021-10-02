@@ -11,7 +11,7 @@
             <%= link_to '編集', edit_diary_path %>
           </button>
           <button class="mt-6 bg-dark-black text-natural hover:bg-white hover:text-dark-black rounded-full px-12 py-3 shadow-lg focus:outline-none">
-            削除
+            <%= link_to '削除', @diary, method: :delete, data: { confirm: '本当に削除しますか？' } %>
           </button>
         </div>
       </div>
