@@ -1,0 +1,103 @@
+<div class="w-full max-w-xs">
+  <form class="bg-white rounded px-8 pt-6 pb-8 mb-4">
+    <div class="mb-4">
+      <label class="block text-gray-600 text-sm font-semibold mb-2" for="title">
+        Title
+      </label>
+      <input
+        class="bg-gray-100 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        id="title"
+        type="text"
+        placeholder="Protocol 3"
+      />
+    </div>
+    <div class="mb-4">
+      <label
+        class="block text-gray-600 text-sm font-semibold mb-2"
+        for="username"
+      >
+        Description
+      </label>
+      <textarea
+        rows="4"
+        cols="50"
+        class="bg-gray-100 p-1 appearance-none border rounded w-full text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        id="description"
+        type="text"
+      />
+      </textarea>
+    </div>
+        <div class="flex items-center justify-between">
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+        Create post
+      </button>
+      <%= link_to 'home', root_path, class: "inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" %>
+    </div>
+  </form>
+</div>
+
+
+<!-- component -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.2.2/cdn.js" defer></script>
+
+<style>
+    .container {
+        height: 400vh;
+    }
+</style>
+
+<div class="container">
+    <!-- Top bar -->
+    <div x-data="scrollProgress" class="fixed inset-x-0 top-0 z-50">
+        <div class="h-1 bg-pink-500" :style="`width: ${percent}%`"></div>
+    </div>
+
+    <!-- Circle -->
+    <div
+      x-data="scrollProgress"
+      class="fixed inline-flex items-center justify-center overflow-hidden rounded-full top-5 right-5"
+    >
+      <!-- Building a Progress Ring: https://css-tricks.com/building-progress-ring-quickly/ -->
+      <svg class="w-20 h-20">
+        <circle
+          class="text-gray-300"
+          stroke-width="5"
+          stroke="currentColor"
+          fill="transparent"
+          r="30"
+          cx="40"
+          cy="40"
+        />
+        <circle
+          class="text-pink-600"
+          stroke-width="5"
+          :stroke-dasharray="circumference"
+          :stroke-dashoffset="circumference - percent / 100 * circumference"
+          stroke-linecap="round"
+          stroke="currentColor"
+          fill="transparent"
+          r="30"
+          cx="40"
+          cy="40"
+        />
+      </svg>
+      <span class="absolute text-xl text-pink-700" x-text="`${percent}%`"></span>
+    </div>
+    </div>
+</div>
+
+<script>
+    const scrollProgress = () => {
+        return {
+            init() {
+                window.addEventListener('scroll', () => {
+                    let winScroll = document.body.scrollTop || document.documentElement.scrollTop
+                    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight
+                    this.percent = Math.round((winScroll / height) * 100)
+                })
+            },
+            circumference: 30 * 2 * Math.PI,
+            percent: 0,
+        }
+    }
+</script>
