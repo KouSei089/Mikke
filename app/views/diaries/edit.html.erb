@@ -1,15 +1,8 @@
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
 <div x-data="{isShow: false}" class="bg-white rounded px-8 pt-6 pb-8 mb-4">
-  <form name="timer">
-    <div x-show="isShow" class="mb-3 po-0">
-      <input type="text" value="5" class="bg-gray-100 appearance-none border rounded w-1/12 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">分
-      <input type="text" value="00" class="bg-gray-100 appearance-none border rounded  w-1/12 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">秒
-      <input type="button" value="スタート" onclick="cntStart()">
-      <input type="button" value="ストップ" onclick="cntStop()">
-    </div>
-    <!-- This is an example component -->
-    <div class="flex justify-center">
+  <!-- This is an example component -->
+    <div class="flex justify-center mb-2">
         <label for="toogleButton" class="flex items-center cursor-pointer">
             <div class="px-2">タイマー</div>
         <!-- toggle -->
@@ -26,29 +19,38 @@
         </div>
       </label>
     </div>
+  <form name="timer">
+    <div x-show="isShow" class="flex items-center justify-center mb-3 po-0">
+      <input type="text" value="5" class="bg-gray-100 appearance-none border rounded w-1/12 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mr-2">分
+      <input type="text" value="00" class="bg-gray-100 appearance-none border rounded  w-1/12 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mx-2">秒
+      <input type="button" value="スタート" onclick="cntStart()" class="bg-blue-500 text-white rounded-full p-2 hover:bg-blue-400 focus:outline-none w-12 h-12 mx-2">
+      <input type="button" value="ストップ" onclick="cntStop()" class="bg-blue-500 text-white rounded-full p-2 hover:bg-blue-400 focus:outline-none w-12 h-12 mx-2">
+    </div>
   </form>
 </div>
 
 <div class="bg-white rounded px-8 pt-6 pb-8 mb-4">
   <%= form_with model: @diary, local: true do |f| %>
     <div class="mb-4">
-      <%= f.label :title, class: "block text-gray-600 text-sm font-semibold mb-2", for: "title" %>
-      <%= f.text_field :title, class: "bg-gray-100 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
-    </div>
-    <div class="mb-4">
       <%= f.label :text, class: "block text-gray-600 text-sm font-semibold mb-2", for: "text" %>
-      <%= f.text_area :text, class: "bg-gray-100 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+      <%= f.text_area :text, class: "bg-natural appearance-none border rounded-lg w-full h-64 py-2 px-3 text-dark-black leading-loose focus:outline-none focus:shadow-outline focus:border-blue-300" %>
     </div>
+
+    <div x-data="{isShow: false}">
+        <h1 x-show="isShow">
+        <div class="mb-4">
+      <%= f.label :title, class: "block text-gray-600 text-sm font-semibold mb-2", for: "text" %>
+      <%= f.text_field :title, class: "bg-natural appearance-none border rounded-lg w-full py-2 px-3 text-dark-black leading-loose focus:outline-none focus:shadow-outline focus:border-blue-300" %>
+    </div>
+        </h1>
+        <button type="button" @click="isShow = !isShow" class="text-natural bg-dark-black hover:bg-natural hover:text-dark-black py-2 px-4 rounded focus:outline-none focus:shadow-outline">タイトル</button>
+    </div>
+
     <div class="flex items-center justify-between">
-      <%= f.submit nil, class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" %>
-      <%= link_to 'home', root_path, class: "inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" %>
+      <%= f.submit nil, class: "text-natural bg-dark-black hover:bg-natural hover:text-dark-black py-2 px-4 rounded focus:outline-none focus:shadow-outline" %>
     </div>
   <% end %>
 </div>
-
-
-
-
 
 <style>
 .toggle-path {
