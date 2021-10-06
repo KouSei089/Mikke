@@ -33,8 +33,10 @@
   <%= form_with model: @diary, local: true do |f| %>
     <div class="mb-4">
       <%= f.label :text, class: "block text-gray-600 text-sm font-semibold mb-2", for: "text" %>
-      <%= f.text_area :text, class: "bg-natural appearance-none border rounded-lg w-full h-64 py-2 px-3 text-dark-black leading-loose focus:outline-none focus:shadow-outline focus:border-blue-300" %>
+      <%= f.text_area :text, class: "bg-natural appearance-none border rounded-lg w-full h-64 py-2 px-3 text-dark-black leading-loose focus:outline-none focus:shadow-outline focus:border-blue-300", onkeyup: "ShowLength(value);" %>
+      <p id="inputlength">0文字</p>
     </div>
+
 
     <div x-data="{isShow: false}">
         <h1 x-show="isShow">
@@ -126,5 +128,10 @@ function reSet(){
   document.timer.elements[1].value="0";
   document.timer.elements[2].disabled=false;
   clearInterval(timer1);
+}
+
+//本文の文字数をカウントする関数
+function ShowLength(str) {
+   document.getElementById("inputlength").innerHTML = str.length + "文字";
 }
 </script>
