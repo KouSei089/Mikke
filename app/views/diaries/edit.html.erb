@@ -34,11 +34,15 @@
     <div class="mb-4">
       <%= f.label :text, class: "block text-gray-600 text-sm font-semibold mb-2", for: "text" %>
       <%= f.text_area :text, class: "bg-natural appearance-none border rounded-lg w-full h-64 py-2 px-3 text-dark-black leading-loose focus:outline-none focus:shadow-outline focus:border-blue-300", onkeyup: "ShowLength(value);" %>
-      <p id="inputlength">0文字</p>
+
+      <%= f.hidden_field :creativity, value: @diary.text.length %>
+
+      <p id="inputlength"><%= @diary.creativity %>文字</p>
+
       <!--プログレスバー文字数-->
       <div class="relative pt-1">
         <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-pink-200">
-          <div style="width:<%= @diary.id %>%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-pink-500"></div>
+          <div id="stylewidth" style="width:<%= @diary.creativity / 10 %>%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-pink-500"></div>
         </div>
       </div>
     </div>
@@ -138,5 +142,6 @@ function reSet(){
 //本文の文字数をカウントする関数
 function ShowLength(str) {
    document.getElementById("inputlength").innerHTML = str.length + "文字";
+   document.getElementById("stylewidth").style.width = str.length / 10 + "%";
 }
 </script>
