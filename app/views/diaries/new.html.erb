@@ -1,81 +1,145 @@
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+<div x-data="{isShow: false}" class="bg-white rounded px-8 pt-6 pb-8 mb-4">
+  <!-- This is an example component -->
+    <div class="flex justify-center mb-2">
+        <label for="toogleButton" class="flex items-center cursor-pointer">
+            <div class="px-2">タイマー</div>
+        <!-- toggle -->
+        <div class="relative">
+          <input id="toogleButton" type="checkbox" class="hidden" @click="isShow = !isShow" />
+          <!-- path -->
+          <div
+            class="toggle-path bg-gray-200 w-9 h-5 rounded-full shadow-inner"
+          ></div>
+          <!-- crcle -->
+          <div
+            class="toggle-circle absolute w-3.5 h-3.5 bg-white rounded-full shadow inset-y-0 left-0"
+          ></div>
+        </div>
+      </label>
+    </div>
+  <form name="timer">
+    <div x-show="isShow" class="flex items-center justify-center mb-3 po-0">
+      <input type="text" value="5" class="bg-gray-100 appearance-none border rounded w-1/12 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mr-2">分
+      <input type="text" value="00" class="bg-gray-100 appearance-none border rounded  w-1/12 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mx-2">秒
+      <input type="button" value="スタート" onclick="cntStart()" class="bg-blue-500 text-white rounded-full p-2 hover:bg-blue-400 focus:outline-none w-12 h-12 mx-2">
+      <input type="button" value="ストップ" onclick="cntStop()" class="bg-blue-500 text-white rounded-full p-2 hover:bg-blue-400 focus:outline-none w-12 h-12 mx-2">
+    </div>
+  </form>
+</div>
+
 <div class="bg-white rounded px-8 pt-6 pb-8 mb-4">
   <%= form_with model: @diary, local: true do |f| %>
     <div class="mb-4">
-      <%= f.label :title, class: "block text-gray-600 text-sm font-semibold mb-2", for: "title" %>
-      <%= f.text_field :title, class: "bg-gray-100 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
-    </div>
-    <div class="mb-4">
       <%= f.label :text, class: "block text-gray-600 text-sm font-semibold mb-2", for: "text" %>
-      <%= f.text_area :text, class: "bg-gray-100 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+      <%= f.text_area :text, class: "bg-natural appearance-none border rounded-lg w-full h-64 py-2 px-3 text-dark-black leading-loose focus:outline-none focus:shadow-outline focus:border-blue-300", onkeyup: "ShowLength(value);" %>
+
+      <p id="inputlength">0文字</p>
+
+      <!--プログレスバー文字数-->
+      <div class="relative pt-1">
+        <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-pink-200">
+          <div id="stylewidth" style="width:<%= @diary.creativity.to_i / 10 %>%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-pink-500"></div>
+        </div>
+      </div>
     </div>
+
+    <div x-data="{isShow: false}">
+        <h1 x-show="isShow">
+        <div class="mb-4">
+      <%= f.label :title, class: "block text-gray-600 text-sm font-semibold mb-2", for: "text" %>
+      <%= f.text_field :title, class: "bg-natural appearance-none border rounded-lg w-full py-2 px-3 text-dark-black leading-loose focus:outline-none focus:shadow-outline focus:border-blue-300" %>
+    </div>
+        </h1>
+        <button type="button" @click="isShow = !isShow" class="text-natural bg-dark-black hover:bg-natural hover:text-dark-black py-2 px-4 rounded focus:outline-none focus:shadow-outline">タイトル</button>
+    </div>
+
     <div class="flex items-center justify-between">
-      <%= f.submit nil, class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" %>
-      <%= link_to 'home', root_path, class: "inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" %>
+      <%= f.submit nil, class: "text-natural bg-dark-black hover:bg-natural hover:text-dark-black py-2 px-4 rounded focus:outline-none focus:shadow-outline" %>
     </div>
   <% end %>
 </div>
 
-<!-- component -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.2.2/cdn.js" defer></script>
-
 <style>
-    .container {
-        height: 400vh;
-    }
+.toggle-path {
+    transition: background 0.3s ease-in-out;
+}
+.toggle-circle {
+    top: 0.2rem;
+    left: 0.25rem;
+    transition: all 0.3s ease-in-out;
+}
+input:checked ~ .toggle-circle {
+    transform: translateX(100%);
+}
+input:checked ~ .toggle-path {
+    background-color:#81E6D9;
+}
 </style>
 
-<div class="container">
-    <!-- Top bar -->
-    <div x-data="scrollProgress" class="fixed inset-x-0 top-0 z-50">
-        <div class="h-1 bg-pink-500" :style="`width: ${percent}%`"></div>
-    </div>
-
-    <!-- Circle -->
-    <div
-      x-data="scrollProgress"
-      class="fixed inline-flex items-center justify-center overflow-hidden rounded-full top-5 right-5"
-    >
-      <!-- Building a Progress Ring: https://css-tricks.com/building-progress-ring-quickly/ -->
-      <svg class="w-20 h-20">
-        <circle
-          class="text-gray-300"
-          stroke-width="5"
-          stroke="currentColor"
-          fill="transparent"
-          r="30"
-          cx="40"
-          cy="40"
-        />
-        <circle
-          class="text-pink-600"
-          stroke-width="5"
-          :stroke-dasharray="circumference"
-          :stroke-dashoffset="circumference - percent / 100 * circumference"
-          stroke-linecap="round"
-          stroke="currentColor"
-          fill="transparent"
-          r="30"
-          cx="40"
-          cy="40"
-        />
-      </svg>
-      <span class="absolute text-xl text-pink-700" x-text="`${percent}%`"></span>
-    </div>
-    </div>
-</div>
-
 <script>
-    const scrollProgress = () => {
-        return {
-            init() {
-                window.addEventListener('scroll', () => {
-                    let winScroll = document.body.scrollTop || document.documentElement.scrollTop
-                    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight
-                    this.percent = Math.round((winScroll / height) * 100)
-                })
-            },
-            circumference: 30 * 2 * Math.PI,
-            percent: 0,
-        }
-    }
+var timer1; //タイマーを格納する変数（タイマーID）の宣言
+
+//カウントダウン関数を1000ミリ秒毎に呼び出す関数
+function cntStart(){
+  document.timer.elements[2].disabled=true;
+  timer1=setInterval("countDown()",1000);
+}
+
+//タイマー停止関数
+function cntStop(){
+  document.timer.elements[2].disabled=false;
+  clearInterval(timer1);
+}
+
+//カウントダウン関数
+function countDown(){
+  var min=document.timer.elements[0].value;
+  var sec=document.timer.elements[1].value;
+
+  if( (min=="") && (sec=="") ){
+    alert("時刻を設定してください！");
+    reSet();
+  }
+  else {
+    if (min=="") min=0;
+    min=parseInt(min);
+
+    if (sec=="") sec=0;
+    sec=parseInt(sec);
+
+    tmWrite(min*60+sec-1);
+  }
+}
+
+//残り時間を書き出す関数
+function tmWrite(int){
+  int=parseInt(int);
+
+  if (int<=0){
+    reSet();
+    alert("時間です！");
+  }
+  else {
+    //残り分数はintを60で割って切り捨てる
+    document.timer.elements[0].value=Math.floor(int/60);
+    //残り秒数はintを60で割った余り
+    document.timer.elements[1].value=int % 60;
+  }
+}
+
+//フォームを初期状態に戻す（リセット）関数
+function reSet(){
+  document.timer.elements[0].value="0";
+  document.timer.elements[1].value="0";
+  document.timer.elements[2].disabled=false;
+  clearInterval(timer1);
+}
+
+//本文の文字数をカウントする関数
+function ShowLength(str) {
+   document.getElementById("inputlength").innerHTML = str.length + "文字";
+   document.getElementById("stylewidth").style.width = str.length / 10 + "%";
+}
 </script>
