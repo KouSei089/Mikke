@@ -16,4 +16,6 @@ require("channels")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 require("stylesheets/application.scss")
-
+require ('chart.js/auto');
+import Chart from 'chart.js/auto';
+global.Chart = Chart;
