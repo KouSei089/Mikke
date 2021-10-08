@@ -9,6 +9,7 @@ class DiariesController < ApplicationController
 
   def create
     diary = Diary.new(diary_params)
+    diary.creativity = diary.text.length
     diary.save!
     redirect_to root_path, notice: "筆記開示を登録しました。"
   end
