@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   root 'diaries#index'
   resources :diaries
-  resources :analysis
+  resource :analysis
 end
