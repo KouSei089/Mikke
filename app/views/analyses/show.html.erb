@@ -1,6 +1,17 @@
-<h1>Analysis#show</h1>
-<p>Find me in app/views/analysis/show.html.erb</p>
-<canvas id="myChart" width="400px" height="400px"></canvas>
+<div class="p-8">
+    <h1>Emotion Chart</h1>
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+      Button-1
+    </button>
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+      Button-1
+    </button>
+    <div class="bg-natural rounded-3xl shadow-lg flex justify-center">
+        <div class="chart-container" style="position: relative; height:25vh; width:50vw">
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+</div>
 
 <script>
 var ctx = document.getElementById('myChart');
@@ -9,21 +20,21 @@ var myChart = new Chart(ctx, {
  data: {
   labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
   datasets: [{
-   label: '# of Votes',
+   label: 'Positive',
    data: [12, 19, 3, 5, 2, 12],
    fill:false,
-   borderColor:"#308af3",
-   pointBackgroundColor: "#308af3",
+   borderColor:"#FF5F5F",
+   pointBackgroundColor: "#FF5F5F",
    pointBorderWidth: 2,
    pointHoverBackgroundColor: "#fff",
    pointHoverBorderWidth: 2,
    lineTension:0.05
   }, {
-   label: '# of Votes',
+   label: 'Negative',
    data: [19, 12, 6, 15, 7, 9],
    fill:false,
-   borderColor:"#48ba16",
-   pointBackgroundColor: "#48ba16",
+   borderColor:"#3399FF",
+   pointBackgroundColor: "#3399FF",
    pointBorderWidth: 2,
    pointHoverBackgroundColor: "#fff",
    pointHoverBorderWidth: 2,
