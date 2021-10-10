@@ -116,6 +116,8 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.4.2)
       loofah (~> 2.3)
+    rails_heroicons (0.6.0)
+      activesupport (>= 6.0.3)
     railties (6.0.4.1)
       actionpack (= 6.0.4.1)
       activesupport (= 6.0.4.1)
@@ -178,6 +180,7 @@ DEPENDENCIES
   pg (>= 0.18, < 2.0)
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.7)
+  rails_heroicons (~> 0.6.0)
   sass-rails (>= 6)
   turbolinks (~> 5)
   tzinfo-data
