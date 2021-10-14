@@ -1,9 +1,43 @@
+<div class="bg-natural rounded-lg m-5">
+  <% if Time.current.hour > 5 && Time.current.hour < 11  %>
+    <h1 class="text-3xl text-dark-black mb-2">○○さん、おはようございます。</h1>
+  <% elsif Time.current.hour > 12 && Time.current.hour < 18 %>
+    <h1 class="text-3xl text-dark-black mb-2">○○さん、こんにちは。</h1>
+  <% else %>
+    <h1 class="text-3xl text-dark-black mb-2">○○さん、こんばんは。</h1>
+  <% end %>
+  <h1 class="text-3xl text-dark-black mb-2">今日は、<%= I18n.l(Date.today, format: :long) %>です。</h1>
+</div>
+
 <% @diaries.each do |diary| %>
-  <div class="p-8">
+<div class="grid grid-cols-12 gap-4">
+  <div class="col-span-2 m-8">
+    <h1 class="text-4xl text-dark-black mb-2"><%= l diary.created_at, format: :day %></h1>
+    <div class="bg-natural rounded-full h-10 w-10 flex items-center justify-center relative">
+      <h1 class="text-lg text-dark-black"><%= l diary.created_at, format: :day_of_week %></h1>
+      <% if diary.created_at.wday == 1 %>
+        <span class="bg-purple-400 h-3 w-3 rounded-full block absolute top-0 right-0"></span>
+      <% elsif diary.created_at.wday == 2 %>
+        <span class="bg-red-400 h-3 w-3 rounded-full block absolute top-0 right-0"></span>
+      <% elsif diary.created_at.wday == 3 %>
+        <span class="bg-blue-400 h-3 w-3 rounded-full block absolute top-0 right-0"></span>
+      <% elsif diary.created_at.wday == 4 %>
+        <span class="bg-green-400 h-3 w-3 rounded-full block absolute top-0 right-0"></span>
+      <% elsif diary.created_at.wday == 5 %>
+        <span class="bg-yellow-400 h-3 w-3 rounded-full block absolute top-0 right-0"></span>
+      <% elsif diary.created_at.wday == 6 %>
+        <span class="bg-indigo-400 h-3 w-3 rounded-full block absolute top-0 right-0"></span>
+      <% else %>
+        <span class="bg-pink-400 h-3 w-3 rounded-full block absolute top-0 right-0"></span>
+      <% end %>
+    </div>
+    <h1 class="text-lg text-dark-black"><%= l diary.created_at, format: :year_month %></h1>
+  </div>
+
+  <div class="p-8 col-span-10">
     <div class="bg-natural rounded-3xl shadow-lg">
       <div class="p-16">
         <div>
-          <h1 class="font-bold text-lg text-dark-black mb-1"><%= l diary.created_at %></h1>
           <h1 class="font-bold text-lg text-dark-black mb-1 text-center"><%= link_to diary.title, diary_path(diary) %></h1>
         </div>
         <div class="mt-8 text-center">
@@ -15,6 +49,7 @@
       </div>
     </div>
   </div>
+</div>
 <% end %>
 <div class="fixed right-32 bottom-64 z-50">
     <div class="rounded-full h-40 w-40 flex items-center justify-center bg-indigo-800 text-natural hover:bg-natural hover:text-dark-black opacity-50 transition-all	duration-300	 cursor-pointer">
