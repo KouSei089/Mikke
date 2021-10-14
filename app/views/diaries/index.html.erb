@@ -1,9 +1,20 @@
+<div class="bg-green-200 rounded-lg m-5">
+  <h1 class="text-3xl text-dark-black mb-2">○○さん、おはようございます。</h1>
+  <h1 class="text-3xl text-dark-black mb-2">今日は、<%= I18n.l(Date.today, format: :long) %>です。</h1>
+</div>
+
 <% @diaries.each do |diary| %>
-  <div class="p-8">
+<div class="grid grid-cols-12 gap-4">
+  <div class="col-span-2 m-8">
+    <h1 class="text-4xl text-dark-black mb-2"><%= l diary.created_at, format: :day %></h1>
+    <h1 class="text-lg text-dark-black mb-1"><%= l diary.created_at, format: :day_of_week %></h1>
+    <h1 class="text-lg text-dark-black mb-1"><%= l diary.created_at, format: :year_month %></h1>
+  </div>
+
+  <div class="p-8 col-span-10">
     <div class="bg-natural rounded-3xl shadow-lg">
       <div class="p-16">
         <div>
-          <h1 class="font-bold text-lg text-dark-black mb-1"><%= l diary.created_at %></h1>
           <h1 class="font-bold text-lg text-dark-black mb-1 text-center"><%= link_to diary.title, diary_path(diary) %></h1>
         </div>
         <div class="mt-8 text-center">
@@ -15,6 +26,7 @@
       </div>
     </div>
   </div>
+</div>
 <% end %>
 <div class="fixed right-32 bottom-64 z-50">
     <div class="rounded-full h-40 w-40 flex items-center justify-center bg-indigo-800 text-natural hover:bg-natural hover:text-dark-black opacity-50 transition-all	duration-300	 cursor-pointer">
