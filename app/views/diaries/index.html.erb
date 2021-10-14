@@ -1,5 +1,11 @@
-<div class="bg-green-200 rounded-lg m-5">
-  <h1 class="text-3xl text-dark-black mb-2">○○さん、おはようございます。</h1>
+<div class="bg-natural rounded-lg m-5">
+  <% if Time.current.hour > 5 && Time.current.hour < 11  %>
+    <h1 class="text-3xl text-dark-black mb-2">○○さん、おはようございます。</h1>
+  <% elsif Time.current.hour > 12 && Time.current.hour < 18 %>
+    <h1 class="text-3xl text-dark-black mb-2">○○さん、こんにちは。</h1>
+  <% else %>
+    <h1 class="text-3xl text-dark-black mb-2">○○さん、こんばんは。</h1>
+  <% end %>
   <h1 class="text-3xl text-dark-black mb-2">今日は、<%= I18n.l(Date.today, format: :long) %>です。</h1>
 </div>
 
@@ -7,8 +13,10 @@
 <div class="grid grid-cols-12 gap-4">
   <div class="col-span-2 m-8">
     <h1 class="text-4xl text-dark-black mb-2"><%= l diary.created_at, format: :day %></h1>
-    <h1 class="text-lg text-dark-black mb-1"><%= l diary.created_at, format: :day_of_week %></h1>
-    <h1 class="text-lg text-dark-black mb-1"><%= l diary.created_at, format: :year_month %></h1>
+    <div class="bg-dark-black rounded-full h-10 w-10 flex items-center justify-center">
+      <h1 class="text-lg text-natural"><%= l diary.created_at, format: :day_of_week %></h1>
+    </div>
+    <h1 class="text-lg text-dark-black"><%= l diary.created_at, format: :year_month %></h1>
   </div>
 
   <div class="p-8 col-span-10">
