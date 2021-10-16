@@ -11,17 +11,16 @@
       <%= link_to "Sign up", new_user_path, class: "rounded-full py-16 px-64 text-5xl" %>
   </div>
 
-  <div class="text-center rounded-full w-9/12 py-14 ml-32 mb-12 bg-dark-black text-natural">
-      <%= link_to "Login", :login, class: "rounded-full py-16 px-64 text-5xl" %>
+  <div class="text-center rounded-full w-9/12 py-14 ml-32 mb-12 bg-indigo-100 text-dark-black">
+      <%= link_to "Guest Login", "#", class: "rounded-full py-16 px-48 text-5xl" %>
   </div>
 
-  <div class="text-center rounded-full w-9/12 py-14 ml-32 bg-dark-black text-natural">
+  <%# <div class="text-center rounded-full w-9/12 py-14 ml-32 bg-dark-black text-natural">
       <%= link_to "Logout", :logout, method: :post, class: "rounded-full py-16 px-64 text-5xl" %>
-  </div>
 </div>
 
 <div class="text-center mt-10">
-  <%= link_to "ログインはこちら", "#", class: "text-4xl text-dark-black border-b-2 border-dark-black" %>
+  <%= link_to "ログインはこちら", login_path, class: "text-4xl text-dark-black border-b-2 border-dark-black" %>
 </div>
 
 <div class="rounded-3xl bg-natural py-20 px-48 mt-10 mb-20 mx-10">
