@@ -30,6 +30,7 @@ module.exports = {
       'dark-black': '#484452',
       'pink-white': '#f9f7eb',
       'tiffany': '#a1cec1',
+      'light-blue': '#96B9DB',
     },
     spacing: {
       px: '1px',

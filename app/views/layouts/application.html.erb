@@ -13,9 +13,13 @@
 
   <body>
   <div class="w-full">
-    <%= render 'shared/header' %>
-    <%= yield %>
-    <%= render 'shared/hooter' %>
+    <% if current_user %>
+      <%= render 'shared/header' %>
+      <%= yield %>
+      <%= render 'shared/hooter' %>
+    <% else %>
+      <%= yield %>
+    <% end %>
   </div>
   </body>
 </html>
