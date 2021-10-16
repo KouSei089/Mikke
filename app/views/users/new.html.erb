@@ -1,15 +1,13 @@
 <%= form_with model: @user, local: true do |f| %>
-  <%= f.label :username, '名前' %>
-  <%= f.text_field :username  %>
+  <div class="flex-col">
+    <%= f.text_field :username, class: 'text-center rounded-full w-9/12 py-14 ml-32 my-12 bg-natural text-dark-black placeholder-gray-200 text-5xl border-natural shadow-sm focus:border-natural focus:ring focus:ring-natural focus:ring-opacity-50', placeholder: "User Name" %>
 
-  <%= f.label :email, 'メールアドレス' %>
-  <%= f.text_field :email  %>
+    <%= f.text_field :email, class: 'text-center rounded-full w-9/12 py-14 ml-32 mb-12 bg-natural text-dark-black placeholder-gray-200 text-5xl border-natural shadow-sm focus:border-natural focus:ring focus:ring-natural focus:ring-opacity-50', placeholder: "Email" %>
 
-  <%= f.label :password, 'パスワード' %>
-  <%= f.password_field :password  %>
+    <%= f.password_field :password, class: 'text-center rounded-full w-9/12 py-14 ml-32 mb-12 bg-natural text-dark-black placeholder-gray-200 text-5xl border-natural shadow-sm focus:border-natural focus:ring focus:ring-natural focus:ring-opacity-50', placeholder: "Password" %>
 
-  <%= f.label :password_confirmation, 'パスワード確認' %>
-  <%= f.password_field :password_confirmation  %>
+    <%= f.password_field :password_confirmation, class: 'text-center rounded-full w-9/12 py-14 ml-32 mb-12 bg-natural text-dark-black placeholder-gray-200 text-5xl border-natural shadow-sm focus:border-natural focus:ring focus:ring-natural focus:ring-opacity-50', placeholder: "Password Confirmation" %>
 
-  <%= f.submit '登録' %>
+    <%= f.submit '登録', class: 'text-center rounded-full w-9/12 py-14 ml-32 bg-dark-black text-natural placeholder-gray-200 text-5xl' %>
+  </div>
 <% end %>
