@@ -35,3 +35,6 @@ vendor/bundle
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+.rubocop.yml
+.rubocop_todo.yml
