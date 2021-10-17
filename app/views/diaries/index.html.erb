@@ -42,9 +42,11 @@
         </div>
         <div class="mt-8 text-center">
           <p class="text-gray-600"><%= diary.text %></p>
-          <button class="mt-6 bg-dark-black text-natural hover:bg-white hover:text-dark-black rounded-full px-12 py-3 shadow-lg focus:outline-none">
-            <%= link_to 'チェック', diary_path(diary) %>
-          </button>
+          <div class="flex justify-end">
+            <div class="rounded-full h-32 w-32 flex items-center justify-center bg-white text-dark-black">
+            <%= link_to heroicon('pencil-alt', style: :outline,class_name: 'h-12 w-12'), analysis_path %>
+            </div>
+          </div>
         </div>
       </div>
     </div>
