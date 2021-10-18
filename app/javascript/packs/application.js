@@ -19,3 +19,6 @@ require("stylesheets/application.scss")
 require ('chart.js/auto');
 import Chart from 'chart.js/auto';
 global.Chart = Chart;
+
+import '@fortawesome/fontawesome-free/js/all'
+import '../stylesheets/application.scss'
