@@ -10,6 +10,7 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to root_url
     else
+      flash[:alert] = '空白項目があります。'
       render :new
     end
   end

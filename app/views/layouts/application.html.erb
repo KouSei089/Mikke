@@ -9,14 +9,17 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script>
   </head>
 
   <body>
   <div class="w-full">
     <% if current_user %>
       <%= render 'shared/header' %>
-      <%= yield %>
-      <%= render 'shared/hooter' %>
+      <div class="h-screen">
+        <%= yield %>
+        <%= render 'shared/hooter' %>
+      </div>
     <% else %>
       <%= yield %>
     <% end %>
