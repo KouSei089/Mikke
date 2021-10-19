@@ -1,4 +1,7 @@
-<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+<div class="flex justify-center">
+  <i class="far fa-calendar text-3xl mr-3 mb-1"></i>
+  <h1 class="far text-3xl"><%= l @diary.created_at, format: :long %></h1>
+</div>
 
 <div x-data="{isShow: false}" class="bg-white rounded px-8 pt-6 pb-8 mb-4">
   <!-- This is an example component -->
