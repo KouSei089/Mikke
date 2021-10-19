@@ -201,7 +201,7 @@ ja:
     am: 午前
     formats:
       default: "%a"
-      long: "%Y/%m/%d %H:%M"
+      long: "%Y年%m月%d日 %a曜日"
       short: "%m/%d %H:%M"
       day_of_week: "%a"
       day: "%d"
