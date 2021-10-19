@@ -26,8 +26,14 @@
     <div x-show="isShow" class="flex items-center justify-center mb-3 po-0">
       <input type="text" value="5" class="bg-gray-100 appearance-none border rounded w-1/12 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mr-2">分
       <input type="text" value="00" class="bg-gray-100 appearance-none border rounded  w-1/12 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mx-2">秒
-      <input type="button" value="スタート" onclick="cntStart()" class="bg-blue-500 text-white rounded-full p-2 hover:bg-blue-400 focus:outline-none w-12 h-12 mx-2">
-      <input type="button" value="ストップ" onclick="cntStop()" class="bg-blue-500 text-white rounded-full p-2 hover:bg-blue-400 focus:outline-none w-12 h-12 mx-2">
+
+      <%= button_tag type: "button", class: "text-dark-black text-opacity-25 mr-2", onclick: "cntStart()" do %>
+          <i class="far fa-pause-circle fa-3x"></i>
+      <% end %>
+
+      <%= button_tag type: "button", class: "text-dark-black text-opacity-25", onclick: "cntStop()" do %>
+          <i class="far fa-stop-circle fa-3x"></i>
+      <% end %>
     </div>
   </form>
 </div>
