@@ -3,7 +3,10 @@
     <%= image_tag 'logo_transparent.png', class: 'object-contain h-64 w-64' %>
   </div>
 </div>
+
 <%= form_with model: @user, local: true do |f| %>
+  <%= render 'shared/error_messages', model: f.object %>
+
   <div class="flex-col">
     <%= f.text_field :username, class: 'text-center rounded-full w-9/12 py-14 ml-32 my-12 bg-natural text-dark-black placeholder-gray-200 text-5xl border-natural shadow-sm focus:border-natural focus:ring focus:ring-natural focus:ring-opacity-50', placeholder: "User Name" %>
 

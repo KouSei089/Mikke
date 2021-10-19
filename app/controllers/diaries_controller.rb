@@ -10,8 +10,12 @@ class DiariesController < ApplicationController
   def create
     diary = Diary.new(diary_params)
     diary.creativity = diary.text.length
-    diary.save!
-    redirect_to root_path, notice: "筆記開示を登録しました。"
+    if diary.save
+      redirect_to root_path, notice: "筆記開示を登録しました。"
+    else
+      flash.now[:alert] = "空白項目があります。"
+      render :new
+    end
   end
 
   def show
@@ -25,7 +29,7 @@ class DiariesController < ApplicationController
   def update
     diary = Diary.find(params[:id])
     diary.update!(diary_params)
-    redirect_to root_path, flash: { notice: "筆記開示を編集しました。" }
+    redirect_to root_path, notice: "筆記開示を編集しました。"
   end
 
   def destroy
