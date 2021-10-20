@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'soliloquies/new'
-  get 'soliloquies/edit'
   root 'diaries#index'
   resource :initials
   resource :settings
@@ -8,6 +6,7 @@ Rails.application.routes.draw do
   resources :diaries
   resource :analysis
   resources :users
+  resources :soliloquies
   get 'login' => 'user_sessions#new', :as => :login
   post 'login' => "user_sessions#create"
   post 'logout' => 'user_sessions#destroy', :as => :logout

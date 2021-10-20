@@ -11,6 +11,16 @@
   <h1 class="text-3xl text-dark-black mb-2">今日は、<%= I18n.l(Date.today, format: :long) %>です。</h1>
 </div>
 
+<% @soliloquies.each do |soliloquy| %>
+  <div class="bg-natural rounded-3xl shadow-lg">
+      <div class="p-16">
+        <div class="mt-8 text-center">
+          <p class="text-gray-600 far"><%= soliloquy.soliloquy %></p>
+        </div>
+      </div>
+    </div>
+<% end %>
+
 <% @diaries.each do |diary| %>
 <div class="grid grid-cols-12 gap-4">
   <div class="col-span-2 m-8">
@@ -55,6 +65,7 @@
   </div>
 </div>
 <% end %>
+
 <div class="fixed right-32 bottom-64 z-50">
     <div class="rounded-full h-40 w-40 flex items-center justify-center bg-blue-400 text-natural  opacity-50 transition-all	duration-300	 cursor-pointer">
         <%= link_to heroicon('pencil', class_name: 'h-24 w-24'), new_diary_path %>
@@ -62,7 +73,7 @@
 </div>
 <div class="fixed left-32 bottom-64 z-50">
     <div class="rounded-full h-40 w-40 flex items-center justify-center bg-blue-400 text-natural  opacity-50 transition-all	duration-300	 cursor-pointer">
-        <%= link_to heroicon('chat', class_name: 'h-24 w-24'), new_diary_path %>
+        <%= link_to heroicon('chat', class_name: 'h-24 w-24'), new_soliloquy_path %>
     </div>
 </div>
 
