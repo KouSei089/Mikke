@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'soliloquies/new'
+  get 'soliloquies/edit'
   root 'diaries#index'
   resource :initials
   resource :settings
