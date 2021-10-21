@@ -1,0 +1,2 @@
+class Soliloquy < ApplicationRecord
+end
