@@ -8,7 +8,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to root_url
+      auto_login(@user)
+      redirect_to root_url, notice: 'ユーザーを登録しました。'
     else
       flash[:alert] = '空白項目があります。'
       render :new
