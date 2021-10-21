@@ -4,7 +4,7 @@
   <div class="text-center rounded-full w-9/12 py-14 ml-32 my-12 bg-natural text-dark-black">
     <div class="flex justify-center">
     <%= heroicon('user', style: :outline, class_name: 'h-24 w-24 mr-10') %>
-      <%= link_to "いずみ いずみ", new_user_path, class: "rounded-full text-5xl self-center" %>
+      <%= link_to @current_user.username, new_user_path, class: "rounded-full text-5xl self-center" %>
     </div>
   </div>
 
