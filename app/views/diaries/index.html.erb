@@ -12,13 +12,38 @@
 </div>
 
 <% @soliloquies.each do |soliloquy| %>
-  <div class="bg-natural rounded-3xl shadow-lg">
-      <div class="p-16">
-        <div class="mt-8 text-center">
+<div class="grid grid-cols-12 gap-4">
+  <div class="col-span-2 m-8">
+    <h1 class="text-4xl text-dark-black mb-2"><%= l soliloquy.created_at, format: :day %></h1>
+    <div class="bg-natural rounded-full h-10 w-10 flex items-center justify-center relative">
+      <h1 class="text-lg text-dark-black"><%= l soliloquy.created_at, format: :day_of_week %></h1>
+      <% if soliloquy.created_at.wday == 1 %>
+        <span class="bg-purple-400 h-3 w-3 rounded-full block absolute top-0 right-0"></span>
+      <% elsif soliloquy.created_at.wday == 2 %>
+        <span class="bg-red-400 h-3 w-3 rounded-full block absolute top-0 right-0"></span>
+      <% elsif soliloquy.created_at.wday == 3 %>
+        <span class="bg-blue-400 h-3 w-3 rounded-full block absolute top-0 right-0"></span>
+      <% elsif soliloquy.created_at.wday == 4 %>
+        <span class="bg-green-400 h-3 w-3 rounded-full block absolute top-0 right-0"></span>
+      <% elsif soliloquy.created_at.wday == 5 %>
+        <span class="bg-yellow-400 h-3 w-3 rounded-full block absolute top-0 right-0"></span>
+      <% elsif soliloquy.created_at.wday == 6 %>
+        <span class="bg-indigo-400 h-3 w-3 rounded-full block absolute top-0 right-0"></span>
+      <% else %>
+        <span class="bg-pink-400 h-3 w-3 rounded-full block absolute top-0 right-0"></span>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-span-10 mx-8 pt-16">
+    <div class="bg-natural rounded-3xl shadow mb-8">
+      <div class="p-4">
+        <div class="text-center">
           <p class="text-gray-600 far"><%= soliloquy.soliloquy %></p>
         </div>
       </div>
     </div>
+  </div>
+</div>
 <% end %>
 
 <% @diaries.each do |diary| %>
