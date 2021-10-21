@@ -13,7 +13,21 @@ class SoliloquiesController < ApplicationController
     end
   end
 
-  def edit; end
+  def edit
+    @soliloquy = Soliloquy.find(params[:id])
+  end
+
+  def update
+    soliloquy = Soliloquy.find(params[:id])
+    soliloquy.update!(soliloquy_params)
+    redirect_to root_path, notice: 'つぶやきを編集しました.'
+  end
+
+  def destroy
+    soliloquy = Soliloquy.find(params[:id])
+    soliloquy.destroy!
+    redirect_to root_path, notice: 'つぶやきを削除しました.'
+  end
 
   private
 

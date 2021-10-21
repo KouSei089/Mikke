@@ -36,9 +36,17 @@
   </div>
   <div class="col-span-10 mx-8 pt-16">
     <div class="bg-natural rounded-3xl shadow mb-8">
-      <div class="p-4">
+      <div class="p-4 flex justify-center relative">
         <div class="text-center">
           <p class="text-gray-600 far"><%= soliloquy.soliloquy %></p>
+        </div>
+        <div class="absolute right-32 bottom-1 flex justify-center">
+          <div class="rounded-full h-12 w-12 flex items-center justify-center bg-white text-dark-black">
+          <%= link_to heroicon('pencil-alt', style: :outline,class_name: 'h-5 w-5 text-dark-black'), edit_soliloquy_path(soliloquy) %>
+          </div>
+          <div class="rounded-full h-12 w-12 flex items-center justify-center bg-white text-dark-black">
+          <%= link_to heroicon('trash', style: :outline,class_name: 'h-5 w-5 text-dark-black'), soliloquy_path(soliloquy), data: { confirm: 'Are you sure?' }, method: :delete %>
+          </div>
         </div>
       </div>
     </div>
