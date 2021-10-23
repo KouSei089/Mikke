@@ -1,7 +1,9 @@
 class DiariesController < ApplicationController
   def index
-    @diaries = Diary.all.order(created_at: :desc)
-    @soliloquies = Soliloquy.all.order(created_at: :desc)
+    diaries = Diary.all
+    soliloquies = Soliloquy.all
+    @diaries_created = diaries | soliloquies
+    @diaries_created.sort! { |a, b| b.created_at <=> a.created_at }
   end
 
   def new
