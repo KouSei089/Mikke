@@ -1,2 +1,11 @@
-<h1>Soliloquies#edit</h1>
-<p>Find me in app/views/soliloquies/edit.html.erb</p>
+<div class="px-20">
+  <h1>独り言</h1>
+
+  <%= form_with model: @soliloquy, local: true do |f|%>
+
+    <%= f.label :soliloquy %>
+    <%= f.text_field :soliloquy %>
+
+    <%= f.submit nil %>
+  <% end %>
+</div>
