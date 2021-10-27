@@ -102,11 +102,20 @@
 <% end %>
 
 <div x-data="{ open: false }"
- class="fixed right-32 bottom-64 ">
+ class="fixed right-32 bottom-64">
+  <div class="fixed right-32 bottom-64 z-20">
+    <template x-if="open">
+      <button class="rounded-full h-40 w-40 flex items-center justify-center bg-blue-300 text-natural transition-all	duration-300	 cursor-pointer">
+      <%= heroicon('x', class_name: 'h-16 w-16') %>
+      </button>
+    </template>
+  </div>
+
     <button x-ref="modal1_button"
             @click="open = true" class="rounded-full h-40 w-40 flex items-center justify-center bg-blue-300 text-natural transition-all	duration-300	 cursor-pointer">
       <%= heroicon('plus', class_name: 'h-24 w-24') %>
     </button>
+
     <div role="dialog"
          aria-labelledby="modal1_label"
          aria-modal="true"
