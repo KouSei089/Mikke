@@ -1,5 +1,13 @@
-<div class="sticky top-0 p-8">
+<div class="p-8 flex justify-between items-center">
   <div class="bg-transparent flex justify-start">
     <%= image_tag 'logo_transparent.png', class: 'object-contain h-64 w-64' %>
+  </div>
+  <div class="bg-white flex items-center rounded-full shadow-xl h-20">
+    <input class="rounded-full flex items-center text-gray-700 border-transparent leading-tight focus:ring-0 focus:border-transparent h-20 w-full px-32" id="search" type="text" placeholder="Search">
+    <div class="p-4">
+      <button class="bg-dark-black text-white rounded-full p-2 focus:outline-none w-12 h-12 flex items-center justify-center">
+        <%= heroicon('search', class_name: 'h-24 w-24') %>
+      </button>
+    </div>
   </div>
 </div>
