@@ -51,6 +51,14 @@
               </div>
             </div>
           </div>
+
+          <div class="bg-white rounded">
+            <div class="overflow-hidden h-5 text-xs flex rounded bg-pink-200">
+              <div id="stylewidth" style="width:<%= diary_created.creativity.to_i / 10 %>%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-pink-500"></div>
+            </div>
+            <p class="text-sm text-center text-dark-black">Creativity</p>
+          </div>
+
         </div>
       </div>
     </div>
@@ -105,14 +113,14 @@
  class="fixed right-32 bottom-64">
   <div class="fixed right-32 bottom-64 z-20">
     <template x-if="open">
-      <button class="rounded-full h-40 w-40 flex items-center justify-center bg-blue-300 text-natural transition-all	duration-300	 cursor-pointer">
+      <button class="rounded-full h-40 w-40 flex items-center justify-center bg-light-blue text-natural transition-all	duration-300	 cursor-pointer">
       <%= heroicon('x', class_name: 'h-16 w-16') %>
       </button>
     </template>
   </div>
 
     <button x-ref="modal1_button"
-            @click="open = true" class="rounded-full h-40 w-40 flex items-center justify-center bg-blue-300 text-natural transition-all	duration-300	 cursor-pointer">
+            @click="open = true" class="rounded-full h-40 w-40 flex items-center justify-center bg-light-blue text-natural transition-all	duration-300	 cursor-pointer">
       <%= heroicon('plus', class_name: 'h-24 w-24') %>
     </button>
 
@@ -133,14 +141,14 @@
           <div class="z-20 absolute right-32 bottom-96 pb-14" id="modal1_label">
             <div class="flex justify-end items-center z-20">
               <p class="text-4xl mr-4 text-natural">投稿</p>
-              <div class="rounded-full h-40 w-40 flex items-center justify-center bg-blue-300 text-natural mb-6">
+              <div class="rounded-full h-40 w-40 flex items-center justify-center bg-light-blue text-natural mb-6">
                   <%= link_to heroicon('pencil', class_name: 'h-24 w-24'), new_diary_path %>
               </div>
             </div>
 
             <div class="flex justify-end items-center z-20">
               <p class="text-4xl mr-4 text-natural">つぶやき</p>
-              <div class="rounded-full h-40 w-40 flex items-center justify-center bg-blue-300 text-natural">
+              <div class="rounded-full h-40 w-40 flex items-center justify-center bg-light-blue text-natural">
                   <%= link_to heroicon('chat', class_name: 'h-24 w-24'), new_soliloquy_path %>
               </div>
             </div>

@@ -1,3 +1,4 @@
+<div class="h-screen">
 <div class="flex justify-center">
   <i class="far fa-calendar text-3xl mr-3 mb-1"></i>
   <h1 class="far text-3xl"><%= l @diary.created_at, format: :long %></h1>
@@ -70,6 +71,7 @@
       <%= f.submit nil, class: "text-natural bg-dark-black hover:bg-natural hover:text-dark-black py-2 px-4 rounded focus:outline-none focus:shadow-outline" %>
     </div>
   <% end %>
+</div>
 </div>
 
 <style>
