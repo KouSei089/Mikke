@@ -8,9 +8,9 @@
 
 <%= form_with url: login_path, method: :post do |f| %>
   <div class="flex-col">
-    <%= f.text_field :email, class: 'text-center rounded-full w-9/12 py-14 ml-32 mb-12 bg-natural text-dark-black placeholder-gray-200 text-5xl border-natural shadow-sm focus:border-natural focus:ring focus:ring-natural focus:ring-opacity-50 far shadow-none', placeholder: "\uf0e0 Email", autocomplete: 'off'  %>
+    <%= f.text_field :email, class: 'text-center rounded-full w-9/12 py-14 ml-32 mb-12 bg-natural text-dark-black placeholder-gray-200 text-5xl border-natural shadow-sm focus:border-natural focus:ring focus:ring-natural focus:ring-opacity-50 far shadow-none', placeholder: "\uf0e0 Email"  %>
 
-    <%= f.password_field :password, class: 'text-center rounded-full w-9/12 py-14 ml-32 mb-12 bg-natural text-dark-black placeholder-gray-200 text-5xl border-natural shadow-sm focus:border-natural focus:ring focus:ring-natural focus:ring-opacity-50 far', placeholder: "Password", autocomplete: 'off'  %>
+    <%= f.password_field :password, class: 'text-center rounded-full w-9/12 py-14 ml-32 mb-12 bg-natural text-dark-black placeholder-gray-200 text-5xl border-natural shadow-sm focus:border-natural focus:ring focus:ring-natural focus:ring-opacity-50 far', placeholder: "Password" %>
 
     <%= f.submit 'Login', class: 'text-center rounded-full w-9/12 py-14 ml-32 bg-dark-black text-natural placeholder-gray-200 text-5xl far' %>
   </div>
