@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   resource :initials
   resource :settings
   resource :tutorials
-  resources :diaries
+  resources :diaries do
+    collection do
+      get 'search'
+    end
+  end
   resource :analysis
   resources :users
   resources :soliloquies

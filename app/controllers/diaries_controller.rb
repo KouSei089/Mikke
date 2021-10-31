@@ -1,9 +1,12 @@
 class DiariesController < ApplicationController
+  before_action :set_q, only: [:index, :search]
+
   def index
     diaries = Diary.all
     soliloquies = Soliloquy.all
     @diaries_created = diaries | soliloquies
     @diaries_created.sort! { |a, b| b.created_at <=> a.created_at }
+    @results = @q.result
   end
 
   def new
@@ -41,9 +44,18 @@ class DiariesController < ApplicationController
     redirect_to root_path, alert: "筆記開示を削除しました。"
   end
 
+  def search
+    @results = @q.result
+    redirect_to root_path
+  end
+
   private
 
     def diary_params
       params.require(:diary).permit(:title, :text, :creativity)
+    end
+
+    def set_q
+      @q = Diary.ransack(params[:q])
     end
 end
