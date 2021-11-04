@@ -1,8 +1,18 @@
 class DiariesController < ApplicationController
+  # before_action :set_q, only: [:index, :search]
+
   def index
-    diaries = Diary.all
-    soliloquies = Soliloquy.all
-    @diaries_created = diaries | soliloquies
+    # diaries = Diary.all
+    # soliloquies = Soliloquy.all
+    # @diaries_created = diaries | soliloquies
+    # @diaries_created.sort! { |a, b| b.created_at <=> a.created_at }
+
+    @q_diary = Diary.ransack(params[:q])
+    @diaries = @q_diary.result
+    @q_soliloquy = Soliloquy.ransack(params[:q])
+    @soliloquies = @q_soliloquy.result
+
+    @diaries_created = @diaries | @soliloquies
     @diaries_created.sort! { |a, b| b.created_at <=> a.created_at }
   end
 
@@ -46,4 +56,8 @@ class DiariesController < ApplicationController
     def diary_params
       params.require(:diary).permit(:title, :text, :creativity)
     end
+
+    # def set_q
+    #   @q = Diary.ransack(params[:q])
+    # end
 end
