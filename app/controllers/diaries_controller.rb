@@ -7,14 +7,11 @@ class DiariesController < ApplicationController
     @diaries_created = diaries | soliloquies
     @diaries_created.sort! { |a, b| b.created_at <=> a.created_at }
 
+    # ransack 検索
     # @q_diary = Diary.joins(:soliloquies).ransack(params[:q])
     # @diaries = @q_diary.result
-
     # @q_soliloquy = Soliloquy.ransack(params[:q])
     # @soliloquies = @q_soliloquy.result
-
-    # @diaries_created = @diaries | @soliloquies
-    # @diaries_created.sort! { |a, b| b.created_at <=> a.created_at }
   end
 
   def new
@@ -57,8 +54,4 @@ class DiariesController < ApplicationController
     def diary_params
       params.require(:diary).permit(:title, :text, :creativity)
     end
-
-    # def set_q
-    #   @q = Diary.ransack(params[:q])
-    # end
 end
