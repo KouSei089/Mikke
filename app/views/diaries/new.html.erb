@@ -35,7 +35,7 @@
 
 <div class="bg-white rounded px-8 pt-6 pb-8 mb-4">
   <%= form_with model: @diary, local: true do |f| %>
-    <%= render 'shared/error_messages', model: f.object %>
+    <%# <%= render 'shared/error_messages', model: f.object %> %>
 
     <div class="mb-4">
       <%= f.label :text, class: "block text-gray-600 text-sm font-semibold mb-2", for: "text" %>
