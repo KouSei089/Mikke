@@ -2,18 +2,19 @@ class DiariesController < ApplicationController
   # before_action :set_q, only: [:index, :search]
 
   def index
-    # diaries = Diary.all
-    # soliloquies = Soliloquy.all
-    # @diaries_created = diaries | soliloquies
-    # @diaries_created.sort! { |a, b| b.created_at <=> a.created_at }
-
-    @q_diary = Diary.ransack(params[:q])
-    @diaries = @q_diary.result
-    @q_soliloquy = Soliloquy.ransack(params[:q])
-    @soliloquies = @q_soliloquy.result
-
-    @diaries_created = @diaries | @soliloquies
+    diaries = Diary.all
+    soliloquies = Soliloquy.all
+    @diaries_created = diaries | soliloquies
     @diaries_created.sort! { |a, b| b.created_at <=> a.created_at }
+
+    # @q_diary = Diary.joins(:soliloquies).ransack(params[:q])
+    # @diaries = @q_diary.result
+
+    # @q_soliloquy = Soliloquy.ransack(params[:q])
+    # @soliloquies = @q_soliloquy.result
+
+    # @diaries_created = @diaries | @soliloquies
+    # @diaries_created.sort! { |a, b| b.created_at <=> a.created_at }
   end
 
   def new
@@ -21,7 +22,7 @@ class DiariesController < ApplicationController
   end
 
   def create
-    diary = Diary.new(diary_params)
+    diary = current_user.diaries.build(diary_params)
     diary.creativity = diary.text.length
     if diary.save
       redirect_to root_path, notice: "筆記開示を登録しました。"
