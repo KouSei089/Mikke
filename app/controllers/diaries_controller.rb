@@ -1,6 +1,4 @@
 class DiariesController < ApplicationController
-  # before_action :set_q, only: [:index, :search]
-
   def index
     diaries = Diary.all
     soliloquies = Soliloquy.all

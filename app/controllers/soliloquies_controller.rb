@@ -32,6 +32,6 @@ class SoliloquiesController < ApplicationController
   private
 
     def soliloquy_params
-      params.require(:soliloquy).permit(:soliloquy, :diary_id)
+      params.require(:soliloquy).permit(:soliloquy)
     end
 end
