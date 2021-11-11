@@ -1,4 +1,5 @@
 <div class="h-screen">
+<%= render 'shared/flash_message' %>
 <p class="text-center text-5xl text-dark-black font-hairline">設定</p>
 
 <div class="flex-col">
@@ -6,6 +7,7 @@
     <div class="flex justify-center">
     <%= heroicon('user', style: :outline, class_name: 'h-24 w-24 mr-10') %>
       <%= link_to @current_user.username, new_user_path, class: "rounded-full text-5xl self-center" %>
+      <%= link_to "編集", edit_settings_profile_path %>
     </div>
   </div>
 

@@ -14,17 +14,17 @@ class SoliloquiesController < ApplicationController
   end
 
   def edit
-    @soliloquy = Soliloquy.find(params[:id])
+    @soliloquy = current_user.soliloquies.build(soliloquy_params)
   end
 
   def update
-    soliloquy = Soliloquy.find(params[:id])
+    soliloquy = current_user.soliloquies.build(soliloquy_params)
     soliloquy.update!(soliloquy_params)
     redirect_to root_path, notice: 'つぶやきを編集しました.'
   end
 
   def destroy
-    soliloquy = Soliloquy.find(params[:id])
+    soliloquy = current_user.soliloquies.build(soliloquy_params)
     soliloquy.destroy!
     redirect_to root_path, notice: 'つぶやきを削除しました.'
   end
@@ -32,6 +32,6 @@ class SoliloquiesController < ApplicationController
   private
 
     def soliloquy_params
-      params.require(:soliloquy).permit(:soliloquy, :diary_id)
+      params.require(:soliloquy).permit(:soliloquy)
     end
 end
