@@ -1,9 +1,9 @@
 class ApplicationController < ActionController::Base
   before_action :require_login
 
-  private
+  protected
 
     def not_authenticated
-      redirect_to new_initials_path, alert: "Please login first"
+      redirect_to new_initials_path
     end
 end
