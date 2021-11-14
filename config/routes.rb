@@ -11,6 +11,8 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
+
+  resource :intros
   resource :analysis
   resources :users
   resources :soliloquies
