@@ -38,3 +38,5 @@ yarn-debug.log*
 
 .rubocop.yml
 .rubocop_todo.yml
+
+request.json
