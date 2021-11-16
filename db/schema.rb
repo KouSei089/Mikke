@@ -10,17 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_06_222322) do
+ActiveRecord::Schema.define(version: 2021_11_16_031149) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "analysis", force: :cascade do |t|
+  create_table "analyses", force: :cascade do |t|
     t.string "positive_word"
     t.string "negative_word"
     t.float "emotion_point"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "diary_id"
+    t.bigint "soliloquy_id"
+    t.index ["diary_id"], name: "index_analyses_on_diary_id"
+    t.index ["soliloquy_id"], name: "index_analyses_on_soliloquy_id"
   end
 
   create_table "diaries", force: :cascade do |t|
@@ -51,6 +55,8 @@ ActiveRecord::Schema.define(version: 2021_11_06_222322) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "analyses", "diaries"
+  add_foreign_key "analyses", "soliloquies"
   add_foreign_key "diaries", "users"
   add_foreign_key "soliloquies", "users"
 end
