@@ -5,6 +5,7 @@ class SoliloquiesController < ApplicationController
 
   def create
     soliloquy = current_user.soliloquies.build(soliloquy_params)
+    soliloquy.emotion_point = soliloquy.sentiment_score
     if soliloquy.save
       redirect_to root_path, notice: 'つぶやきしました。'
     else
@@ -32,6 +33,6 @@ class SoliloquiesController < ApplicationController
   private
 
     def soliloquy_params
-      params.require(:soliloquy).permit(:soliloquy)
+      params.require(:soliloquy).permit(:text)
     end
 end

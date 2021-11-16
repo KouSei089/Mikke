@@ -10,34 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_06_222322) do
+ActiveRecord::Schema.define(version: 2021_11_16_085439) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "analysis", force: :cascade do |t|
-    t.string "positive_word"
-    t.string "negative_word"
-    t.float "emotion_point"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "diaries", force: :cascade do |t|
     t.string "title"
-    t.text "text"
+    t.text "text", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "creativity"
+    t.integer "creativity", default: 0
     t.bigint "user_id"
+    t.float "emotion_point"
     t.index ["user_id"], name: "index_diaries_on_user_id"
   end
 
   create_table "soliloquies", force: :cascade do |t|
-    t.text "soliloquy", null: false
+    t.text "text", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id"
+    t.float "emotion_point"
     t.index ["user_id"], name: "index_soliloquies_on_user_id"
   end
 

@@ -18,10 +18,8 @@
       <%= yield %>
     <% elsif current_user %>
       <%= render 'shared/header' %>
-      <div class="h-screen">
-        <%= yield %>
-        <%= render 'shared/hooter' %>
-      </div>
+      <%= yield %>
+      <%= render 'shared/hooter' %>
     <% else %>
       <%= yield %>
     <% end %>
