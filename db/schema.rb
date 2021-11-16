@@ -10,38 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_16_031149) do
+ActiveRecord::Schema.define(version: 2021_11_16_085439) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "analyses", force: :cascade do |t|
-    t.string "positive_word"
-    t.string "negative_word"
-    t.float "emotion_point"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.bigint "diary_id"
-    t.bigint "soliloquy_id"
-    t.index ["diary_id"], name: "index_analyses_on_diary_id"
-    t.index ["soliloquy_id"], name: "index_analyses_on_soliloquy_id"
-  end
-
   create_table "diaries", force: :cascade do |t|
     t.string "title"
-    t.text "text"
+    t.text "text", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "creativity"
+    t.integer "creativity", default: 0
     t.bigint "user_id"
+    t.float "emotion_point"
     t.index ["user_id"], name: "index_diaries_on_user_id"
   end
 
   create_table "soliloquies", force: :cascade do |t|
-    t.text "soliloquy", null: false
+    t.text "text", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id"
+    t.float "emotion_point"
     t.index ["user_id"], name: "index_soliloquies_on_user_id"
   end
 
@@ -55,8 +45,6 @@ ActiveRecord::Schema.define(version: 2021_11_16_031149) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
-  add_foreign_key "analyses", "diaries"
-  add_foreign_key "analyses", "soliloquies"
   add_foreign_key "diaries", "users"
   add_foreign_key "soliloquies", "users"
 end

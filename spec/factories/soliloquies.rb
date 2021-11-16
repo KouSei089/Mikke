@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :soliloquy do
-    soliloquy { 'MyText' }
+    text { 'MyText' }
   end
 end

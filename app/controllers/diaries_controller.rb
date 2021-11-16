@@ -13,6 +13,7 @@ class DiariesController < ApplicationController
   def create
     diary = current_user.diaries.build(diary_params)
     diary.creativity = diary.text.length
+    diary.emotion_point = diary.sentiment_score
     if diary.save
       redirect_to root_path, notice: "筆記開示を登録しました。"
     else
@@ -44,6 +45,6 @@ class DiariesController < ApplicationController
   private
 
     def diary_params
-      params.require(:diary).permit(:title, :text, :creativity)
+      params.require(:diary).permit(:title, :text, :creativity, :emotion_point)
     end
 end
