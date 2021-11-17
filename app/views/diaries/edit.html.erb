@@ -4,7 +4,7 @@
   <h1 class="far text-3xl"><%= l @diary.created_at, format: :long %></h1>
 </div>
 
-<div x-data="{isShow: false}" class="bg-white rounded px-8 pt-6 pb-8 mb-4">
+<div x-data="{isShow: true}" class="bg-white rounded px-8 pt-6 pb-8 mb-4">
   <!-- This is an example component -->
     <div class="flex justify-center mb-2">
         <label for="toogleButton" class="flex items-center cursor-pointer">
@@ -14,7 +14,7 @@
           <input id="toogleButton" type="checkbox" class="hidden" @click="isShow = !isShow" />
           <!-- path -->
           <div
-            class="toggle-path bg-gray-200 w-9 h-5 rounded-full shadow-inner"
+            class="toggle-path bg-light-blue w-9 h-5 rounded-full shadow-inner"
           ></div>
           <!-- crcle -->
           <div
@@ -25,16 +25,18 @@
     </div>
   <form name="timer">
     <div x-show="isShow" class="flex items-center justify-center mb-3 po-0">
-      <input type="text" value="5" class="bg-gray-100 appearance-none border rounded w-1/12 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mr-2">分
-      <input type="text" value="00" class="bg-gray-100 appearance-none border rounded  w-1/12 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mx-2">秒
+      <input type="tel" value="5" maxlength="2" oninput="value = value.replace(/[^0-9]+/i,'');" class="bg-gray-100  border rounded w-12 py-2 px-3 text-gray-700 border-white focus:border-white focus:ring focus:ring-white far">:
+      <input type="tel" value="00" maxlength="2" oninput="value = value.replace(/[^0-9]+/i,'');" class="bg-gray-100  border rounded w-12 py-2 px-3 text-gray-700 border-white focus:border-white focus:ring focus:ring-white far">
 
-      <%= button_tag type: "button", class: "text-dark-black text-opacity-25 mr-2", onclick: "cntStart()" do %>
+
+      <%= button_tag type: "button", class: "text-dark-black ml-2", onclick: "cntStart()" do %>
           <i class="far fa-pause-circle fa-3x"></i>
       <% end %>
 
-      <%= button_tag type: "button", class: "text-dark-black text-opacity-25", onclick: "cntStop()" do %>
+      <%= button_tag type: "button", class: "text-dark-black ml-2", onclick: "cntStop()" do %>
           <i class="far fa-stop-circle fa-3x"></i>
       <% end %>
+
     </div>
   </form>
 </div>
@@ -59,10 +61,10 @@
 
     <div x-data="{isShow: false}">
         <h1 x-show="isShow">
-        <div class="mb-4">
-      <%= f.label :title, class: "block text-gray-600 text-sm font-semibold mb-2", for: "text" %>
-      <%= f.text_field :title, class: "bg-natural appearance-none border rounded-lg w-full py-2 px-3 text-dark-black leading-loose focus:outline-none focus:shadow-outline focus:border-blue-300" %>
-    </div>
+          <div class="mb-4">
+            <%= f.label :title, class: "block text-gray-600 text-sm font-semibold mb-2", for: "text" %>
+            <%= f.text_field :title, class: "bg-natural appearance-none border rounded-lg w-full py-2 px-3 text-dark-black leading-loose focus:outline-none focus:shadow-outline focus:border-blue-300" %>
+          </div>
         </h1>
         <button type="button" @click="isShow = !isShow" class="text-natural bg-dark-black hover:bg-natural hover:text-dark-black py-2 px-4 rounded focus:outline-none focus:shadow-outline">タイトル</button>
     </div>
@@ -87,7 +89,7 @@ input:checked ~ .toggle-circle {
     transform: translateX(100%);
 }
 input:checked ~ .toggle-path {
-    background-color:#96B9DB;
+    background-color:#888;
 }
 </style>
 
