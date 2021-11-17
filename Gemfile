@@ -32,8 +32,6 @@ gem 'rails_heroicons', '~> 0.6.0'
 gem 'rails-i18n'
 gem 'sorcery'
 gem 'groupdate'
-gem 'chartkick'
-gem 'chart-js-rails', '~> 0.1.4'
 gem 'gon', '~> 6.2.0'
 
 group :development, :test do
