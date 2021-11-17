@@ -20,5 +20,8 @@ require ('chart.js/auto');
 import Chart from 'chart.js/auto';
 global.Chart = Chart;
 
+require("chartkick")
+require("chart.js")
+
 //import '@fortawesome/fontawesome-free/js/all'
 import '../stylesheets/application.scss'

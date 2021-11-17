@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2021_11_16_085439) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "creativity", default: 0
     t.bigint "user_id"
-    t.float "emotion_point"
+    t.float "emotion_point", default: 0.0
     t.index ["user_id"], name: "index_diaries_on_user_id"
   end
 
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 2021_11_16_085439) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id"
-    t.float "emotion_point"
+    t.float "emotion_point", default: 0.0
     t.index ["user_id"], name: "index_soliloquies_on_user_id"
   end
 

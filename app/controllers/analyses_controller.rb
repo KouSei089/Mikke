@@ -1,13 +1,8 @@
 class AnalysesController < ApplicationController
   def show
-    @data_keys = [
-      'January',
-      'February',
-      'March',
-      'April',
-      'May',
-      'June',
-    ]
-    @data_values = [0, 10, 5, 2, 20, 30, 45]
+    @diaries = current_user.diaries.all
+    @diaries_score = @diaries.group_by_day(:created_at, last: 7).average(:emotion_point)
+    gon.chartdays = @diaries_score.map(&:first)
+    gon.chartdates = @diaries_score.map(&:second)
   end
 end
