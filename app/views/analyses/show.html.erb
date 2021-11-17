@@ -11,7 +11,7 @@
   </div>
   <div class="bg-natural rounded-3xl shadow-lg flex justify-center">
       <div class="chart-container p-20"  style="position: relative; height:25vh; width:80vw">
-          <canvas id="myChart"></canvas>
+          <canvas id="myChart" data-labels= "<%= @chartdays %>"</canvas>
       </div>
   </div>
 </div>
@@ -39,10 +39,10 @@ var ctx = document.getElementById('myChart');
 var myChart = new Chart(ctx, {
  type: 'line',
  data: {
-  labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+  labels: gon.chartdays,
   datasets: [{
    label: 'Positive',
-   data: [12, 19, 3, 5, 2, 12],
+   data: [0.1,0.1,0.1,0.4,0.6],
    fill:true,
    borderColor:"#FF5F5F",
    backgroundColor:"rgba(255,182,185,0.9)",
@@ -53,7 +53,7 @@ var myChart = new Chart(ctx, {
    lineTension:0.45
   }, {
    label: 'Negative',
-   data: [19, 12, 6, 15, 7, 9],
+   data: [-0.1,-0.1, -0.1,0.0],
    fill:true,
    borderColor:"#3399FF",
    backgroundColor:"rgba(185,237,248,0.9)",
@@ -66,17 +66,14 @@ var myChart = new Chart(ctx, {
  },
  options: {
   responsive: true,
-  legend: { display: false },
   scales: {
-   xAxes: [{
-    gridLines: { display:false },
-   }],
-   yAxes: [{
-    gridLines: {
-     color: "rgba(0, 0, 0, .05)",
-    }
-   }]
-  },
+      y : {
+              min: -1.0,
+              max: 1.0,
+              stepSize: 0.1
+          }
+
+  }
  }
 });
 
@@ -100,18 +97,14 @@ var Chart = new Chart(ctx, {
  },
  options: {
   responsive: true,
-  maintainAspectRatio: false,
-  legend: { display: false },
-  scales: {
-   xAxes: [{
-    gridLines: { display:false },
-   }],
-   yAxes: [{
-    gridLines: {
-     color: "rgba(0, 0, 0, .05)",
+  options: {
+        scales: {
+            yAxes: {
+                    beginAtZero:true
+                }
+
+        }
     }
-   }]
-  },
  }
 });
 </script>
