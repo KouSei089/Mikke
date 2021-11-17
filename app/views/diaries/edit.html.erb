@@ -18,7 +18,7 @@
           ></div>
           <!-- crcle -->
           <div
-            class="toggle-circle absolute w-3.5 h-3.5 bg-white rounded-full shadow inset-y-0 left-0"
+            class="toggle-circle absolute w-3.5 h-3.5 bg-white rounded-full shadow"
           ></div>
         </div>
       </label>
@@ -33,7 +33,7 @@
           <i class="far fa-pause-circle fa-3x"></i>
       <% end %>
 
-      <%= button_tag type: "button", class: "text-dark-black ml-2", onclick: "cntStop()" do %>
+      <%= button_tag type: "button", class: "text-dark-black ", onclick: "cntStop()" do %>
           <i class="far fa-stop-circle fa-3x"></i>
       <% end %>
 
@@ -75,23 +75,6 @@
   <% end %>
 </div>
 </div>
-
-<style>
-.toggle-path {
-    transition: background 0.3s ease-in-out;
-}
-.toggle-circle {
-    top: 0.2rem;
-    left: 0.25rem;
-    transition: all 0.3s ease-in-out;
-}
-input:checked ~ .toggle-circle {
-    transform: translateX(100%);
-}
-input:checked ~ .toggle-path {
-    background-color:#888;
-}
-</style>
 
 <script>
 var timer1; //タイマーを格納する変数（タイマーID）の宣言
