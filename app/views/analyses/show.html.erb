@@ -42,7 +42,7 @@ var myChart = new Chart(ctx, {
   labels: gon.chartdays,
   datasets: [{
    label: 'Positive',
-   data: [0.1,0.1,0.1,0.4,0.6],
+   data: gon.positive_scores,
    fill:true,
    borderColor:"#FF5F5F",
    backgroundColor:"rgba(255,182,185,0.9)",
@@ -53,7 +53,7 @@ var myChart = new Chart(ctx, {
    lineTension:0.45
   }, {
    label: 'Negative',
-   data: [-0.1,-0.1, -0.1,0.0],
+   data: gon.negative_scores,
    fill:true,
    borderColor:"#3399FF",
    backgroundColor:"rgba(185,237,248,0.9)",
@@ -70,7 +70,7 @@ var myChart = new Chart(ctx, {
       y : {
               min: -1.0,
               max: 1.0,
-              stepSize: 0.1
+              stepSize: 0.05
           }
 
   }
