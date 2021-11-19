@@ -40,6 +40,14 @@
     <div class="p-8 col-span-10">
       <div class="bg-natural rounded-3xl shadow-lg">
         <div class="p-16">
+        <% if diary_created.creativity > 100 %>
+          <i class="fas fa-award text-5xl text-yellow-500"></i>
+        <% elsif diary_created.creativity > 85 %>
+          <i class="fas fa-award text-5xl text-gray-300"></i>
+        <% elsif diary_created.creativity > 70 %>
+          <i class="fas fa-award text-5xl text-yellow-800"></i>
+        <% else %>
+        <% end %>
           <div class="mt-8 text-center">
             <% if diary_created.title? %>
               <h1 class="font-bold text-lg text-dark-black mb-1 text-center far"><%= link_to diary_created.title, diary_path(diary_created) %></h1>
