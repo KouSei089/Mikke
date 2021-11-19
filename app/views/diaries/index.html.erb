@@ -56,10 +56,32 @@
           </div>
 
           <div class="bg-white rounded">
-            <div class="overflow-hidden h-5 text-xs flex rounded bg-pink-200">
-              <div id="stylewidth" style="width:<%= diary_created.creativity.to_i / 10 %>%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-pink-500"></div>
+          <% if diary_created.creativity > 100 %>
+            <div class="overflow-hidden h-5 text-xs flex rounded bg-green-100">
+              <div id="stylewidth" style="width:<%= diary_created.creativity.to_i / 10 %>%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-400"></div>
             </div>
-            <p class="text-sm text-center text-dark-black">Creativity</p>
+          <% elsif diary_created.creativity > 200 %>
+            <div class="overflow-hidden h-5 text-xs flex rounded bg-yellow-100">
+              <div id="stylewidth" style="width:<%= diary_created.creativity.to_i / 10 %>%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-yellow-400"></div>
+            </div>
+          <% elsif diary_created.creativity > 300 %>
+            <div class="overflow-hidden h-5 text-xs flex rounded bg-orange-100">
+              <div id="stylewidth" style="width:<%= diary_created.creativity.to_i / 10 %>%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-orange-400"></div>
+            </div>
+          <% elsif diary_created.creativity > 400 %>
+            <div class="overflow-hidden h-5 text-xs flex rounded bg-pink-100">
+              <div id="stylewidth" style="width:<%= diary_created.creativity.to_i / 10 %>%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-pink-400"></div>
+            </div>
+          <% elsif diary_created.creativity > 500 %>
+            <div class="overflow-hidden h-5 text-xs flex rounded bg-red-100">
+              <div id="stylewidth" style="width:<%= diary_created.creativity.to_i / 10 %>%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-400"></div>
+            </div>
+          <% else %>
+            <div class="overflow-hidden h-5 text-xs flex rounded bg-indigo-100">
+              <div id="stylewidth" style="width:<%= diary_created.creativity.to_i / 10 %>%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-indigo-400"></div>
+            </div>
+          <% end %>
+          <p class="text-sm text-center text-dark-black">Creativity</p>
           </div>
 
         </div>
