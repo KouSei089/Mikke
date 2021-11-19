@@ -26,6 +26,8 @@ module.exports = {
       indigo: colors.indigo,
       purple: colors.violet,
       pink: colors.pink,
+      teal: colors.teal,
+      orange: colors.orange,
       'natural': '#FCF7F8',
       'dark-black': '#484452',
       'pink-white': '#f9f7eb',
