@@ -23,5 +23,8 @@ class AnalysesController < ApplicationController
         score
       end
     end
+    @diaries_creative = current_user.diaries.pluck(:created_at, :creativity)
+    gon.creative_days = @diaries_creative.map { |creative_day| creative_day[0].strftime("%m/%d\n%H:%S") }
+    gon.creative_sizes = @diaries_creative.map(&:second)
   end
 end

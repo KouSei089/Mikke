@@ -11,14 +11,14 @@
   </div>
   <div class="bg-natural rounded-3xl shadow-lg flex justify-center">
       <div class="chart-container p-20"  style="position: relative; height:25vh; width:80vw">
-          <canvas id="myChart" data-labels= "<%= @chartdays %>"</canvas>
+          <canvas id="myChart"></canvas>
       </div>
   </div>
 </div>
 
 <div class="px-32">
   <div class="grid grid-cols-10 gap-4 py-10">
-    <h1 class="text-4xl far col-span-6">Emotion chart</h1>
+    <h1 class="text-4xl far col-span-6">Creativity chart</h1>
     <button class="bg-natural text-dark-black rounded-full px-5 py-2 col-span-2 far">
       Day
     </button>
@@ -32,6 +32,24 @@
       </div>
   </div>
 </div>
+
+<div class="px-32">
+  <div class="grid grid-cols-10 gap-4 py-10">
+    <h1 class="text-4xl far col-span-6">Creativity chart</h1>
+    <button class="bg-natural text-dark-black rounded-full px-5 py-2 col-span-2 far">
+      Day
+    </button>
+     <button class="bg-natural text-dark-black rounded-full px-5 py-2 col-span-2 far">
+      Week
+    </button>
+  </div>
+  <div class="bg-natural rounded-3xl shadow-lg flex justify-center">
+      <div class="chart-container p-20"  style="position: relative; height:25vh; width:80vw">
+          ////
+      </div>
+  </div>
+</div>
+
 </div>
 
 <script>
@@ -81,10 +99,10 @@ var ctx = document.getElementById('Chart');
 var Chart = new Chart(ctx, {
  type: 'line',
  data: {
-  labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+  labels: gon.creative_days,
   datasets: [{
-   label: 'Negative',
-   data: [19, 12, 6, 15, 7, 9],
+   label: 'Creativity',
+   data: gon.creative_sizes,
    fill:true,
    borderColor: '#f6d55c',
    backgroundColor: "rgba(240,216,121,0.8)",

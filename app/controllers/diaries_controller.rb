@@ -12,7 +12,7 @@ class DiariesController < ApplicationController
 
   def create
     diary = current_user.diaries.build(diary_params)
-    diary.creativity = diary.text.length
+    diary.creativity = diary.text.length / 5
     diary.emotion_point = diary.sentiment_score
     if diary.save
       redirect_to root_path, notice: "筆記開示を登録しました。"
@@ -32,6 +32,8 @@ class DiariesController < ApplicationController
 
   def update
     diary = current_user.diaries.find(params[:id])
+    diary.creativity = diary.text.length / 5
+    diary.emotion_point = diary.sentiment_score
     diary.update!(diary_params)
     redirect_to root_path, notice: "筆記開示を編集しました。"
   end
