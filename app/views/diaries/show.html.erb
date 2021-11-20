@@ -6,7 +6,7 @@
           <h1 class="font-bold text-lg text-dark-black mb-1 text-center"><%= @diary.title %></h1>
         </div>
         <div class="mt-8 text-center">
-          <p class="text-gray-600"><%= @diary.text %></p>
+          <p class="text-gray-600"><%=safe_join(@diary.text.split("\n"),tag(:br))%></p>
           <button class="mt-6 bg-dark-black text-natural hover:bg-white hover:text-dark-black rounded-full px-12 py-3 shadow-lg focus:outline-none">
             <%= link_to '編集', edit_diary_path %>
           </button>
