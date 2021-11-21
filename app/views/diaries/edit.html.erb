@@ -1,7 +1,6 @@
-<div class="h-screen">
 <div class="flex justify-center">
-  <i class="far fa-calendar text-3xl mr-3 mb-1"></i>
-  <h1 class="far text-3xl"><%= l @diary.created_at, format: :long %></h1>
+  <i class="fas fa-calendar text-3xl text-dark-black mr-3 mb-1 shadow-lg"></i>
+  <h1 class="far text-3xl"><%= l Time.current, format: :long %></h1>
 </div>
 
 <div x-data="{isShow: true}" class="bg-white rounded px-8 pt-6 pb-8 mb-4">
@@ -25,16 +24,16 @@
     </div>
   <form name="timer">
     <div x-show="isShow" class="flex items-center justify-center mb-3 po-0">
-      <input type="tel" value="5" maxlength="2" oninput="value = value.replace(/[^0-9]+/i,'');" class="bg-gray-100  border rounded w-12 py-2 px-3 text-gray-700 border-white focus:border-white focus:ring focus:ring-white far">:
-      <input type="tel" value="00" maxlength="2" oninput="value = value.replace(/[^0-9]+/i,'');" class="bg-gray-100  border rounded w-12 py-2 px-3 text-gray-700 border-white focus:border-white focus:ring focus:ring-white far">
+      <input type="tel" value="10" maxlength="2" oninput="value = value.replace(/[^0-9]+/i,'');" class="bg-dark-black  border rounded w-12 py-2 px-3 text-natural shadow-lg border-white focus:border-white focus:ring focus:ring-white far mx-4">
+      <input type="tel" value="00" maxlength="2" oninput="value = value.replace(/[^0-9]+/i,'');" class="bg-dark-black  border rounded w-12 py-2 px-3 text-natural shadow-lg border-white focus:border-white focus:ring focus:ring-white far">
 
 
-      <%= button_tag type: "button", class: "text-dark-black ml-2", onclick: "cntStart()" do %>
-          <i class="far fa-pause-circle fa-3x"></i>
+      <%= button_tag type: "button", class: "rounded py-1 px-3 bg-dark-black text-natural mx-5 shadow-lg", onclick: "cntStart()" do %>
+          <i class="fas fa-play fa-sm shadow-inner"></i>
       <% end %>
 
-      <%= button_tag type: "button", class: "text-dark-black ", onclick: "cntStop()" do %>
-          <i class="far fa-stop-circle fa-3x"></i>
+      <%= button_tag type: "button", class: "rounded py-1 px-3 bg-dark-black text-natural shadow-lg", onclick: "cntStop()" do %>
+          <i class="fas fa-stop fa-sm shadow-inner"></i>
       <% end %>
 
     </div>
@@ -44,34 +43,25 @@
 <div class="bg-white rounded px-8 pt-6 pb-8 mb-4">
   <%= form_with model: @diary, local: true do |f| %>
     <div class="mb-4">
-      <%= f.label :text, class: "block text-gray-600 text-sm font-semibold mb-2", for: "text" %>
-      <%= f.text_area :text, class: "bg-natural appearance-none border rounded-lg w-full h-64 py-2 px-3 text-dark-black leading-loose focus:outline-none focus:shadow-outline focus:border-blue-300", onkeyup: "ShowLength(value);" %>
+      <div class="flex justify-between mb-5">
+        <h1 class="text-4xl text-dark-black">筆記開示</h1>
+        <%= button_tag type: 'submit', class: "text-6xl text-light-blue" do %>
+          <i class="fab fa-telegram-plane"></i>
+        <% end %>
+      </div>
+      <%= f.text_field :title, class: "bg-gray-50 border-white rounded-lg w-full mb-4 py-2 px-3 text-dark-black shadow-inner focus:border-white focus:ring focus:ring-white", placeholder: "タイトル(最後に決めるのをおすすめします)"  %>
+      <%= f.text_area :text, class: "bg-gray-50 border-white rounded-lg w-full h-64 py-2 px-3 text-dark-black shadow-inner focus:border-white focus:ring focus:ring-white", onkeyup: "ShowLength(value);" %>
       <%= f.hidden_field :creativity, value: @diary.text.length %>
       <!--プログレスバー文字数-->
       <div class="relative pt-1">
-        <div class="overflow-hidden h-5 mb-4 text-xs flex rounded bg-indigo-100">
-          <div id="stylewidth" style="width:<%= @diary.creativity.to_i / 10 %>%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-indigo-400"></div>
+        <div class="overflow-hidden h-5 mb-4 text-xs flex rounded bg-indigo-100 shadow-inner">
+          <div id="stylewidth" style="width:<%= @diary.creativity.to_i / 10 %>%" class="shadow-inner flex flex-col text-center whitespace-nowrap text-white justify-center bg-indigo-400"></div>
+          <span class="pt-0.5 text-dark-black" id="inputpercentage"><%= @diary.creativity %>％</span>
         </div>
       </div>
-      <p id="inputlength"><%= @diary.creativity %>文字</p>
-      <p id="inputpercentage">%</p>
-    </div>
-
-    <div x-data="{isShow: false}">
-        <h1 x-show="isShow">
-          <div class="mb-4">
-            <%= f.label :title, class: "block text-gray-600 text-sm font-semibold mb-2", for: "text" %>
-            <%= f.text_field :title, class: "bg-natural appearance-none border rounded-lg w-full h-64 py-2 px-3 text-dark-black leading-loose focus:outline-none focus:shadow-outline focus:border-blue-300" %>
-          </div>
-        </h1>
-        <button type="button" @click="isShow = !isShow" class="text-natural bg-dark-black hover:bg-natural hover:text-dark-black py-2 px-4 rounded focus:outline-none focus:shadow-outline">タイトル</button>
-    </div>
-
-    <div class="flex items-center justify-between">
-      <%= f.submit nil, class: "text-natural bg-dark-black hover:bg-natural hover:text-dark-black py-2 px-4 rounded focus:outline-none focus:shadow-outline" %>
+      <p id="inputlength">文字</p>
     </div>
   <% end %>
-</div>
 </div>
 
 <script>
