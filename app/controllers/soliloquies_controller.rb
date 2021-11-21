@@ -7,7 +7,7 @@ class SoliloquiesController < ApplicationController
     soliloquy = current_user.soliloquies.build(soliloquy_params)
     soliloquy.emotion_point = soliloquy.sentiment_score
     if soliloquy.save
-      redirect_to root_path, notice: 'つぶやきしました。'
+      redirect_to root_url, notice: 'つぶやきしました。'
     else
       flash.now[:alert] = '空白項目があります。'
       render :new
@@ -21,13 +21,13 @@ class SoliloquiesController < ApplicationController
   def update
     soliloquy = current_user.soliloquies.build(soliloquy_params)
     soliloquy.update!(soliloquy_params)
-    redirect_to root_path, notice: 'つぶやきを編集しました.'
+    redirect_to root_url, notice: 'つぶやきを編集しました.'
   end
 
   def destroy
     soliloquy = current_user.soliloquies.build(soliloquy_params)
     soliloquy.destroy!
-    redirect_to root_path, notice: 'つぶやきを削除しました.'
+    redirect_to root_url, notice: 'つぶやきを削除しました.'
   end
 
   private

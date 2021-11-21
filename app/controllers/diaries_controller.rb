@@ -15,7 +15,7 @@ class DiariesController < ApplicationController
     diary.creativity = diary.text.length / 5
     diary.emotion_point = diary.sentiment_score
     if diary.save
-      redirect_to root_path, notice: "筆記開示を登録しました。"
+      redirect_to root_url, notice: "筆記開示を登録しました。"
     else
       flash.now[:alert] = "空白項目があります。"
       render :new
@@ -35,13 +35,13 @@ class DiariesController < ApplicationController
     diary.creativity = diary.text.length / 5
     diary.emotion_point = diary.sentiment_score
     diary.update!(diary_params)
-    redirect_to root_path, notice: "筆記開示を編集しました。"
+    redirect_to root_url, notice: "筆記開示を編集しました。"
   end
 
   def destroy
     diary = current_user.diaries.find(params[:id])
     diary.destroy
-    redirect_to root_path, alert: "筆記開示を削除しました。"
+    redirect_to root_url, alert: "筆記開示を削除しました。"
   end
 
   private
