@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       auto_login(@user)
-      redirect_to intros_path, notice: 'ユーザーを登録しました。'
+      redirect_to intros_url, notice: 'ユーザーを登録しました。'
     else
       flash[:alert] = '空白項目があります。'
       render :new
