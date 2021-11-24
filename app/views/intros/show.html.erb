@@ -4,15 +4,15 @@
 <div class="h-screen">
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">Slide 1</div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide"><%= render 'tutorials/intro01' %></div>
+      <div class="swiper-slide"><%= render 'tutorials/intro02' %></div>
+      <div class="swiper-slide"><%= render 'tutorials/intro01' %></div>
       <div class="swiper-slide">Slide 4</div>
       <div class="swiper-slide"><button class="bg-blue-100"><%= link_to 'Done', root_path %></button></div>
     </div>
+    <div class="swiper-pagination"></div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
-    <div class="swiper-pagination"></div>
   </div>
 </div>
 <!-- Swiper JS -->
@@ -28,6 +28,7 @@
     },
     pagination: {
       el: ".swiper-pagination",
+      type: 'progressbar',
       clickable: true,
     },
     navigation: {
@@ -91,5 +92,8 @@
   }
   .swiper-pagination {
     --swiper-pagination-color: #ff7789;
+    --swiper-pagination-progressbar {
+      height:20px;
+    }
   }
 </style>
