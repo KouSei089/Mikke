@@ -33,6 +33,7 @@ class DiariesController < ApplicationController
   def update
     diary = current_user.diaries.find(params[:id])
     diary.creativity = diary.text.length / 5
+    diary.word_count = diary.text.length
     diary.emotion_point = diary.sentiment_score
     diary.update!(diary_params)
     redirect_to root_url, notice: "筆記開示を編集しました。"
