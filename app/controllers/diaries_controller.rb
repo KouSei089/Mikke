@@ -13,6 +13,7 @@ class DiariesController < ApplicationController
   def create
     diary = current_user.diaries.build(diary_params)
     diary.creativity = diary.text.length / 5
+    diary.word_count = diary.text.length
     diary.emotion_point = diary.sentiment_score
     if diary.save
       redirect_to root_url, notice: "筆記開示を登録しました。"

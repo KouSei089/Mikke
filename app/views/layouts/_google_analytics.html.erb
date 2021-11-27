@@ -6,7 +6,7 @@
   gtag('js', new Date());
 
   gtag('config', 'トラッキングID');
-  if (<%= ::Temple::Utils.escape_html_safe((raw current_user.to_json)) %>) {
+  if (<%= ::Temple::Utils.escape_html_safe((raw current_user.to_json)) %>){
     gtag('set', {'user_id': <%= ::Temple::Utils.escape_html_safe((raw current_user.to_json)) %>.id});
   }
 </script>
