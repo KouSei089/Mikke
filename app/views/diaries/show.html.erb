@@ -7,10 +7,18 @@
         </div>
         <div class="mt-8 text-center">
           <p class="text-gray-600"><%=safe_join(@diary.text.split("\n"),tag(:br))%></p>
-          <button class="mt-6 bg-dark-black text-natural hover:bg-white hover:text-dark-black rounded-full px-12 py-3 shadow-lg focus:outline-none">
-            <%= link_to '編集', edit_diary_path %>
+        </div>
+        <div class="relative pt-1 mt-3">
+          <div class="overflow-hidden h-5 mb-4 text-xs flex rounded bg-indigo-100 shadow-inner">
+            <div id="stylewidth" style="width:<%= @diary.creativity.to_i / 10 %>%" class="shadow-inner flex flex-col text-center whitespace-nowrap text-white justify-center bg-indigo-400"></div>
+            <span class="pt-0.5 text-dark-black" id="inputpercentage"><%= @diary.creativity %>％</span>
+          </div>
+        </div>
+        <div class="text-center">
+          <button class="mt-3 bg-dark-black text-natural hover:bg-white hover:text-dark-black rounded-full px-12 py-3 shadow-lg focus:outline-none">
+              <%= link_to '編集', edit_diary_path %>
           </button>
-          <button class="mt-6 bg-dark-black text-natural hover:bg-white hover:text-dark-black rounded-full px-12 py-3 shadow-lg focus:outline-none">
+          <button class="mt-3 bg-dark-black text-natural hover:bg-white hover:text-dark-black rounded-full px-12 py-3 shadow-lg focus:outline-none">
             <%= link_to '削除', @diary, method: :delete, data: { confirm: '本当に削除しますか？' } %>
           </button>
         </div>
