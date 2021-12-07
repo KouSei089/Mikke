@@ -1,11 +1,16 @@
 Rails.application.routes.draw do
   root 'diaries#index'
   resource :initials
+  # resource :initial
+  # resource :setting, only: [:show] do
+  #   resource :profile, only: [:edit, :update]
+  #  end
   resource :settings, only: [:show] do
     resource :profile, only: [:edit, :update]
   end
 
   resource :tutorials
+  # resource :tutorial
   resources :diaries do
     collection do
       get 'search'
@@ -13,6 +18,7 @@ Rails.application.routes.draw do
   end
 
   resource :intros
+  # resource :intro
   resource :analysis
   resources :users
   resources :soliloquies
