@@ -1,25 +1,19 @@
 Rails.application.routes.draw do
   root 'diaries#index'
-  resource :initials
-  # resource :initial
-  # resource :setting, only: [:show] do
-  #   resource :profile, only: [:edit, :update]
-  #  end
-  resource :settings, only: [:show] do
+  resource :initial, only: [:new]
+  resource :setting, only: [:show] do
     resource :profile, only: [:edit, :update]
   end
 
-  resource :tutorials
-  # resource :tutorial
+  resource :tutorial, only: [:show]
   resources :diaries do
     collection do
       get 'search'
     end
   end
 
-  resource :intros
-  # resource :intro
-  resource :analysis
+  resource :intro, only: [:show]
+  resource :analysis, only: [:show]
   resources :users
   resources :soliloquies
   get 'login' => 'user_sessions#new', :as => :login

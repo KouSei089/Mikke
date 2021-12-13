@@ -19,7 +19,7 @@
 
   <body>
   <div class="w-full mb-64">
-    <% if current_page?(intros_path) %>
+    <% if current_page?(intro_path) %>
       <%= yield %>
     <% elsif current_user %>
       <%= render 'shared/header' %>
