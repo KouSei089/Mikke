@@ -4,6 +4,6 @@ class ApplicationController < ActionController::Base
   protected
 
     def not_authenticated
-      redirect_to new_initials_url
+      redirect_to new_initial_url
     end
 end

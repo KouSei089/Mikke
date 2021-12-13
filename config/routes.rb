@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   root 'diaries#index'
-  resource :initials
-  # resource :initial
+  resource :initial, only: [:new]
   # resource :setting, only: [:show] do
   #   resource :profile, only: [:edit, :update]
   #  end
