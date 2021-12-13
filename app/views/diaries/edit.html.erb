@@ -51,15 +51,14 @@
       </div>
       <%= f.text_field :title, class: "bg-gray-50 border-white rounded-lg w-full mb-4 py-2 px-3 text-dark-black shadow-inner focus:border-white focus:ring focus:ring-white", placeholder: "タイトル(最後に決めるのをおすすめします)"  %>
       <%= f.text_area :text, class: "bg-gray-50 border-white rounded-lg w-full h-64 py-2 px-3 text-dark-black shadow-inner focus:border-white focus:ring focus:ring-white", onkeyup: "ShowLength(value);" %>
-      <%= f.hidden_field :creativity, value: @diary.text.length %>
       <!--プログレスバー文字数-->
       <div class="relative pt-1">
         <div class="overflow-hidden h-5 mb-4 text-xs flex rounded bg-indigo-100 shadow-inner">
-          <div id="stylewidth" style="width:<%= @diary.creativity.to_i / 10 %>%" class="shadow-inner flex flex-col text-center whitespace-nowrap text-white justify-center bg-indigo-400"></div>
-          <span class="pt-0.5 text-dark-black" id="inputpercentage"><%= @diary.creativity %>％</span>
+          <div id="stylewidth" style="width:<%= @diary.creativity %>%" class="shadow-inner flex flex-col text-center whitespace-nowrap text-white justify-center bg-indigo-400"></div>
         </div>
+        <span class="absolute right-0 text-dark-black" id="inputpercentage"><%= @diary.creativity %>％</span>
       </div>
-      <p id="inputlength">文字</p>
+      <p id="inputlength"><%= @diary.word_count %>文字</p>
     </div>
   <% end %>
 </div>
@@ -127,6 +126,6 @@ function reSet(){
 function ShowLength(str) {
   document.getElementById("inputpercentage").innerHTML = Math.trunc(str.length / 5) + "%";
   document.getElementById("inputlength").innerHTML = str.length + "文字";
-  document.getElementById("stylewidth").style.width = str.length / 10 + "%";
+  document.getElementById("stylewidth").style.width = str.length / 5 + "%";
 }
 </script>
