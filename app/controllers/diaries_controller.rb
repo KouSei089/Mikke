@@ -1,4 +1,6 @@
 class DiariesController < ApplicationController
+  before_action :set_message, only: [:show, :edit, :update, :destroy]
+
   def index
     diaries = current_user.diaries.all
     soliloquies = current_user.soliloquies.all
@@ -11,11 +13,9 @@ class DiariesController < ApplicationController
   end
 
   def create
-    diary = current_user.diaries.build(diary_params)
-    diary.creativity = diary.text.length / 5
-    diary.word_count = diary.text.length
-    diary.emotion_point = diary.sentiment_score
-    if diary.save
+    @diary = current_user.diaries.build(diary_params)
+    @diary.data_create_logic
+    if @diary.save
       redirect_to root_url, notice: "筆記開示を登録しました。"
     else
       flash.now[:alert] = "空白項目があります。"
@@ -23,26 +23,18 @@ class DiariesController < ApplicationController
     end
   end
 
-  def show
-    @diary = current_user.diaries.find(params[:id])
-  end
+  def show; end
 
-  def edit
-    @diary = current_user.diaries.find(params[:id])
-  end
+  def edit; end
 
   def update
-    diary = current_user.diaries.find(params[:id])
-    diary.creativity = diary.text.length / 5
-    diary.word_count = diary.text.length
-    diary.emotion_point = diary.sentiment_score
-    diary.update!(diary_params)
+    @diary.data_create_logic
+    @diary.update!(diary_params)
     redirect_to root_url, notice: "筆記開示を編集しました。"
   end
 
   def destroy
-    diary = current_user.diaries.find(params[:id])
-    diary.destroy
+    @diary.destroy
     redirect_to root_url, alert: "筆記開示を削除しました。"
   end
 
@@ -50,5 +42,9 @@ class DiariesController < ApplicationController
 
     def diary_params
       params.require(:diary).permit(:title, :text, :creativity, :emotion_point)
+    end
+
+    def set_diary
+      @diary = current_user.diaries.find(params[:id])
     end
 end
