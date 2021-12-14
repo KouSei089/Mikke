@@ -1,5 +1,5 @@
 class DiariesController < ApplicationController
-  before_action :set_message, only: [:show, :edit, :update, :destroy]
+  before_action :set_diary, only: [:show, :edit, :update, :destroy]
 
   def index
     diaries = current_user.diaries.all
@@ -29,8 +29,11 @@ class DiariesController < ApplicationController
 
   def update
     @diary.data_create_logic
-    @diary.update!(diary_params)
-    redirect_to root_url, notice: "筆記開示を編集しました。"
+    if @diary.update(diary_params)
+      redirect_to root_url, notice: "筆記開示を編集しました。"
+    else
+      render :edit
+    end
   end
 
   def destroy
