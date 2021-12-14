@@ -1,14 +1,12 @@
 class ProfilesController < ApplicationController
-  def edit
-    @user = User.find(current_user.id)
-  end
+  before_action :set_user, only: [:edit, :update]
+
+  def edit; end
 
   def update
-    @user = User.find(current_user.id)
     if @user.update(user_params)
       redirect_to setting_url, notice: '変更完了'
     else
-      flash.now[:alert] = '漏れてます'
       render :edit
     end
   end
@@ -17,5 +15,9 @@ class ProfilesController < ApplicationController
 
     def user_params
       params.require(:user).permit(:username)
+    end
+
+    def set_user
+      @user = User.find(current_user.id)
     end
 end

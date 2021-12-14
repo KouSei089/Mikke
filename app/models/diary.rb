@@ -1,6 +1,12 @@
 class Diary < ApplicationRecord
   belongs_to :user
 
+  def data_create_logic
+    self.creativity = text.length / 5
+    self.word_count = text.length
+    self.emotion_point = sentiment_score
+  end
+
   def sentiment_score
     require 'net/http'
     require 'uri'
