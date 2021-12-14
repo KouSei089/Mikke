@@ -1,4 +1,6 @@
 class SoliloquiesController < ApplicationController
+  before_action :set_soliloquy, only: [:edit, :update, :destroy]
+
   def new
     @soliloquy = Soliloquy.new
   end
@@ -14,25 +16,28 @@ class SoliloquiesController < ApplicationController
     end
   end
 
-  def edit
-    @soliloquy = current_user.soliloquies.build(soliloquy_params)
-  end
+  def edit; end
 
   def update
-    soliloquy = current_user.soliloquies.build(soliloquy_params)
-    soliloquy.update!(soliloquy_params)
-    redirect_to root_url, notice: 'つぶやきを編集しました.'
+    if @soliloquy.update(soliloquy_params)
+      redirect_to root_url, notice: 'つぶやきを編集しました.'
+    else
+      render :edit
+    end
   end
 
   def destroy
-    soliloquy = current_user.soliloquies.build(soliloquy_params)
-    soliloquy.destroy!
+    @soliloquy.destroy!
     redirect_to root_url, notice: 'つぶやきを削除しました.'
   end
 
   private
 
     def soliloquy_params
-      params.require(:soliloquy).permit(:text)
+      params.require(:soliloquy).permit(:text, :emotion_point)
+    end
+
+    def set_soliloquy
+      @soliloquy = current_user.soliloquies.find(params[:id])
     end
 end
