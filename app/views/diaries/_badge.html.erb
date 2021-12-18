@@ -1,0 +1,8 @@
+<% if diary_created.creativity > 100 %>
+  <i class="fas fa-award text-5xl text-yellow-500"></i>
+<% elsif diary_created.creativity > 85 %>
+  <i class="fas fa-award text-5xl text-gray-300"></i>
+<% elsif diary_created.creativity > 70 %>
+  <i class="fas fa-award text-5xl text-yellow-800"></i>
+<% else %>
+<% end %>

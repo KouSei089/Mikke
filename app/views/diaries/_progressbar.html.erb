@@ -1,0 +1,25 @@
+<% if diary_created.creativity > 100 %>
+  <div class="overflow-hidden h-5 text-xs flex rounded bg-red-100">
+    <div id="stylewidth" style="width:<%= diary_created.creativity %>%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-400"></div>
+  </div>
+<% elsif diary_created.creativity > 80 %>
+  <div class="overflow-hidden h-5 text-xs flex rounded bg-pink-100">
+    <div id="stylewidth" style="width:<%= diary_created.creativity %>%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-pink-400"></div>
+  </div>
+<% elsif diary_created.creativity > 60 %>
+  <div class="overflow-hidden h-5 text-xs flex rounded bg-orange-100">
+    <div id="stylewidth" style="width:<%= diary_created.creativity %>%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-orange-400"></div>
+  </div>
+<% elsif diary_created.creativity > 40 %>
+  <div class="overflow-hidden h-5 text-xs flex rounded bg-yellow-100">
+    <div id="stylewidth" style="width:<%= diary_created.creativity %>%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-yellow-400"></div>
+  </div>
+<% elsif diary_created.creativity > 20 %>
+  <div class="overflow-hidden h-5 text-xs flex rounded bg-green-100">
+    <div id="stylewidth" style="width:<%= diary_created.creativity %>%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-400"></div>
+  </div>
+<% else %>
+  <div class="overflow-hidden h-5 text-xs flex rounded bg-indigo-100">
+    <div id="stylewidth" style="width:<%= diary_created.creativity %>%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-indigo-400"></div>
+  </div>
+<% end %>
