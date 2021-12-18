@@ -1,0 +1,26 @@
+<div class="grid grid-cols-12 gap-4">
+  <div class="col-span-2 m-8">
+    <h1 class="text-4xl text-dark-black mb-2"><%= l diary_created.created_at, format: :day %></h1>
+    <div class="bg-natural rounded-full h-10 w-10 flex items-center justify-center relative">
+      <h1 class="text-lg text-dark-black"><%= l diary_created.created_at, format: :day_of_week %></h1>
+      <%= render 'diaries/wday', diary_created: diary_created %>
+    </div>
+  </div>
+  <div class="col-span-10 mx-8 pt-16">
+    <div class="bg-natural rounded-3xl shadow mb-8">
+      <div class="p-4 flex justify-center relative">
+        <div class="text-center">
+          <p class="text-gray-600 far"><%= diary_created.text %></p>
+        </div>
+        <div class="absolute right-32 bottom-1 flex justify-center">
+          <div class="rounded-full h-12 w-12 flex items-center justify-center bg-white text-dark-black">
+          <%= link_to heroicon('pencil-alt', style: :outline,class_name: 'h-5 w-5 text-dark-black'), edit_soliloquy_path(diary_created) %>
+          </div>
+          <div class="rounded-full h-12 w-12 flex items-center justify-center bg-white text-dark-black">
+          <%= link_to heroicon('trash', style: :outline,class_name: 'h-5 w-5 text-dark-black'), soliloquy_path(diary_created), data: { confirm: 'Are you sure?' }, method: :delete %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
