@@ -1,13 +1,15 @@
 <%= render 'shared/flash_message' %>
 <%= render 'diaries/greeting' %>
 
-<% @diaries_created.each do |diary_created| %>
-  <% if diary_created.class == Diary %>
-    <%= render 'diaries/diary_content', diary_created: diary_created %>
-  <% elsif diary_created.class == Soliloquy %>
-    <%= render 'diaries/soliloquy_content', diary_created: diary_created %>
-  <% else %>
-    <p>投稿がありません</p>
+<% if @diaries_created.present? %>
+  <% @diaries_created.each do |diary_created| %>
+    <% if diary_created.class == Diary %>
+      <%= render 'diaries/diary_content', diary_created: diary_created %>
+    <% elsif diary_created.class == Soliloquy %>
+      <%= render 'diaries/soliloquy_content', diary_created: diary_created %>
+    <% end %>
   <% end %>
+<% else %>
+  <h1 class="text-3xl text-dark-black mb-2 m-10">投稿がありません</h1>
 <% end %>
 <%= render 'diaries/submit_button' %>
