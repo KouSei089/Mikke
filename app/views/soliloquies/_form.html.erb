@@ -1,7 +1,10 @@
 <div class="px-20">
   <%= form_with model: @soliloquy, local: true do |f|%>
     <div class="flex justify-between mb-5">
-      <h1 class="text-4xl text-dark-black">つぶやき</h1>
+      <div class="flex justify-start">
+        <%= render 'shared/back_button' %>
+        <h1 class="text-4xl text-dark-black">つぶやき</h1>
+      </div>
       <%= button_tag type: 'submit', class: "text-6xl text-light-blue" do %>
         <i class="fab fa-telegram-plane"></i>
       <% end %>
