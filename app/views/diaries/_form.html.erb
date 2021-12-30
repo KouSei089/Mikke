@@ -2,7 +2,10 @@
   <%= form_with model: @diary, local: true do |f| %>
     <div class="mb-4">
       <div class="flex justify-between mb-5">
-        <h1 class="text-4xl text-dark-black">筆記開示</h1>
+        <div class="flex justify-start">
+          <%= render 'shared/back_button' %>
+          <h1 class="text-4xl text-dark-black">筆記開示</h1>
+        </div>
         <%= button_tag type: 'submit', class: "text-6xl text-light-blue" do %>
           <i class="fab fa-telegram-plane"></i>
         <% end %>
