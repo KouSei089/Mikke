@@ -10,20 +10,9 @@ class AnalysesController < ApplicationController
     @diaries_creative = current_user.diaries.pluck(:created_at, :creativity)
     gon.creative_days = @diaries_creative.map { |creative_day| creative_day[0].strftime("%m/%d\n%H:%S") }
     gon.creative_sizes = @diaries_creative.map(&:second)
-    # gon.creative_sizes = @creatities.creative_analysis
   end
 
   private
-
-    # def creative_analysis
-    #   @creatities.map do |score|
-    #     if score.nil?
-    #       _creativity_score = 0.05
-    #     else
-    #       score
-    #     end
-    #   end
-    # end
 
     def positive_analyses
       @chartdates.map do |score|
