@@ -1,12 +1,14 @@
-<%= render 'shared/back_button' %>
 <div class="p-8">
   <div class="relative pb-5">
-  <% if @diary.title? %>
-    <div class="far text-3xl text-dark-black"><%= @diary.title %></div>
-  <% else %>
-    <div class="far text-3xl text-dark-black">Untitled</div>
-  <% end %>
-    <div class="absolute right-0 far text-1xl"><%= l @diary.created_at, format: :long %></div>
+    <div class="flex justify-start">
+        <%= render 'shared/back_button' %>
+        <% if @diary.title? %>
+          <div class="far text-4xl text-dark-black"><%= @diary.title %></div>
+        <% else %>
+          <div class="far text-4xl text-dark-black">Untitled</div>
+        <% end %>
+      </div>
+    <div class="absolute right-0 far text-1xl mb-5"><%= l @diary.created_at, format: :long %></div>
   </div>
     <div class="bg-gray-50 rounded-3xl shadow-lg">
       <div class="p-16">
