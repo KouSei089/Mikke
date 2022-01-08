@@ -1,7 +1,8 @@
 <% if diary_created.title? %>
-  <h1 class="font-bold text-lg text-dark-black mb-1 text-center far"><%= link_to diary_created.title, diary_path(diary_created) %></h1>
+<h1 class="text-2xl font-thin text-dark-black mb-5"><%= link_to diary_created.title, diary_path(diary_created) %></h1>
 <% else %>
-  <p class="text-dark-black far">
-    <%= link_to truncate(diary_created.text, length: 10), diary_path(diary_created) %>
-  </p>
+  <h1 class="text-2xl font-thin text-dark-black mb-5"><%= link_to "Untitled", diary_path(diary_created) %></h1>
 <% end %>
+<p class="text-dark-black font-thin mb-5">
+  <%= link_to truncate(diary_created.text, length: 20), diary_path(diary_created) %>
+</p>

@@ -13,11 +13,6 @@
         <%= render 'diaries/badge', diary_created: diary_created %>
         <div class="mt-8 text-center">
           <%= render 'diaries/content_title', diary_created: diary_created %>
-          <div class="flex justify-end">
-            <div class="rounded-full h-32 w-32 flex items-center justify-center bg-white text-dark-black">
-            <%= link_to heroicon('pencil-alt', style: :outline,class_name: 'h-12 w-12'), edit_diary_path(diary_created) %>
-            </div>
-          </div>
         </div>
         <div class="bg-white rounded">
         <%= render 'diaries/progressbar', diary_created: diary_created %>
