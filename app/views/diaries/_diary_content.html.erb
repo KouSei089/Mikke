@@ -1,11 +1,11 @@
 <div class="grid grid-cols-12 gap-4">
   <div class="col-span-2 m-8">
-    <h1 class="text-4xl text-dark-black mb-2"><%= l diary_created.created_at, format: :day %></h1>
+    <h1 class="text-4xl text-dark-black mb-2 font-thin"><%= l diary_created.created_at, format: :day %></h1>
     <div class="bg-natural rounded-full h-10 w-10 flex items-center justify-center relative">
-      <h1 class="text-lg text-dark-black"><%= l diary_created.created_at, format: :day_of_week %></h1>
+      <h1 class="text-lg text-dark-black font-thin"><%= l diary_created.created_at, format: :day_of_week %></h1>
       <%= render 'diaries/wday', diary_created: diary_created %>
     </div>
-    <h1 class="text-lg text-dark-black"><%= l diary_created.created_at, format: :year_month %></h1>
+    <h1 class="text-lg text-dark-black font-thin"><%= l diary_created.created_at, format: :year_month %></h1>
   </div>
   <div class="p-8 col-span-10">
     <div class="bg-natural rounded-3xl shadow-lg">
@@ -16,7 +16,7 @@
         </div>
         <div class="bg-white rounded">
         <%= render 'diaries/progressbar', diary_created: diary_created %>
-        <p class="text-sm text-center text-dark-black">Creativity</p>
+        <p class="text-sm text-center text-dark-black font-thin">Creativity</p>
         </div>
       </div>
     </div>
