@@ -19,15 +19,16 @@
     </div>
   <form name="timer">
     <div x-show="isShow" class="flex items-center justify-center mb-3 po-0">
-      <input type="tel" value="10" maxlength="2" oninput="value = value.replace(/[^0-9]+/i,'');" class="bg-dark-black  border rounded w-12 py-2 px-3 text-natural shadow-lg border-white focus:border-white focus:ring focus:ring-white far mx-4">
-      <input type="tel" value="00" maxlength="2" oninput="value = value.replace(/[^0-9]+/i,'');" class="bg-dark-black  border rounded w-12 py-2 px-3 text-natural shadow-lg border-white focus:border-white focus:ring focus:ring-white far">
+      <input type="tel" value="10" maxlength="2" oninput="value = value.replace(/[^0-9]+/i,'');" class="bg-dark-black  border rounded w-12 py-2 px-3 text-natural shadow-lg border-white focus:border-white focus:ring focus:ring-white mx-3 font-thin">
+      <p class="text-dark-black mr-3">:</p>
+      <input type="tel" value="00" maxlength="2" oninput="value = value.replace(/[^0-9]+/i,'');" class="bg-dark-black  border rounded w-12 py-2 px-3 text-natural shadow-lg border-white focus:border-white focus:ring focus:ring-white font-thin">
 
 
-      <%= button_tag type: "button", class: "rounded py-1 px-3 bg-dark-black text-natural mx-5 shadow-lg", onclick: "cntStart()" do %>
+      <%= button_tag type: "button", class: "rounded py-2 px-3 bg-dark-black text-natural mx-5 shadow-lg", onclick: "cntStart()" do %>
           <i class="fas fa-play fa-sm shadow-inner"></i>
       <% end %>
 
-      <%= button_tag type: "button", class: "rounded py-1 px-3 bg-dark-black text-natural shadow-lg", onclick: "cntStop()" do %>
+      <%= button_tag type: "button", class: "rounded py-2 px-3 bg-dark-black text-natural shadow-lg", onclick: "cntStop()" do %>
           <i class="fas fa-stop fa-sm shadow-inner"></i>
       <% end %>
 
