@@ -1,37 +1,33 @@
 <div class="mb-20">
-<div class="px-32">
-  <div class="grid grid-cols-10 gap-4 py-10">
-    <h1 class="text-4xl font-thin col-span-6">Emotion chart</h1>
-    <button class="bg-natural text-dark-black rounded-full px-5 py-2 col-span-2 font-thin">
-      Day
-    </button>
-     <button class="bg-natural text-dark-black rounded-full px-5 py-2 col-span-2 font-thin">
-      Week
-    </button>
+  <div class="px-32 relative right-0 bottom-0">
+    <div class="grid grid-cols-10 gap-4 py-10">
+      <h1 class="text-4xl font-thin col-span-6">Emotion chart</h1>
+      <button class="bg-natural text-dark-black rounded-full px-5 py-2 col-span-2 font-thin">
+        Day
+      </button>
+      <button class="bg-natural text-dark-black rounded-full px-5 py-2 col-span-2 font-thin">
+        Week
+      </button>
+    </div>
+    <div class="chart-container p-20 bg-natural rounded-3xl shadow-lg flex justify-center">
+        <canvas id="myChart"></canvas>
+    </div>
   </div>
-  <div class="bg-natural rounded-3xl shadow-lg flex justify-center">
-      <div class="chart-container p-20"  style="position: relative; height:25vh; width:80vw">
-          <canvas id="myChart"></canvas>
-      </div>
-  </div>
-</div>
 
-<div class="px-32">
-  <div class="grid grid-cols-10 gap-4 py-10">
-    <h1 class="text-4xl font-thin col-span-6">Creativity chart</h1>
-    <button class="bg-natural text-dark-black rounded-full px-5 py-2 col-span-2 font-thin">
-      Day
-    </button>
-     <button class="bg-natural text-dark-black rounded-full px-5 py-2 col-span-2 font-thin">
-      Week
-    </button>
+  <div class="px-32 relative right-0 bottom-0">
+    <div class="grid grid-cols-10 gap-4 py-10">
+      <h1 class="text-4xl font-thin col-span-6">Creativity chart</h1>
+      <button class="bg-natural text-dark-black rounded-full px-5 py-2 col-span-2 font-thin">
+        Day
+      </button>
+      <button class="bg-natural text-dark-black rounded-full px-5 py-2 col-span-2 font-thin">
+        Week
+      </button>
+    </div>
+    <div class="chart-container p-20 bg-natural rounded-3xl shadow-lg flex justify-center">
+        <canvas id="Chart"></canvas>
+    </div>
   </div>
-  <div class="bg-natural rounded-3xl shadow-lg flex justify-center">
-      <div class="chart-container p-20"  style="position: relative; height:25vh; width:80vw">
-          <canvas id="Chart"></canvas>
-      </div>
-  </div>
-</div>
 </div>
 
 <script>
