@@ -3,24 +3,24 @@
     <div class="flex justify-start">
         <%= render 'shared/back_button' %>
         <% if @diary.title? %>
-          <div class="text-4xl text-dark-black"><%= @diary.title %></div>
+          <div class="text-4xl text-dark-black font-thin"><%= @diary.title %></div>
         <% else %>
-          <div class="text-4xl text-dark-black">Untitled</div>
+          <div class="text-4xl text-dark-black font-thin">Untitled</div>
         <% end %>
       </div>
-    <div class="absolute right-0 far text-1xl text-dark-black mb-5"><%= l @diary.created_at, format: :long %></div>
+    <div class="absolute right-0 text-1xl text-dark-black font-thin"><%= l @diary.created_at, format: :long %></div>
   </div>
     <div class="bg-gray-50 rounded-3xl shadow-lg">
       <div class="p-16">
         <div class="mt-8 text-center">
-          <p class="text-gray-600"><%=safe_join(@diary.text.split("\n"),tag(:br))%></p>
+          <p class="text-gray-600 font-thin"><%=safe_join(@diary.text.split("\n"),tag(:br))%></p>
         </div>
         <div class="relative pt-1 mt-3">
           <div class="overflow-hidden h-5 mb-4 text-xs flex rounded bg-indigo-100 shadow-inner">
             <div id="stylewidth" style="width:<%= @diary.creativity %>%" class="shadow-inner flex flex-col text-center whitespace-nowrap text-white justify-center bg-indigo-400"></div>
           </div>
-          <span class="absolute right-0 text-dark-black"><%= @diary.creativity %>％</span>
-          <span class="absolute left-0 text-dark-black"><%= @diary.word_count %>文字</span>
+          <span class="absolute right-0 text-dark-black font-thin"><%= @diary.creativity %>％</span>
+          <span class="absolute left-0 text-dark-black font-thin"><%= @diary.word_count %>文字</span>
         </div>
         <div class="flex justify-end mt-10">
           <div class="rounded-full h-32 w-32 flex items-center justify-center bg-white text-dark-black">
