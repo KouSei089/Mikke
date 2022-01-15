@@ -1,8 +1,17 @@
 <% if diary_created.creativity > 100 %>
-  <i class="fas fa-award text-5xl text-yellow-500"></i>
+  <div x-data="{ open: false }">
+    <%= render 'diaries/badge_description' %>
+    <button @click="open = !open"><i class="fas fa-award text-5xl text-yellow-500"></i></button>
+  </div>
 <% elsif diary_created.creativity > 85 %>
-  <i class="fas fa-award text-5xl text-gray-300"></i>
+  <div x-data="{ open: false }">
+    <%= render 'diaries/badge_description' %>
+    <button @click="open = !open"><i class="fas fa-award text-5xl text-gray-300"></i></button>
+  </div>
 <% elsif diary_created.creativity > 70 %>
-  <i class="fas fa-award text-5xl text-yellow-800"></i>
+  <div x-data="{ open: false }">
+    <%= render 'diaries/badge_description' %>
+    <button @click="open = !open"><i class="fas fa-award text-5xl text-yellow-800"></i></button>
+  </div>
 <% else %>
 <% end %>

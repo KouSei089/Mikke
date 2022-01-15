@@ -8,7 +8,7 @@
     <h1 class="text-lg text-dark-black font-thin"><%= l diary_created.created_at, format: :year_month %></h1>
   </div>
   <div class="p-8 col-span-10">
-    <div class="bg-natural rounded-3xl shadow-lg">
+    <div class="bg-natural rounded-3xl shadow-lg relative">
       <div class="p-16">
         <%= render 'diaries/badge', diary_created: diary_created %>
         <div class="mt-8 text-center">
