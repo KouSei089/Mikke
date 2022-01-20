@@ -19,13 +19,15 @@ class UserSessionsController < ApplicationController
   end
 
   def guest_login
-    @guest_user = User.create(
-      username: 'ゲスト',
-      email: "#{SecureRandom.alphanumeric(10)}@email.com",
-      password: 'password',
-      password_confirmation: 'password'
+    random_value_user = SecureRandom.hex(5)
+    random_value = SecureRandom.hex
+    guest_user = User.create!(
+      username: random_value_user,
+      email: "test_#{random_value}@example.com",
+      password: 'password1234',
+      password_confirmation: 'password1234'
     )
-    auto_login(@guest_user)
+    auto_login(guest_user)
     redirect_to root_path, success: 'ゲストとしてログインしました'
   end
 end
