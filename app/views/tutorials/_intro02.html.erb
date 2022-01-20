@@ -1,6 +1,22 @@
 <div class="h-full w-full bg-light-blue">
   <h1 class="text-1xl text-natural my-5">ホーム画面の基本操作について</h1>
-  <div class="h-screen w-auto mx-5 rounded-md bg-white text-dark-black">
-      <p>コンテンツ</p>
+  <div class="relative h-full w-auto mx-5 rounded-md bg-white text-dark-black">
+    <!-- header 開始 -->
+    <%= render 'intros/index_header'%>
+    <!-- header 終了 -->
+    <div class="bg-natural rounded-full text-center mx-3">
+      <h1 class="text-xs lg:text-2xl text-dark-black">ゲストユーザーさん、おはようございます。</h1>
+    </div>
+    <%= render 'intros/index_body' %>
+    <%= render 'intros/index_soliloquy_body' %>
+    <%= render 'intros/index_body' %>
+    <%= render 'intros/index_soliloquy_body' %>
+    <!-- hooter開始 -->
+    <%= render 'intros/index_hooter' %>
+    <!-- hooter終了 -->
   </div>
 </div>
+ <button class="absolute right-12 bottom-32 rounded-full h-16 w-16 flex items-center justify-center bg-light-blue text-natural transition-all	duration-300	 cursor-pointer">
+  <%= heroicon('plus', class_name: 'h-5 w-5') %>
+</button>
+

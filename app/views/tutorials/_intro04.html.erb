@@ -1,6 +1,120 @@
 <div class="h-full w-full bg-light-blue">
   <h1 class="text-1xl text-natural my-5">分析結果の確認について</h1>
-  <div class="h-screen w-auto mx-5 rounded-md bg-white text-dark-black">
-      <p>コンテンツ</p>
+  <div class="relative h-full w-auto mx-5 rounded-md bg-white text-dark-black">
+      <!-- header 開始 -->
+      <%= render 'intros/index_header'%>
+      <!-- header 終了 -->
+      <!-- anlysis body 開始 -->
+      <div class="mb-2">
+        <div class="px-3 relative right-0 bottom-0">
+          <div class="grid grid-cols-10 gap-4 py-2 mr-4">
+            <h1 class="text-md font-thin col-span-6">Emotion chart</h1>
+            <button class="bg-natural text-dark-black rounded-full px-2 py-2 col-span-2 font-thin text-xs">
+              Day
+            </button>
+            <button class="bg-natural text-dark-black rounded-full px-2 py-2 col-span-2 font-thin text-xs">
+              Week
+            </button>
+          </div>
+          <div class="chart-container p-2 bg-natural rounded-3xl shadow-lg flex justify-center">
+              <canvas id="myChart"></canvas>
+          </div>
+        </div>
+
+        <div class="px-3 mt-3 relative right-0 bottom-0">
+          <div class="grid grid-cols-10 gap-4 py-2 mr-4">
+            <h1 class="text-md font-thin col-span-6">Creativity chart</h1>
+            <button class="bg-natural text-dark-black rounded-full px-2 py-1 col-span-2 font-thin text-xs">
+              Day
+            </button>
+            <button class="bg-natural text-dark-black rounded-full px-2 py-2 col-span-2 font-thin text-xs">
+              Week
+            </button>
+          </div>
+          <div class="chart-container p-2 bg-natural rounded-3xl shadow-lg flex justify-center">
+              <canvas id="Chart"></canvas>
+          </div>
+        </div>
+      </div>
+      <!-- anlysis body 終了 -->
+      <!-- hooter開始 -->
+      <%= render 'intros/index_hooter' %>
+      <!-- hooter終了 -->
   </div>
 </div>
+
+<script>
+var ctx = document.getElementById('myChart');
+var myChart = new Chart(ctx, {
+ type: 'line',
+ data: {
+  labels: ["2/2", "2/3", "2/4", "2/5", "2/6", "2/7", "2/8"],
+  datasets: [{
+   label: 'Positive',
+   data: [0.7, 0.9, 0.1, 0.1, 0.9, 0.1, 0.8],
+   fill:true,
+   borderColor:"#FF5F5F",
+   backgroundColor:"rgba(255,182,185,0.9)",
+   pointBackgroundColor: "#FF5F5F",
+   pointBorderWidth: 2,
+   pointHoverBackgroundColor: "#fff",
+   pointHoverBorderWidth: 2,
+   lineTension:0.45
+  }, {
+   label: 'Negative',
+   data: [-0.1, -0.1, -0.8, -0.6, -0.1, -0.8, -0.1],
+   fill:true,
+   borderColor:"#3399FF",
+   backgroundColor:"rgba(185,237,248,0.9)",
+   pointBackgroundColor: "#3399FF",
+   pointBorderWidth: 2,
+   pointHoverBackgroundColor: "#fff",
+   pointHoverBorderWidth: 2,
+   lineTension:0.45
+  }]
+ },
+ options: {
+  responsive: true,
+  scales: {
+      y : {
+              min: -1.0,
+              max: 1.0,
+              stepSize: 0.05,
+              display: false
+          }
+
+  }
+ }
+});
+
+var ctx = document.getElementById('Chart');
+var Chart = new Chart(ctx, {
+ type: 'line',
+ data: {
+  labels: ["2/2 12:22", "2/2 21:32", "2/4 22/44", "2/5 08:43", "2/7 09:23", "2/8 10:56"],
+  datasets: [{
+   label: 'Creativity(％)',
+   data: [230, 344, 500, 100, 230, 1200],
+   fill:true,
+   borderColor: '#f6d55c',
+   backgroundColor: "rgba(240,216,121,0.8)",
+   pointBackgroundColor: "#f6d55c",
+   pointBorderWidth: 2,
+   pointHoverBackgroundColor: "#fff",
+   pointHoverBorderWidth: 2,
+   lineTension:0.45
+  }]
+ },
+ options: {
+  responsive: true,
+  options: {
+        scales: {
+            yAxes: {
+                    beginAtZero:true
+                }
+
+        }
+    }
+ }
+});
+</script>

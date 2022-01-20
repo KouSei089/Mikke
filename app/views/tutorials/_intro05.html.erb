@@ -1,9 +1,11 @@
-<div class="w-full mb-64">
-  <div class="mx-20">
-    <div class="mb-10 font-thin">
-      <h1 class="text-4xl text-dark-black">Mikke</h1>
-      <h2 class="text-2xl text-dark-black">書く瞑想で<br>新しい自分を見つけてみませんか.</h2>
-      <button class="rounted-md bg-blue-100 font-thin"><%= link_to 'Done', root_path %></button>
+<div class="flex flex-col h-screen text-dark-black">
+  <div class="p-8 flex justify-between items-center">
+    <div class="bg-transparent flex justify-start">
+      <%= image_tag 'logo_transparent.png', class: 'object-contain h-64 w-64' %>
     </div>
+  </div>
+  <div class="mb-10 font-thin">
+    <h2 class="text-2xl text-dark-black">書く瞑想で<br>新しい自分を見つけてみませんか.</h2>
+    <button class="rounted-md bg-blue-100 font-thin"><%= link_to 'Done', root_path %></button>
   </div>
 </div>
