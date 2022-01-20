@@ -8,10 +8,15 @@
       <h1 class="text-xs lg:text-2xl text-dark-black">ゲストユーザーさん、おはようございます。</h1>
     </div>
     <%= render 'intros/index_body' %>
+    <%= render 'intros/index_soliloquy_body' %>
     <%= render 'intros/index_body' %>
-    <%= render 'intros/index_body' %>
+    <%= render 'intros/index_soliloquy_body' %>
     <!-- hooter開始 -->
     <%= render 'intros/index_hooter' %>
-    <!-- hooter終了 -->
   </div>
+    <!-- hooter終了 -->
 </div>
+ <button class="absolute right-12 bottom-32 rounded-full h-16 w-16 flex items-center justify-center bg-light-blue text-natural transition-all	duration-300	 cursor-pointer">
+  <%= heroicon('plus', class_name: 'h-5 w-5') %>
+</button>
+
