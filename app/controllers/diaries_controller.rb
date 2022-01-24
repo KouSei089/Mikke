@@ -2,9 +2,9 @@ class DiariesController < ApplicationController
   before_action :set_diary, only: [:show, :edit, :update, :destroy]
 
   def index
-    diaries = current_user.diaries.all
-    soliloquies = current_user.soliloquies.all
-    @diaries_created = diaries | soliloquies
+    @diaries = current_user.diaries.all.order(created_at: :desc)
+    @soliloquies = current_user.soliloquies.all.order(created_at: :desc)
+    @diaries_created = @diaries | @soliloquies
     @diaries_created.sort! { |a, b| b.created_at <=> a.created_at }
   end
 
