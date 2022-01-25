@@ -1,10 +1,10 @@
-<div class="bg-natural rounded-full m-5 text-center">
+<div class="rounded-full m-5 text-center">
   <% if Time.current.hour > 5 && Time.current.hour < 11  %>
-    <h1 class="text-3xl text-dark-black mb-2"><%= "#{current_user.username}さん、おはようございます。" %></h1>
+    <h1 class="text-3xl lg:text-sm text-dark-black mb-2"><%= "#{current_user.username}さん、おはようございます。" %></h1>
   <% elsif Time.current.hour > 12 && Time.current.hour < 18 %>
-    <h1 class="text-3xl text-dark-black mb-2"><%= "#{current_user.username}さん、こんにちは。" %></h1>
+    <h1 class="text-3xl lg:text-sm text-dark-black mb-2"><%= "#{current_user.username}さん、こんにちは。" %></h1>
   <% else %>
-    <h1 class="text-3xl text-dark-black mb-2"><%= "#{current_user.username}さん、こんばんは。" %></h1>
+    <h1 class="text-3xl lg:text-sm text-dark-black mb-2"><%= "#{current_user.username}さん、こんばんは。" %></h1>
   <% end %>
-  <h1 class="text-3xl text-dark-black mb-2 font-thin">今日は、<%= I18n.l(Date.today, format: :long) %>です。</h1>
+  <h1 class="text-3xl lg:text-sm text-dark-black mb-2 font-thin">今日は、<%= I18n.l(Date.today, format: :long) %>です。</h1>
 </div>

@@ -3,20 +3,20 @@
   <p class="text-center text-5xl text-dark-black font-hairline">設定</p>
 
   <div class="flex-col mx-32">
-    <div class="text-center rounded-full w-full h-48 py-14 my-12 bg-natural text-dark-black">
+    <div class="text-center rounded-full w-full h-48 py-14 my-12 bg-white text-dark-black">
       <div class="flex justify-center">
-      <%= heroicon('user', style: :outline, class_name: 'h-24 w-24 mr-10') %>
+        <%= heroicon('user', style: :outline, class_name: 'h-24 w-24 mr-10') %>
         <%= link_to @current_user.username, new_user_path, class: "rounded-full text-5xl self-center" %>
         <%= link_to "編集", edit_setting_profile_path %>
       </div>
     </div>
 
-    <div class="flex justify-center rounded-full w-full h-48 bg-natural text-dark-black">
+    <div class="flex justify-center rounded-full w-full h-48 bg-white text-dark-black">
         <%= link_to "リマインダー", "#", class: "pt-16 px-48 text-5xl" %>
     </div>
   </div>
 
-  <div class="rounded-3xl bg-natural py-20 px-48 mt-10 mb-20 mx-10">
+  <div class="rounded-3xl bg-white py-20 px-48 mt-10 mb-20 mx-10">
     <div class="border-b-2 border-dark-black mb-12">
       <h1 class="text-center text-5xl text-dark-black pb-5">チュートリアル</h1>
     </div>
