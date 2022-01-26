@@ -1,5 +1,7 @@
 class Diary < ApplicationRecord
   belongs_to :user
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to :sentiment
 
   def data_create_logic
     self.creativity = text.length / 5
