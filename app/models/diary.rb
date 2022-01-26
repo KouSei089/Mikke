@@ -1,5 +1,10 @@
 class Diary < ApplicationRecord
   belongs_to :user
+  has_many :diary_sentiments, dependent: :destroy
+
+  def sentiments
+    diary_sentiments.map(&:diary)
+  end
 
   def data_create_logic
     self.creativity = text.length / 5

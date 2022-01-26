@@ -34,7 +34,8 @@ class UserSessionsController < ApplicationController
         creativity: rand(10..100),
         emotion_point: rand(-1.0..1.0),
         word_count: rand(20..600),
-        created_at: Faker::Date.backward(days: 7)
+        created_at: Faker::Date.backward(days: 7),
+        sentiment_ids: rand(1..5)
       )
     end
     10.times do
@@ -44,6 +45,12 @@ class UserSessionsController < ApplicationController
         created_at: Faker::Date.backward(days: 7)
       )
     end
+    # 3.times do
+    #   DiarySentiment.create!(
+    #     diary_id: 1,
+    #     sentiment_id: rand(1..5)
+    #   )
+    # end
     auto_login(guest_user)
     redirect_to root_path, success: 'ゲストとしてログインしました'
   end
