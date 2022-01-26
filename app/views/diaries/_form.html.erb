@@ -1,4 +1,4 @@
-<div class="bg-white rounded px-8 pt-6 pb-8 mb-4">
+<div class="bg-natural rounded px-8 pt-6 pb-8 mb-4">
   <%= form_with model: @diary, local: true do |f| %>
     <div class="mb-4">
       <div class="flex justify-between mb-5">
@@ -20,6 +20,7 @@
         <span class="absolute right-0 text-dark-black font-thin" id="inputpercentage"><%= @diary.creativity %>％</span>
         <span class="absolute left-0 text-dark-black font-thin" id="inputlength"><%= @diary.word_count %>文字</span>
       </div>
+      <%= f.collection_check_boxes(:diary_sentiments, Sentiment.all, :id, :name, {}, {class: 'check_box', id:'diary_sentiments'}) %>
     </div>
   <% end %>
 </div>
