@@ -34,7 +34,8 @@ class UserSessionsController < ApplicationController
         creativity: rand(10..100),
         emotion_point: rand(-1.0..1.0),
         word_count: rand(20..600),
-        created_at: Faker::Date.backward(days: 7)
+        created_at: Faker::Date.backward(days: 7),
+        sentiment_id: rand(1..5)
       )
     end
     10.times do
