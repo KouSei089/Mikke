@@ -44,7 +44,7 @@ class DiariesController < ApplicationController
   private
 
     def diary_params
-      params.require(:diary).permit(:title, :text, :creativity, :emotion_point)
+      params.require(:diary).permit(:title, :text, :creativity, :emotion_point, { sentiment_ids: [] })
     end
 
     def set_diary

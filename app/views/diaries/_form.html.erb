@@ -20,7 +20,9 @@
         <span class="absolute right-0 text-dark-black font-thin" id="inputpercentage"><%= @diary.creativity %>％</span>
         <span class="absolute left-0 text-dark-black font-thin" id="inputlength"><%= @diary.word_count %>文字</span>
       </div>
-      <%= f.collection_check_boxes("#", "#", :id, :name, {}, {class: 'check_box', id:'diary_sentiments'}) %>
+      <%= f.collection_check_boxes(:sentiment_ids, Sentiment.all, :id, :name) do |t| %>
+        <%= t.label { t.check_box + t.text } %>
+      <% end %>
     </div>
   <% end %>
 </div>
