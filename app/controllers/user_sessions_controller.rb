@@ -37,20 +37,16 @@ class UserSessionsController < ApplicationController
         created_at: Faker::Date.backward(days: 7),
         sentiment_ids: rand(1..5)
       )
-    end
-    10.times do
+      DiarySentiment.create!(
+        diary_id: rand(1..5),
+        sentiment_id: rand(1..5)
+      )
       Soliloquy.create!(
         user_id: guest_user.id,
         text: Faker::Lorem.sentence,
         created_at: Faker::Date.backward(days: 7)
       )
     end
-    # 3.times do
-    #   DiarySentiment.create!(
-    #     diary_id: 1,
-    #     sentiment_id: rand(1..5)
-    #   )
-    # end
     auto_login(guest_user)
     redirect_to root_path, success: 'ゲストとしてログインしました'
   end

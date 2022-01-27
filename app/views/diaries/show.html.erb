@@ -29,6 +29,9 @@
           <div class="rounded-full h-32 w-32 flex items-center justify-center bg-white text-dark-black">
             <%= link_to heroicon('trash', style: :outline,class_name: 'h-12 w-12'), @diary, method: :delete, data: { confirm: '本当に削除しますか？' } %>
           </div>
+        <% @sentiments_date.each do |sentiment_date| %>
+          <%= sentiment_date %>
+        <% end %>
         </div>
       </div>
     </div>
