@@ -21,10 +21,34 @@
         <span class="absolute right-0 text-dark-black font-thin" id="inputpercentage"><%= @diary.creativity %>％</span>
         <span class="absolute left-0 text-dark-black font-thin" id="inputlength"><%= @diary.word_count %>文字</span>
       </div>
-      <%= f.collection_check_boxes(:sentiment_ids, Sentiment.all, :id, :name) do |t| %>
+      <%= f.collection_check_boxes :sentiment_ids, Sentiment.all, :id, :name, onclick: "Climit()" do |t| %>
         <%= t.label { t.check_box + t.text } %>
       <% end %>
     </div>
   <% end %>
 </div>
+
+<script>
+var limit =3; //チェックできる数
+Flag = new Array(); //チェックの有無を格納する配列
+
+function Climit(){
+  var v=0; //チェックの合計
+  var Myname = document.getElementsByName("diary[sentiment_ids][]");// 指定したnameの要素をすべて取得
+for (i=0; i<Myname.length; i++){
+    Flag[i]=i; // 配列Flagを初期化
+if(Myname[i].checked){Flag[i]="chk"; // チェックが入っていれば文字列 "chk" を代入
+v++;}//チェックの合計数を 1 増やします
+   }
+
+if(v>=limit){ //チェックの合計数が制限数になれば
+for (i=0; i<Myname.length; i++){
+if(Flag[i]=="chk"){Myname[i].disabled =false;}
+else{Myname[i].disabled = true;}
+ }
+}
+else{for (i=0; i<Myname.length; i++)
+Myname[i].disabled =false;}
+}
+</script>
 
