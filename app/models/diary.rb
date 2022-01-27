@@ -1,6 +1,10 @@
 class Diary < ApplicationRecord
   belongs_to :user
 
+  has_many :diary_sentiments, dependent: :destroy
+  has_many :sentiments, through: :diary_sentiments
+  accepts_nested_attributes_for :diary_sentiments, allow_destroy: true
+
   def data_create_logic
     self.creativity = text.length / 5
     self.word_count = text.length
