@@ -16,7 +16,7 @@ class DiariesController < ApplicationController
     @diary = current_user.diaries.build(diary_params)
     @diary.data_create_logic
     if @diary.save
-      redirect_to root_url, notice: "筆記開示を登録しました。"
+      redirect_to sentiment_diaries_url, notice: "筆記開示を登録しました。"
     else
       flash.now[:alert] = "空白項目があります。"
       render :new
@@ -42,6 +42,10 @@ class DiariesController < ApplicationController
   def destroy
     @diary.destroy
     redirect_to root_url, alert: "筆記開示を削除しました。"
+  end
+
+  def sentiment
+    @diary = Diary.new
   end
 
   private
