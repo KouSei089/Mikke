@@ -16,11 +16,16 @@ class DiariesController < ApplicationController
     @diary = current_user.diaries.build(diary_params)
     @diary.data_create_logic
     if @diary.save
-      redirect_to sentiment_diaries_url, notice: "筆記開示を登録しました。"
+      redirect_to root_url, notice: "筆記開示を登録しました。"
     else
       flash.now[:alert] = "空白項目があります。"
       render :new
     end
+  end
+
+  def sentiment_confirm
+    @diary = Diary.find_or_initialize_by(id: params[:id])
+    @diary.assign_attributes(diary_params)
   end
 
   def show

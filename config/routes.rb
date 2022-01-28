@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resource :tutorial, only: [:show]
   resources :diaries do
     collection do
-      get 'sentiment'
+      post 'sentiment_confirm'
     end
   end
 

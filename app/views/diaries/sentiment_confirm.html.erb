@@ -1,0 +1,18 @@
+<%= form_with model: @diary, local: true do |f| %>
+<div class="flex justify-between mb-5 px-64">
+  <div class="flex justify-start">
+    <%= render 'shared/back_button' %>
+    <h1 class="text-4xl text-dark-black">今の感情を選んでみましょう。</h1>
+  </div>
+  <%= button_tag type: 'submit', class: "text-6xl text-light-blue" do %>
+    <i class="fab fa-telegram-plane"></i>
+  <% end %>
+</div>
+<section class="flex justify-center mx-auto">
+  <%= f.collection_check_boxes :sentiment_ids, Sentiment.all, :id, :name do |t| %>
+    <%= t.label(class: "relative bg-yellow-200 text-dark-black py-3 px-5 m-5 rounded-tl-3xl rounded-tr-2xl rounded-bl-2xl rounded-br-3xl"){ t.check_box(class: "absolute inset-0 focus:ring-0 border-yellow-200 text-yellow-400 rounded-full") + t.text } %>
+  <% end %>
+</section>
+<%= f.hidden_field :title %>
+<%= f.hidden_field :text %>
+<% end %>
