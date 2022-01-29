@@ -8,7 +8,7 @@ ja:
         password_confirmation: パスワード（確認用）
       diary:
         title: "タイトル"
-        text: "筆記開示"
+        text: "テキスト"
         sentiment_ids: "感情選択"
       soliloquy:
         text: "テキスト"
