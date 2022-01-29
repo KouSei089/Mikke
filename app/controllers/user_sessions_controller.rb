@@ -29,7 +29,7 @@ class UserSessionsController < ApplicationController
     20.times do
       Diary.create!(
         user_id: guest_user.id,
-        title: Faker::Lorem.word,
+        title: Faker::Book.title,
         text: Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false),
         creativity: rand(10..100),
         emotion_point: rand(-1.0..1.0),
