@@ -1,5 +1,17 @@
 ja:
   activerecord:
+    attributes:
+      user:
+        username: 名前
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: パスワード（確認用）
+      diary:
+        title: "タイトル"
+        text: "筆記開示"
+        sentiment_ids: "感情選択"
+      soliloquy:
+        text: "テキスト"
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'

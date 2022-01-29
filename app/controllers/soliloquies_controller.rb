@@ -6,12 +6,11 @@ class SoliloquiesController < ApplicationController
   end
 
   def create
-    soliloquy = current_user.soliloquies.build(soliloquy_params)
-    soliloquy.emotion_point = soliloquy.sentiment_score
-    if soliloquy.save
+    @soliloquy = current_user.soliloquies.build(soliloquy_params)
+    @soliloquy.emotion_point = @soliloquy.sentiment_score
+    if @soliloquy.save
       redirect_to root_url, notice: 'つぶやきしました。'
     else
-      flash.now[:alert] = '空白項目があります。'
       render :new
     end
   end

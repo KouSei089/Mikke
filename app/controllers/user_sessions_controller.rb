@@ -7,9 +7,9 @@ class UserSessionsController < ApplicationController
     @user = login(params[:email], params[:password])
 
     if @user
-      redirect_back_or_to root_url, notice: 'Login successful'
+      redirect_back_or_to root_url, notice: 'ログインしました。'
     else
-      redirect_to login_url, alert: 'ログインに失敗しました'
+      redirect_to login_url, alert: 'ログインに失敗しました。'
     end
   end
 

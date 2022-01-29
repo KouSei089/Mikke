@@ -1,5 +1,8 @@
 class Soliloquy < ApplicationRecord
+  validates :text, presence: true
+
   belongs_to :user
+
   def sentiment_score
     require 'net/http'
     require 'uri'

@@ -3,7 +3,7 @@
     <% model.errors.full_messages.each do |message| %>
       <li>
         <div x-data="{ isShow: true }">
-          <div x-show="isShow" class="bg-red-100 text-red-600 px-2 py-3 mb-1 mx-32 rounded-lg relative" role="alert">
+          <div x-show="isShow" class="bg-red-100 text-red-600 px-2 py-3 mb-5 mx-32 rounded-lg relative" role="alert">
             <%= heroicon('information-circle',style: :outline, class_name: 'w-5 h-5 inline mr-3') %>
             <span><%= message %></span>
             <span class="absolute top-0 bottom-0 right-0 px-4 py-3">

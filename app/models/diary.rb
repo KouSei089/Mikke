@@ -5,6 +5,7 @@ class Diary < ApplicationRecord
   has_many :sentiments, through: :diary_sentiments
   accepts_nested_attributes_for :diary_sentiments, allow_destroy: true
 
+  validates :text, presence: true
   validates :sentiment_ids, presence: true
 
   def data_create_logic
