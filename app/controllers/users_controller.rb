@@ -11,7 +11,6 @@ class UsersController < ApplicationController
       auto_login(@user)
       redirect_to intro_url, notice: 'ユーザーを登録しました。'
     else
-      flash[:alert] = '空白項目があります。'
       render :new
     end
   end

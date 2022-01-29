@@ -1,5 +1,6 @@
 <div class="px-20">
   <%= form_with model: @soliloquy, local: true do |f|%>
+    <%= render 'shared/error_messages', model: f.object %>
     <div class="flex justify-between mb-5">
       <div class="flex justify-start">
         <%= render 'shared/back_button' %>
