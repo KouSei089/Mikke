@@ -1,7 +1,7 @@
 <%= render 'shared/flash_message' %>
 <%= render 'diaries/greeting' %>
 <h1 class="text-dark-black text-center font-thin text-lg"><%= current_user.username %>さんの最近の感情です。</h1>
-<div class="flex justify-center mx-64">
+<div class="flex flex-wrap mx-64">
   <% @diaries.each do |diary|%>
     <% diary.sentiments.map(&:name).first(10).each do |sentiment_date| %>
       <% if sentiment_date == "楽しい" %>
