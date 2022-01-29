@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root 'diaries#index'
   resource :initial, only: [:new]
+  resource :trivia, only: [:show]
   resource :setting, only: [:show] do
     resource :profile, only: [:edit, :update]
   end
