@@ -10,7 +10,6 @@
         <%= link_to "編集", edit_setting_profile_path %>
       </div>
     </div>
-
     <!-- hidden function -->
     <!--<div class="flex justify-center rounded-full w-full h-48 bg-white text-dark-black">
         <%= link_to "リマインダー", "#", class: "pt-16 px-48 text-5xl" %>
@@ -21,11 +20,11 @@
     <div class="border-b-2 border-dark-black mb-12">
       <h1 class="text-center text-5xl text-dark-black pb-5">チュートリアル</h1>
     </div>
-    <div class="border-b-2 border-dark-black mb-12">
-      <h1 class="text-center text-5xl text-dark-black pb-5">ご利用規約</h1>
+    <div class="border-b-2 border-dark-black mb-12 text-center pb-5">
+      <%= link_to 'ご利用規約', page_path('terms'), class: "text-5xl text-dark-black" %>
     </div>
-    <div class="border-b-2 border-dark-black mb-8">
-      <h1 class="text-center text-5xl text-dark-black pb-5">プライバシーポリシー</h1>
+    <div class="border-b-2 border-dark-black mb-12 text-center pb-5">
+      <%= link_to 'プライバシーポリシー', page_path('privacy_policy'), class: "text-5xl text-dark-black" %>
     </div>
     <div class="border-b-2 border-dark-black mb-8">
       <h1 class="text-center text-5xl text-dark-black pb-5">フィードバック</h1>
