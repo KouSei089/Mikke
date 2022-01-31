@@ -2,7 +2,7 @@ class DiariesController < ApplicationController
   before_action :set_diary, only: [:show, :edit, :update, :destroy]
 
   def index
-    @diaries = current_user.diaries.all.order(created_at: :desc)
+    @diaries = Diary.paginate(page: params[:page], per_page: 10).order(created_at: :desc)
     @soliloquies = current_user.soliloquies.all.order(created_at: :desc)
     @diaries_created = @diaries | @soliloquies
     @diaries_created.sort! { |a, b| b.created_at <=> a.created_at }
