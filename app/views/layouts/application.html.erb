@@ -18,16 +18,16 @@
   </head>
 
   <body>
-  <div class="w-full mb-64 lg:mb-0 bg-natural">
-    <% if current_page?(intro_path) %>
-      <%= yield %>
-    <% elsif current_user %>
-      <%= render 'shared/header' %>
-      <%= yield %>
-      <%= render 'shared/hooter' %>
-    <% else %>
-      <%= yield %>
-    <% end %>
-  </div>
+    <div class="w-full pb-64 lg:pb-0 bg-natural">
+      <% if current_page?(intro_path) %>
+        <%= yield %>
+      <% elsif current_user %>
+        <%= render 'shared/header' %>
+        <%= yield %>
+        <%= render 'shared/hooter' %>
+      <% else %>
+        <%= yield %>
+      <% end %>
+    </div>
   </body>
 </html>

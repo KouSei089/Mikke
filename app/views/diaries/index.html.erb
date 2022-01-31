@@ -48,6 +48,25 @@
 </div>
 
 <% if @diaries_created.present? %>
+  <div class="h-full mt-20 mx-10">
+    <div class="grid grid-cols-12 gap-4">
+      <div class="col-span-7">
+        <% @diaries.each do |diary| %>
+          <div class="flex flex-col">
+            <%= render 'diaries/diary_content02', diary: diary %>
+          </div>
+        <% end %>
+      </div>
+      <div class="col-span-5">
+        <% @soliloquies.each do |soliloquy| %>
+          <div class="flex flex-col">
+            <%= render 'diaries/soliloquy_content02', soliloquy: soliloquy %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <!--
   <div class="visible lg:invisible grid grid-cols-12 gap-4">
   <% @diaries_created.each do |diary_created| %>
     <% if diary_created.class == Diary %>
@@ -57,22 +76,10 @@
     <% end %>
   <% end %>
   </div>
+  -->
   <!-- 親要素でjustify-aroundで横並びにして.子要素でflex-colで縦並びにしている -->
   <!-- おそらく修正が必要なのは，そのさらに下の子要素のコードである. -->
   <!-- invisibleでは，非表示になるだけなので.条件分岐で表示させる方法に変更する必要がある -->
-  <div class="invisible lg:visible flex justify-around w-full">
-    <% @diaries.each do |diary| %>
-      <div class="flex flex-col">
-      <%= render 'diaries/diary_content02', diary: diary %>
-      <div>
-    <% end %>
-
-    <%= @soliloquies.each do |soliloquy| %>
-      <div class="flex flex-col">
-      <%= render 'diaries/soliloquy_content02', soliloquy: soliloquy %>
-      <div>
-    <% end %>
-  </div>
 <% else %>
   <div class="text-6xl text-dark-black mb-2 m-10">
     <i class="fas fa-box-open"></i>
