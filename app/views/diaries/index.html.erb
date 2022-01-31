@@ -88,3 +88,7 @@
   <h1 class="text-3xl text-dark-black mb-2 m-10">新しい投稿をしてみませんか</h1>
 <% end %>
 <%= render 'diaries/submit_button' %>
+
+<div class="text-center">
+  <%= will_paginate @diaries %>
+</div>

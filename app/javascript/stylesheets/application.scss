@@ -7,3 +7,15 @@ $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
 @import "~@fortawesome/fontawesome-free/scss/solid";
 @import "~@fortawesome/fontawesome-free/scss/brands";
 @import '~@fortawesome/fontawesome-free/scss/v4-shims';
+
+.pagination {
+  @apply flex justify-center;
+  @apply my-2 py-2;
+}
+.pagination * {
+  @apply px-3 py-2 mx-2;
+  @apply text-dark-black font-thin no-underline bg-white rounded-lg;
+}
+.pagination a:hover {
+  @apply font-thin text-natural bg-dark-black;
+}
