@@ -1,6 +1,6 @@
 <div x-data="{ open: false }"
- class="visible lg:invisible fixed right-32 bottom-64">
-  <div class="fixed right-32 bottom-64 z-20">
+ class="visible lg:invisible fixed right-28 bottom-64">
+  <div class="fixed right-28 bottom-64 z-20">
     <template x-if="open">
       <button class="rounded-full h-40 w-40 flex items-center justify-center bg-light-blue text-natural transition-all	duration-300	 cursor-pointer">
       <%= heroicon('x', class_name: 'h-16 w-16') %>
@@ -27,7 +27,7 @@
         <div @click.stop=""
              x-show="open"
              class="flex flex-col shadow-lg overflow-hidden z-10">
-          <div class="z-20 absolute right-32 bottom-96 pb-14" id="modal1_label">
+          <div class="z-20 absolute right-28 bottom-96 pb-14" id="modal1_label">
             <div class="flex justify-end items-center z-20">
               <p class="text-4xl mr-4 text-natural">投稿</p>
               <div class="rounded-full h-40 w-40 flex items-center justify-center bg-light-blue text-natural mb-6">
