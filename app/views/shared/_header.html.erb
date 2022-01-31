@@ -46,7 +46,7 @@
         <div x-show="open" x-transition:enter="transition ease-out duration-700" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-500" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full md:max-w-screen-sm md:w-screen mt-2 origin-top-right">
           <div class="px-2 pt-2 pb-2 bg-white rounded-md">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <%= link_to new_diary_path, class: 'flex row items-start rounded-lg bg-transparent p-2 text-dark-black text-opacity-50 hover:text-dark-black hover:bg-gray-50 focus:text-dark-black focus:bg-gray-200 focus:outline-none focus:shadow-outline transition duration-500' do %>
+              <%= link_to edit_setting_profile_path, class: 'flex row items-start rounded-lg bg-transparent p-2 text-dark-black text-opacity-50 hover:text-dark-black hover:bg-gray-50 focus:text-dark-black focus:bg-gray-200 focus:outline-none focus:shadow-outline transition duration-500' do %>
                 <div class="bg-red-300 text-white rounded-lg p-3">
                   <%= heroicon 'identification', class_name: 'md:h-6 md:w-6 h-4 w-4' %>
                 </div>
