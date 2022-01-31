@@ -27,7 +27,7 @@
             <%= link_to heroicon('pencil-alt', style: :outline,class_name: 'h-12 w-12'), edit_diary_path(@diary) %>
           </div>
           <div class="rounded-full h-32 w-32 flex items-center justify-center bg-white text-dark-black">
-            <%= link_to heroicon('trash', style: :outline,class_name: 'h-12 w-12'), @diary, method: :delete, data: { confirm: '本当に削除しますか？' } %>
+            <%= render 'shared/delete', object: @diary %>
           </div>
         <% @sentiments_date.each do |sentiment_date| %>
           <% if sentiment_date == "楽しい" %>
@@ -72,3 +72,4 @@
       </div>
     </div>
   </div>
+
