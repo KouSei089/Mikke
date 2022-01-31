@@ -7,7 +7,7 @@
     </div>
 
     <div class="rounded-full h-40 w-40 flex items-center justify-center bg-natural text-dark-black hover:bg-dark-black hover:text-natural transition-all	duration-500	 cursor-pointer">
-        <%= link_to heroicon('chart-bar', class_name: 'h-24 w-24'), analysis_path %>
+        <%= link_to heroicon('chart-bar', class_name: 'h-24 w-24'), analysis_path, "data-turbolinks": false %>
     </div>
 
     <div class="rounded-full h-40 w-40 flex items-center justify-center bg-natural text-dark-black hover:bg-dark-black hover:text-natural transition-all	duration-500	 cursor-pointer">
@@ -26,7 +26,7 @@
                             <ul>
                                 <li><%= link_to 'Totorial', tutorial_path, class: "focus:outline-none focus:underline font-thin text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50" %></li>
                                 <li class="mt-6"><%= link_to 'Trivia', "#", class: "focus:outline-none focus:underline font-thin text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50" %></li>
-                                <li class="mt-6"><%= link_to 'Analysis', analysis_path, class: "focus:outline-none focus:underline font-thin text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50" %></li>
+                                <li class="mt-6"><%= link_to 'Analysis', analysis_path, class: "focus:outline-none focus:underline font-thin text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50", "data-turbolinks": false %></li>
                             </ul>
                         </div>
                         <div class="w-full lg:w-1/2 px-6">
