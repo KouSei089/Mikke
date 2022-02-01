@@ -11,25 +11,25 @@
     <div class="text-1xl text-dark-black font-thin"><%= l @diary.created_at, format: :long %></div>
   </div>
     <div class="bg-white rounded-3xl">
-      <div class="p-16">
+      <div class="py-8 px-16">
         <div class="mt-8 text-center">
           <p class="text-gray-600 font-thin"><%=safe_join(@diary.text.split("\n"),tag(:br))%></p>
         </div>
         <div class="relative pt-1 mt-3">
-          <div class="overflow-hidden h-5 mb-4 text-xs flex rounded bg-indigo-100 shadow-inner">
-            <div id="stylewidth" style="width:<%= @diary.creativity %>%" class="shadow-inner flex flex-col text-center whitespace-nowrap text-white justify-center bg-indigo-400"></div>
+          <%= render 'diaries/progressbar', diary_created: @diary %>
+          <div class="mt-5">
+            <span class="absolute right-0 text-dark-black font-thin"><%= @diary.creativity %>％</span>
+            <span class="absolute left-0 text-dark-black font-thin"><%= @diary.word_count %>文字</span>
           </div>
-          <span class="absolute right-0 text-dark-black font-thin"><%= @diary.creativity %>％</span>
-          <span class="absolute left-0 text-dark-black font-thin"><%= @diary.word_count %>文字</span>
         </div>
         <div class="flex justify-center mt-10">
           <%= render 'shared/sentiment_design', object: @diary %>
         </div>
         <div class="flex justify-end mt-10">
-          <div class="rounded-full h-32 w-32 flex items-center justify-center bg-white text-dark-black hover:opacity-75">
-            <%= link_to heroicon('pencil-alt', style: :outline,class_name: 'h-12 w-12'), edit_diary_path(@diary) %>
+          <div class="flex items-center justify-center bg-white text-dark-black hover:opacity-75 mr-5">
+            <%= link_to heroicon('pencil-alt', style: :outline,class_name: 'h-10 w-10'), edit_diary_path(@diary) %>
           </div>
-          <div class="rounded-full h-32 w-32 flex items-center justify-center bg-white text-dark-black hover:opacity-75">
+          <div class="flex items-center justify-center bg-white text-dark-black hover:opacity-75">
             <%= render 'shared/delete', object: @diary %>
           </div>
         </div>
