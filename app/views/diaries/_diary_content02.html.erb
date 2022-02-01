@@ -7,9 +7,9 @@
     </div>
     <h1 class="text-lg text-dark-black font-thin"><%= l diary.created_at, format: :year_month %></h1>
   </div>
-  <div class="p-8">
+  <div class="p-8 w-full">
     <div class="bg-white rounded-3xl relative">
-      <div class="py-16 mx-48 w-64">
+      <div class="py-16 w-auto mx-20">
         <%= render 'diaries/medal', diary_created: diary %>
         <div class="mt-8 text-center">
           <%= render 'diaries/content_title', diary_created: diary %>
@@ -17,6 +17,9 @@
         <div class="bg-white rounded">
           <%= render 'diaries/progressbar', diary_created: diary %>
           <p class="text-sm text-center text-dark-black font-thin">Creativity</p>
+        </div>
+        <div class="flex justify-center mt-5">
+          <%= render 'shared/sentiment_design', object: diary %>
         </div>
       </div>
     </div>

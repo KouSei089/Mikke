@@ -3,47 +3,7 @@
 <h1 class="text-dark-black text-center font-thin text-lg"><%= current_user.username %>さんの最近の感情です。</h1>
 <div class="flex flex-wrap mx-64">
   <% @diaries_sentiments.each do |diary_sentiments| %>
-    <% diary_sentiments.sentiments.map(&:name).each do |sentiment_date| %>
-      <% if sentiment_date == "楽しい" %>
-      <div>
-        <div class="relative rounded-tl-3xl rounded-tr-2xl rounded-bl-2xl rounded-br-3xl w-20 h-10 bg-yellow-200 text-dark-black">
-          <div class="absolute inset-y-2 inset-x-3.5">
-            <%= sentiment_date %>
-          </div>
-        </div>
-      </div>
-      <% elsif sentiment_date == "怒り" %>
-        <div class="relative rounded-tl-2xl rounded-tr-3xl rounded-bl-xl rounded-br-2xl w-20 h-10 bg-red-200 text-dark-black">
-          <div class="absolute inset-y-2 inset-x-5">
-            <%= sentiment_date %>
-          </div>
-        </div>
-      <% elsif sentiment_date == "悲しい" %>
-        <div class="relative rounded-tl-3xl rounded-tr-3xl rounded-bl-2xl rounded-br-xl w-20 h-10 bg-light-blue text-dark-black">
-          <div class="absolute inset-y-2 inset-x-3.5">
-            <%= sentiment_date %>
-          </div>
-        </div>
-      <% elsif sentiment_date == "恐怖" %>
-        <div class="relative rounded-tl-2xl rounded-tr-3xl rounded-bl-2xl rounded-br-xl w-20 h-10 bg-gray-200 text-dark-black">
-          <div class="absolute inset-y-2 inset-x-5">
-            <%= sentiment_date %>
-          </div>
-        </div>
-      <% elsif sentiment_date == "嬉しい" %>
-        <div class="relative rounded-tl-2xl rounded-tr-xl rounded-bl-2xl rounded-br-3xl w-20 h-10 bg-pink-100 text-dark-black">
-          <div class="absolute inset-y-2 inset-x-3.5">
-            <%= sentiment_date %>
-          </div>
-        </div>
-      <% else %>
-        <div class="relative rounded-tl-3xl rounded-tr-3xl rounded-bl-2xl rounded-br-xl w-20 h-10 bg-green-200 text-dark-black">
-          <div class="absolute inset-y-2 inset-x-4">
-            <%= sentiment_date %>
-          </div>
-        </div>
-      <% end %>
-    <% end %>
+    <%= render 'shared/sentiment_design', object: diary_sentiments %>
   <% end %>
 </div>
 
