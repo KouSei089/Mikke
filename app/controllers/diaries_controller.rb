@@ -30,10 +30,7 @@ class DiariesController < ApplicationController
     @sentiments_date = Sentiment.all.map(&:name)
   end
 
-  def show
-    sentiments = @diary.sentiments
-    @sentiments_date = sentiments.map { |sentiment| sentiment[:name] }
-  end
+  def show; end
 
   def edit; end
 
