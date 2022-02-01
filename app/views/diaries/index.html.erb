@@ -2,8 +2,8 @@
 <%= render 'diaries/greeting' %>
 <h1 class="text-dark-black text-center font-thin text-lg"><%= current_user.username %>さんの最近の感情です。</h1>
 <div class="flex flex-wrap mx-64">
-  <% @diaries.each do |diary|%>
-    <% diary.sentiments.map(&:name).first(10).each do |sentiment_date| %>
+  <% @diaries_sentiments.each do |diary_sentiments| %>
+    <% diary_sentiments.sentiments.map(&:name).each do |sentiment_date| %>
       <% if sentiment_date == "楽しい" %>
       <div>
         <div class="relative rounded-tl-3xl rounded-tr-2xl rounded-bl-2xl rounded-br-3xl w-20 h-10 bg-yellow-200 text-dark-black">
