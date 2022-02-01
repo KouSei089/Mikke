@@ -9,7 +9,7 @@
   <% end %>
 </div>
 <section class="grid grid-cols-3 lg:grid-cols-6 gap-4 mx-auto xl:mx-64 text-center">
-  <%= f.collection_check_boxes :sentiment_ids, Sentiment.all, :id, :name do |t| %>
+  <%= f.collection_check_boxes :sentiment_ids, Sentiment.all, :id, :name,{ checked: @diary.sentiment_ids.map(&:to_param) } do |t| %>
     <% if ["激怒", "怒り", "苛立ち"].include?(t.text)  %>
       <%= t.label(class: "relative bg-red-200 text-dark-black py-3 px-5 mx-20 my-5 lg:m-5 xl:m-8 rounded-tl-3xl rounded-tr-2xl rounded-bl-2xl rounded-br-3xl"){ t.check_box(class: "absolute inset-0 focus:ring-0 border-red-200 text-red-400 rounded-full") + t.text } %>
     <% elsif ["警戒", "予期", "関心"].include?(t.text) %>
