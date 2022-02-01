@@ -38,7 +38,7 @@ class UserSessionsController < ApplicationController
         sentiment_ids: rand(1..5)
       )
       DiarySentiment.create!(
-        diary_id: rand(1..5),
+        diary_id: rand(1..3),
         sentiment_id: rand(1..5)
       )
       Soliloquy.create!(

@@ -26,6 +26,7 @@ class DiariesController < ApplicationController
   def sentiment_confirm
     @diary = Diary.find_or_initialize_by(id: params[:id])
     @diary.assign_attributes(diary_params)
+    @sentiments_date = Sentiment.all.map(&:name)
   end
 
   def show
