@@ -5,7 +5,7 @@ class ProfilesController < ApplicationController
 
   def update
     if @user.update(user_params)
-      redirect_to setting_url, notice: '変更完了'
+      redirect_to root_url, notice: '名前を変更しました。'
     else
       render :edit
     end

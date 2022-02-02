@@ -1,14 +1,14 @@
-<% if diary_created.creativity > 100 %>
+<% if object.creativity > 100 %>
   <div x-data="{ open: false }">
     <%= render 'diaries/medal_description' %>
     <button @click="open = !open"><i class="fas fa-medal text-5xl text-yellow-500"></i></button>
   </div>
-<% elsif diary_created.creativity > 85 %>
+<% elsif object.creativity > 85 %>
   <div x-data="{ open: false }">
     <%= render 'diaries/medal_description' %>
     <button @click="open = !open"><i class="fas fa-medal text-5xl text-gray-300"></i></button>
   </div>
-<% elsif diary_created.creativity > 70 %>
+<% elsif object.creativity > 70 %>
   <div x-data="{ open: false }">
     <%= render 'diaries/medal_description' %>
     <button @click="open = !open"><i class="fas fa-medal text-5xl text-yellow-800"></i></button>
