@@ -1,3 +1,5 @@
 class TutorialsController < ApplicationController
-  def show; end
+  def show
+    @trivia = Trivia.all
+  end
 end
