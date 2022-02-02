@@ -1,24 +1,17 @@
 <%= render 'shared/top_logo' %>
-
 <%= form_with model: @user, local: true do |f| %>
   <%= render 'shared/error_messages', model: f.object %>
-
   <div class="flex-col mx-32">
     <%= f.text_field :username, class: 'text-center rounded-full w-full py-14 my-12 bg-natural text-dark-black placeholder-gray-200 text-5xl border-natural shadow-sm focus:border-natural focus:ring focus:ring-natural focus:ring-opacity-50 far', placeholder: "\uf007 User Name" %>
-
     <%= f.text_field :email, class: 'text-center rounded-full w-full py-14 mb-12 bg-natural text-dark-black placeholder-gray-200 text-5xl border-natural shadow-sm focus:border-natural focus:ring focus:ring-natural focus:ring-opacity-50 far', placeholder: "\uf0e0 Email" %>
-
     <%= f.password_field :password, class: 'text-center rounded-full w-full py-14 mb-12 bg-natural text-dark-black placeholder-gray-200 text-5xl border-natural shadow-sm focus:border-natural focus:ring focus:ring-natural focus:ring-opacity-50 far', placeholder: "Password" %>
-
     <%= f.password_field :password_confirmation, class: 'text-center rounded-full w-full py-14 mb-12 bg-natural text-dark-black placeholder-gray-200 text-5xl border-natural shadow-sm focus:border-natural focus:ring focus:ring-natural focus:ring-opacity-50 far', placeholder: "Password Confirmation" %>
-
     <%= f.submit 'Register', class: 'text-center rounded-full w-full py-14 bg-dark-black text-natural placeholder-gray-200 text-5xl font-thin' %>
   </div>
 <% end %>
-
 <div class="text-center mt-10">
   <%= link_to "ログインはこちら", login_path, class: "text-2xl text-dark-black border-b-2 border-dark-black" %>
 </div>
-<div class="text-center mt-10">
+<div class="text-center my-10">
   <%= link_to "ご案内はこちら", new_initial_path, class: "text-2xl text-dark-black border-b-2 border-dark-black" %>
 </div>

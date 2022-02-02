@@ -2,7 +2,7 @@
   <h1 class="text-4xl text-dark-black mb-2 font-thin"><%= l diary_created.created_at, format: :day %></h1>
   <div class="bg-natural rounded-full h-10 w-10 flex items-center justify-center relative">
     <h1 class="text-lg text-dark-black"><%= l diary_created.created_at, format: :day_of_week %></h1>
-    <%= render 'diaries/wday', diary_created: diary_created %>
+    <%= render 'diaries/wday', object: diary_created %>
   </div>
 </div>
 <div class="col-span-10 lg:col-span-5 mx-8 pt-16">

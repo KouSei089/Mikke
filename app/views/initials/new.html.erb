@@ -1,21 +1,16 @@
 <%= render 'shared/top_logo' %>
-
 <p class="text-center text-4xl text-dark-black font-hairline">初めてご利用される方</p>
-
 <div class="flex-col mx-32">
   <div class="flex justify-center rounded-full w-full h-48 bg-dark-black text-natural my-10">
       <%= link_to "Sign up", new_user_path, class: "pt-16 px-48 text-5xl font-thin" %>
   </div>
-
   <div class="flex justify-center rounded-full w-full h-48 bg-indigo-100 text-dark-black">
-      <%= link_to "Guest Login", '/guest_login', class: "pt-16 px-48 text-5xl font-thin", method: :post %>
+    <%= link_to "Guest Login", '/guest_login', class: "pt-16 px-48 text-5xl font-thin", method: :post %>
   </div>
 </div>
-
 <div class="text-center mt-10">
   <%= link_to "ログインはこちら", login_path, class: "text-4xl text-dark-black border-b-2 border-dark-black" %>
 </div>
-
 <div class="rounded-3xl bg-natural py-20 px-48 mt-10 mb-20 mx-10">
   <div class="border-b-2 border-dark-black mb-12">
     <h1 class="text-center text-5xl text-dark-black pb-5">チュートリアル</h1>

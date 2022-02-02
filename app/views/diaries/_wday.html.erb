@@ -1,14 +1,14 @@
-<% if diary_created.created_at.wday == 1 %>
+<% if object.created_at.wday == 1 %>
   <span class="bg-purple-400 h-3 w-3 rounded-full block absolute top-0 right-0"></span>
-<% elsif diary_created.created_at.wday == 2 %>
+<% elsif object.created_at.wday == 2 %>
   <span class="bg-red-400 h-3 w-3 rounded-full block absolute top-0 right-0"></span>
-<% elsif diary_created.created_at.wday == 3 %>
+<% elsif object.created_at.wday == 3 %>
   <span class="bg-blue-400 h-3 w-3 rounded-full block absolute top-0 right-0"></span>
-<% elsif diary_created.created_at.wday == 4 %>
+<% elsif object.created_at.wday == 4 %>
   <span class="bg-green-400 h-3 w-3 rounded-full block absolute top-0 right-0"></span>
-<% elsif diary_created.created_at.wday == 5 %>
+<% elsif object.created_at.wday == 5 %>
   <span class="bg-yellow-400 h-3 w-3 rounded-full block absolute top-0 right-0"></span>
-<% elsif diary_created.created_at.wday == 6 %>
+<% elsif object.created_at.wday == 6 %>
   <span class="bg-indigo-400 h-3 w-3 rounded-full block absolute top-0 right-0"></span>
 <% else %>
   <span class="bg-pink-400 h-3 w-3 rounded-full block absolute top-0 right-0"></span>
