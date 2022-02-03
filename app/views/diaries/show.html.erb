@@ -29,7 +29,7 @@
         <div class="flex items-center justify-center bg-white text-dark-black hover:opacity-75 mr-5">
           <%= link_to heroicon('pencil-alt', style: :outline,class_name: 'h-10 w-10'), edit_diary_path(@diary) %>
         </div>
-        <div class="flex items-center justify-center bg-white text-dark-black hover:opacity-75">
+        <div class="flex items-center justify-center bg-white text-dark-black">
           <%= render 'shared/delete_modal', object: @diary %>
         </div>
       </div>
