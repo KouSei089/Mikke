@@ -6,4 +6,9 @@ module ApplicationHelper
     svg['class'] = options[:class] if options[:class].present?
     content_tag(doc.to_html)
   end
+
+  def page_title(page_title = '')
+    base_title = 'Mikke'
+    page_title.empty? ? base_title : "#{page_title} | #{base_title}"
+  end
 end

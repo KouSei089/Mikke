@@ -1,3 +1,4 @@
+<% content_for(:title, 'サインアップ') %>
 <%= render 'shared/top_logo' %>
 <%= form_with model: @user, local: true do |f| %>
   <%= render 'shared/error_messages', model: f.object %>
