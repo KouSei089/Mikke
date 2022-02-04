@@ -1,0 +1,20 @@
+ja:
+  diaries:
+    index:
+      title: 'トップページ'
+      sentiment_list: '%{username}さんの最近の感情です。'
+      no_posts: '投稿がありません。'
+      advise_posts: '新しい投稿をしてみませんか。'
+    greeting:
+      hello_morning: '%{username}さん、おはようございます。'
+      hello_noon: '%{username}さん、こんにちは。'
+      hello_night: '%{username}さん、こんばんは。'
+    new:
+      title: '筆記開示'
+    edit:
+      title: '筆記開示'
+    sentiment_confirm:
+      title: '感情選択'
+      subtitle: '今の感情を選んでみましょう。'
+    show:
+      untitled: 'Untitled'

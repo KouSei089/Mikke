@@ -6,7 +6,7 @@
       <% if @diary.title? %>
         <div class="text-4xl text-dark-black font-thin"><%= @diary.title %></div>
       <% else %>
-        <div class="text-4xl text-dark-black font-thin">Untitled</div>
+        <div class="text-4xl text-dark-black font-thin"><%= t '.untitled' %></div>
       <% end %>
     </div>
     <div class="text-1xl text-dark-black font-thin"><%= l @diary.created_at, format: :long %></div>

@@ -1,10 +1,9 @@
-<% content_for(:title, 'トップページ') %>
+<% content_for(:title, t('.title')) %>
 <%= render 'shared/flash_message' %>
 <%= render 'diaries/greeting' %>
 
-
 <% if @diaries_created.present? %>
-  <h1 class="text-dark-black text-center font-thin text-lg"><%= current_user.username %>さんの最近の感情です。</h1>
+  <h1 class="text-dark-black text-center font-thin text-lg"><%= t '.sentiment_list' , username: current_user.username %></h1>
   <div class="flex flex-wrap mx-64">
     <% @diaries_sentiments.each do |diary_sentiments| %>
       <%= render 'shared/sentiment_design', object: diary_sentiments %>
@@ -50,8 +49,8 @@
       <%= embedded_svg "undraw_no_data_re_kwbl.svg", class: "h-32 w-32" %>
     </div>
     <div class="mt-10">
-      <h1 class="text-md text-dark-black mb-2 m-10">投稿がありません。</h1>
-      <h1 class="text-md text-dark-black mb-2 m-10">新しい投稿をしてみませんか。</h1>
+      <h1 class="text-md text-dark-black mb-2 m-10"><%= t '.no_posts' %></h1>
+      <h1 class="text-md text-dark-black mb-2 m-10"><%= t '.advise_posts' %></h1>
     </div>
   </div>
 <% end %>
