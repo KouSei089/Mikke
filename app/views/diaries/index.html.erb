@@ -1,12 +1,14 @@
 <% content_for(:title, 'トップページ') %>
 <%= render 'shared/flash_message' %>
 <%= render 'diaries/greeting' %>
-<h1 class="text-dark-black text-center font-thin text-lg"><%= current_user.username %>さんの最近の感情です。</h1>
-<div class="flex flex-wrap mx-64">
-  <% @diaries_sentiments.each do |diary_sentiments| %>
-    <%= render 'shared/sentiment_design', object: diary_sentiments %>
-  <% end %>
+<% if @diary_sentiments.present? %>
+  <h1 class="text-dark-black text-center font-thin text-lg"><%= current_user.username %>さんの最近の感情です。</h1>
+  <div class="flex flex-wrap mx-64">
+    <% @diaries_sentiments.each do |diary_sentiments| %>
+      <%= render 'shared/sentiment_design', object: diary_sentiments %>
+    <% end %>
 </div>
+<% end %>
 
 <% if @diaries_created.present? %>
   <div class="h-full mt-20 mx-10">
@@ -49,8 +51,8 @@
       <%= embedded_svg "undraw_no_data_re_kwbl.svg", class: "h-32 w-32" %>
     </div>
     <div class="mt-10">
-      <h1 class="text-xl text-dark-black mb-2 m-10">投稿がありません。</h1>
-      <h1 class="text-xl text-dark-black mb-2 m-10">新しい投稿をしてみませんか。</h1>
+      <h1 class="text-md text-dark-black mb-2 m-10">投稿がありません。</h1>
+      <h1 class="text-md text-dark-black mb-2 m-10">新しい投稿をしてみませんか。</h1>
     </div>
   </div>
 <% end %>
