@@ -1,16 +1,15 @@
 <% content_for(:title, 'トップページ') %>
 <%= render 'shared/flash_message' %>
 <%= render 'diaries/greeting' %>
-<% if @diary_sentiments.present? %>
+
+
+<% if @diaries_created.present? %>
   <h1 class="text-dark-black text-center font-thin text-lg"><%= current_user.username %>さんの最近の感情です。</h1>
   <div class="flex flex-wrap mx-64">
     <% @diaries_sentiments.each do |diary_sentiments| %>
       <%= render 'shared/sentiment_design', object: diary_sentiments %>
     <% end %>
-</div>
-<% end %>
-
-<% if @diaries_created.present? %>
+  </div>
   <div class="h-full mt-20 mx-10">
     <div class="grid grid-cols-12 gap-4">
       <div class="col-span-7">

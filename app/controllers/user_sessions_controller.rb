@@ -35,11 +35,7 @@ class UserSessionsController < ApplicationController
         emotion_point: rand(-1.0..1.0),
         word_count: rand(20..600),
         created_at: Faker::Date.backward(days: 7),
-        sentiment_ids: rand(1..5)
-      )
-      DiarySentiment.create!(
-        diary_id: rand(1..3),
-        sentiment_id: rand(1..5)
+        sentiment_ids: [rand(1..8), rand(9..16), rand(7..24)]
       )
       Soliloquy.create!(
         user_id: guest_user.id,
