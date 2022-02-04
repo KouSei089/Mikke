@@ -1,14 +1,15 @@
 <% content_for(:title, 'トップページ') %>
 <%= render 'shared/flash_message' %>
 <%= render 'diaries/greeting' %>
-<h1 class="text-dark-black text-center font-thin text-lg"><%= current_user.username %>さんの最近の感情です。</h1>
-<div class="flex flex-wrap mx-64">
-  <% @diaries_sentiments.each do |diary_sentiments| %>
-    <%= render 'shared/sentiment_design', object: diary_sentiments %>
-  <% end %>
-</div>
+
 
 <% if @diaries_created.present? %>
+  <h1 class="text-dark-black text-center font-thin text-lg"><%= current_user.username %>さんの最近の感情です。</h1>
+  <div class="flex flex-wrap mx-64">
+    <% @diaries_sentiments.each do |diary_sentiments| %>
+      <%= render 'shared/sentiment_design', object: diary_sentiments %>
+    <% end %>
+  </div>
   <div class="h-full mt-20 mx-10">
     <div class="grid grid-cols-12 gap-4">
       <div class="col-span-7">
@@ -44,10 +45,14 @@
   -->
   <!-- コメントアウト終了 -->
 <% else %>
-  <div class="text-6xl text-dark-black mb-2 m-10">
-    <i class="fas fa-box-open"></i>
+  <div class="pb-20 flex justify-center">
+    <div class="text-natural m-10">
+      <%= embedded_svg "undraw_no_data_re_kwbl.svg", class: "h-32 w-32" %>
+    </div>
+    <div class="mt-10">
+      <h1 class="text-md text-dark-black mb-2 m-10">投稿がありません。</h1>
+      <h1 class="text-md text-dark-black mb-2 m-10">新しい投稿をしてみませんか。</h1>
+    </div>
   </div>
-  <h1 class="text-3xl text-dark-black mb-2 m-10">投稿がありません</h1>
-  <h1 class="text-3xl text-dark-black mb-2 m-10">新しい投稿をしてみませんか</h1>
 <% end %>
 <%= render 'diaries/submit_button' %>

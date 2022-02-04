@@ -1,5 +1,5 @@
 class UserSessionsController < ApplicationController
-  skip_before_action :require_login, only: [:new, :create, :guest_login]
+  skip_before_action :require_login, only: [:new, :create, :demo_login]
 
   def new; end
 
@@ -18,9 +18,9 @@ class UserSessionsController < ApplicationController
     redirect_to root_url
   end
 
-  def guest_login
+  def demo_login
     random_value = SecureRandom.hex
-    guest_user = User.create!(
+    demo_user = User.create!(
       username: Gimei.last.kanji,
       email: "test_#{random_value}@example.com",
       password: 'password1234',
@@ -28,26 +28,22 @@ class UserSessionsController < ApplicationController
     )
     20.times do
       Diary.create!(
-        user_id: guest_user.id,
+        user_id: demo_user.id,
         title: Faker::Book.title,
         text: Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false),
         creativity: rand(10..100),
         emotion_point: rand(-1.0..1.0),
         word_count: rand(20..600),
         created_at: Faker::Date.backward(days: 7),
-        sentiment_ids: rand(1..5)
-      )
-      DiarySentiment.create!(
-        diary_id: rand(1..3),
-        sentiment_id: rand(1..5)
+        sentiment_ids: [rand(1..8), rand(9..16), rand(7..24)]
       )
       Soliloquy.create!(
-        user_id: guest_user.id,
+        user_id: demo_user.id,
         text: Faker::Lorem.sentence,
         created_at: Faker::Date.backward(days: 7)
       )
     end
-    auto_login(guest_user)
+    auto_login(demo_user)
     redirect_to root_path, success: 'ゲストとしてログインしました'
   end
 end
