@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Mikke</title>
+    <title><%= page_title(yield(:title)) %></title>
+    <%= favicon_link_tag('favicon.png') %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= include_gon %>

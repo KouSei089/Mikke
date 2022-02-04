@@ -1,3 +1,4 @@
+<% content_for(:title, '名前変更') %>
 <%= render 'shared/flash_message' %>
 <%= form_with model: @user, url: setting_profile_path, local: true do |f| %>
   <div class="block lg:hidden">
