@@ -18,9 +18,8 @@ class DiariesController < ApplicationController
     @diary = current_user.diaries.build(diary_params)
     @diary.data_create_logic
     if @diary.save
-      redirect_to trivium_url(@trivia), notice: "筆記開示を登録しました。"
+      redirect_to trivium_url(@trivia), notice: t('diaries.flash.notice')
     else
-      flash.now[:alert] = "空白項目があります。"
       render :new
     end
   end
@@ -44,7 +43,7 @@ class DiariesController < ApplicationController
   def update
     @diary.data_create_logic
     if @diary.update(diary_params)
-      redirect_to trivium_url(@trivia), notice: "筆記開示を編集しました。"
+      redirect_to trivium_url(@trivia), notice: t('diaries.flash.update')
     else
       render :edit
     end
@@ -52,7 +51,7 @@ class DiariesController < ApplicationController
 
   def destroy
     @diary.destroy
-    redirect_to root_url, alert: "筆記開示を削除しました。"
+    redirect_to root_url, alert: t('diaries.flash.delete')
   end
 
   private

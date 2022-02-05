@@ -5,7 +5,7 @@ class ProfilesController < ApplicationController
 
   def update
     if @user.update(user_params)
-      redirect_to root_url, notice: '名前を変更しました。'
+      redirect_to root_url, notice: t('profiles.flash.notice')
     else
       render :edit
     end

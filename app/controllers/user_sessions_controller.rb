@@ -7,9 +7,9 @@ class UserSessionsController < ApplicationController
     @user = login(params[:email], params[:password])
 
     if @user
-      redirect_back_or_to root_url, notice: 'ログインしました。'
+      redirect_back_or_to root_url, notice: t('user_sessions.flash.notice')
     else
-      redirect_to login_url, alert: 'ログインに失敗しました。'
+      redirect_to login_url, alert: t('user_sessions.flash.alert')
     end
   end
 
@@ -44,6 +44,6 @@ class UserSessionsController < ApplicationController
       )
     end
     auto_login(demo_user)
-    redirect_to root_path, success: 'ゲストとしてログインしました'
+    redirect_to root_path, notice: t('user_sessions.flash.demo')
   end
 end
