@@ -10,8 +10,8 @@
   <button x-ref="modal1_button" @click="open = true" class="rounded-full h-40 w-40 flex items-center justify-center bg-light-blue text-natural transition-all	duration-300	 cursor-pointer">
     <%= heroicon('plus', class_name: 'h-24 w-24') %>
   </button>
-  <div role="dialog" aria-labelledby="modal1_label" aria-modal="true" tabindex="0" x-show="open" @click="open = false; $refs.modal1_button.focus()" @click.away="open = false; $refs.modal1_button.focus()" class="fixed bottom-0 left-0 w-full h-screen ">
-    <div class="bottom-0 left-0 w-full h-screen bg-black opacity-50" aria-hidden="true" x-show="open"></div>
+  <div role="dialog" aria-labelledby="modal1_label" aria-modal="true" tabindex="0" x-show="open" @click="open = false; $refs.modal1_button.focus()" @click.away="open = false; $refs.modal1_button.focus()" class="fixed bottom-0 left-0 w-full h-screen">
+    <div class="bottom-0 left-0 w-full h-screen bg-black opacity-40" aria-hidden="true" x-show="open"></div>
       <div @click.stop="" x-show="open" class="flex flex-col shadow-lg overflow-hidden z-10">
         <div class="z-20 absolute right-28 bottom-96 pb-14" id="modal1_label">
           <div class="flex justify-end items-center z-20">
