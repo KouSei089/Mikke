@@ -44,4 +44,15 @@ ja:
     edit:
       title: '名前変更'
       submit: '変更'
+  settings:
+    show:
+      title: '設定'
+      subtitle: '設定'
+      edit_setting: '編集'
+      reminder: 'リマインダー'
+      tutorial: 'Mikkeとは'
+      terms_of_service: 'ご利用規約'
+      privacy_policy: 'プライバシーポリシー'
+      feedback: 'フィードバック'
+      logout: 'ログアウト'
 

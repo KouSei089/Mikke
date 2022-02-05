@@ -1,38 +1,38 @@
-<% content_for(:title, '設定') %>
+<% content_for(:title, t('.title')) %>
 <div class="mb-20">
   <%= render 'shared/flash_message' %>
-  <h1 class="text-center text-5xl text-dark-black font-hairline">設定</h1>
+  <h1 class="text-center text-5xl text-dark-black font-hairline"><%= t '.subtitle' %></h1>
   <div class="flex-col mx-32">
     <div class="text-center rounded-full w-full h-48 py-14 my-12 bg-white text-dark-black">
       <div class="flex justify-center">
         <%= heroicon('user', style: :outline, class_name: 'h-24 w-24 mr-10') %>
         <%= link_to @current_user.username, new_user_path, class: "rounded-full text-5xl self-center" %>
-        <%= link_to "編集", edit_setting_profile_path %>
+        <%= link_to t('.edit_setting'), edit_setting_profile_path %>
       </div>
     </div>
     <!-- hidden function -->
     <!--<div class="flex justify-center rounded-full w-full h-48 bg-white text-dark-black">
-        <%= link_to "リマインダー", "#", class: "pt-16 px-48 text-5xl" %>
+        <%= link_to t('.reminder'), "#", class: "pt-16 px-48 text-5xl" %>
     </div> -->
   </div>
 
   <div class="rounded-3xl bg-white py-20 px-48 mt-10 mb-20 mx-10">
     <div class="border-b-2 border-dark-black mb-12">
-      <%= link_to 'Mikkeとは', tutorial_path, class: "text-5xl text-dark-black" %>
+      <%= link_to t('.tutorial'), tutorial_path, class: "text-5xl text-dark-black" %>
     </div>
     <div class="border-b-2 border-dark-black mb-12 text-center pb-5">
-      <%= link_to 'ご利用規約', page_path('terms'), class: "text-5xl text-dark-black" %>
+      <%= link_to t('.terms_of_service'), page_path('terms'), class: "text-5xl text-dark-black" %>
     </div>
     <div class="border-b-2 border-dark-black mb-12 text-center pb-5">
-      <%= link_to 'プライバシーポリシー', page_path('privacy_policy'), class: "text-5xl text-dark-black" %>
+      <%= link_to t('.privacy_policy'), page_path('privacy_policy'), class: "text-5xl text-dark-black" %>
     </div>
     <div class="border-b-2 border-dark-black mb-12 text-center pb-5">
-      <%= link_to 'フィードバッグ', "#", class: "text-5xl text-dark-black" %>
+      <%= link_to t('.feedback'), "#", class: "text-5xl text-dark-black" %>
     </div>
   </div>
   <div class="mx-32">
     <div class="flex justify-center rounded-full w-full h-48 bg-red-300 text-natural">
-      <%= link_to "Logout", :logout, method: :post, class: "pt-16 px-48 text-5xl font-thin" %>
+      <%= link_to t('.logout'), :logout, method: :post, class: "pt-16 px-48 text-5xl font-thin" %>
     </div>
   </div>
 </div>
