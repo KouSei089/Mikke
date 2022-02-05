@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       auto_login(@user)
-      redirect_to intro_url, notice: 'ユーザーを登録しました。'
+      redirect_to intro_url, notice: t('users.flash.notice')
     else
       render :new
     end

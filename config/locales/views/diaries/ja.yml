@@ -4,11 +4,17 @@ ja:
       title: 'サインアップ'
       login: 'ログインはこちら'
       guidance: 'ご案内はこちら'
+    flash:
+      notice: "ユーザー登録に成功しました。"
   user_sessions:
     new:
       title: 'ログイン'
       sign_up: 'サインアップはこちら'
       guidance: 'ご案内はこちら'
+    flash:
+      notice: 'ログインしました。'
+      alert: 'ログインに失敗しました。'
+      demo: 'Demoユーザーとしてログインしました。'
   diaries:
     index:
       title: 'トップページ'
@@ -32,6 +38,10 @@ ja:
       subtitle: '今の感情を選んでみましょう。'
     show:
       untitled: 'Untitled'
+    flash:
+      notice: '筆記開示を登録しました。'
+      update: '筆記開示を編集しました。'
+      delete: '筆記開示を削除しました。'
   analyses:
     show:
       emotion_chart: '感情分析'
@@ -75,9 +85,15 @@ ja:
       title: 'ひとりごと'
     form:
       soliloquy: 'つぶやき'
+    flash:
+      notice: 'ひとりごとをつぶやきました。'
+      delete: 'ひとりごとを削除しました。'
   trivia:
     show:
       title: 'エビデンス'
+  profiles:
+    flash:
+      notice: '名前を変更しました。'
   shared:
     delete_modal:
       title: '本当に削除してよろしいですか？'
