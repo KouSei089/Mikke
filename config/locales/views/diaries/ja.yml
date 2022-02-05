@@ -67,6 +67,8 @@ ja:
     edit:
       title: '名前変更'
       submit: '変更'
+    flash:
+      notice: '名前を変更しました。'
   settings:
     show:
       title: '設定'
@@ -91,9 +93,6 @@ ja:
   trivia:
     show:
       title: 'エビデンス'
-  profiles:
-    flash:
-      notice: '名前を変更しました。'
   shared:
     delete_modal:
       title: '本当に削除してよろしいですか？'
