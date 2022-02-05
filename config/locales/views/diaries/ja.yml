@@ -1,4 +1,9 @@
 ja:
+  users:
+    new:
+      title: 'サインアップ'
+      login: 'ログインはこちら'
+      guidance: 'ご案内はこちら'
   diaries:
     index:
       title: 'トップページ'
