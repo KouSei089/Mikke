@@ -32,4 +32,12 @@ ja:
       terms_of_service: 'ご利用規約'
       privacy_policy: 'プライバシーポリシー'
       feedback: 'フィードバック'
+  intros:
+    show:
+      title: 'チュートリアル'
+  pages:
+    privacy_policy:
+      title: 'プライバシーポリシー'
+    terms:
+      title: 'ご利用規約'
 
