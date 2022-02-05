@@ -24,23 +24,23 @@
                     <div class="w-full lg:w-1/2 mb-16 lg:mb-0 flex">
                         <div class="w-full lg:w-1/2 px-6">
                             <ul>
-                                <li><%= link_to 'Totorial', tutorial_path, class: "focus:outline-none focus:underline font-thin text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50" %></li>
-                                <li class="mt-6"><%= link_to 'Trivia', "#", class: "focus:outline-none focus:underline font-thin text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50" %></li>
-                                <li class="mt-6"><%= link_to 'Analysis', analysis_path, class: "focus:outline-none focus:underline font-thin text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50", "data-turbolinks": false %></li>
+                                <li><%= link_to t('.tutorial'), tutorial_path, class: "focus:outline-none focus:underline font-thin text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50" %></li>
+                                <li class="mt-6"><%= link_to t('.trivia'), "#", class: "focus:outline-none focus:underline font-thin text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50" %></li>
+                                <li class="mt-6"><%= link_to t('.analysis'), analysis_path, class: "focus:outline-none focus:underline font-thin text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50", "data-turbolinks": false %></li>
                             </ul>
                         </div>
                         <div class="w-full lg:w-1/2 px-6">
                             <ul>
-                                <li><%= link_to 'Feedback', "#", class: "focus:outline-none focus:underline font-thin text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50" %></li>
-                                <li class="mt-6"><%= link_to 'Blog', "#", class: "focus:outline-none focus:underline font-thin text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50" %></li>
+                                <li><%= link_to t('.feedback'), "#", class: "focus:outline-none focus:underline font-thin text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50" %></li>
+                                <li class="mt-6"><%= link_to t('.blog'), "#", class: "focus:outline-none focus:underline font-thin text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50" %></li>
                             </ul>
                         </div>
                     </div>
                     <div class="w-full lg:w-1/2 flex">
                         <div class="w-full lg:w-1/2 px-6">
                             <ul>
-                                <li><%= link_to 'Teams of service', page_path('terms'), class: "focus:outline-none focus:underline font-thin text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50" %></li>
-                                <li class="mt-6"><%= link_to 'Privacy policy', page_path('privacy_policy'), class: "focus:outline-none focus:underline font-thin text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50" %></li>
+                                <li><%= link_to t('.terms_of_service'), page_path('terms'), class: "focus:outline-none focus:underline font-thin text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50" %></li>
+                                <li class="mt-6"><%= link_to t('.privacy_policy'), page_path('privacy_policy'), class: "focus:outline-none focus:underline font-thin text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50" %></li>
                             </ul>
                         </div>
                         <div class="w-full lg:w-1/2 px-6 flex flex-col justify-between">
