@@ -1,4 +1,4 @@
-<% content_for(:title, 'サインアップ') %>
+<% content_for(:title, t('.title')) %>
 <%= render 'shared/top_logo' %>
 <%= form_with model: @user, local: true do |f| %>
   <%= render 'shared/error_messages', model: f.object %>
@@ -11,8 +11,8 @@
   </div>
 <% end %>
 <div class="text-center mt-10">
-  <%= link_to "ログインはこちら", login_path, class: "text-2xl text-dark-black border-b-2 border-dark-black" %>
+  <%= link_to t('.login'), login_path, class: "text-2xl text-dark-black border-b-2 border-dark-black" %>
 </div>
 <div class="text-center my-10">
-  <%= link_to "ご案内はこちら", new_initial_path, class: "text-2xl text-dark-black border-b-2 border-dark-black" %>
+  <%= link_to t('.guidance'), new_initial_path, class: "text-2xl text-dark-black border-b-2 border-dark-black" %>
 </div>

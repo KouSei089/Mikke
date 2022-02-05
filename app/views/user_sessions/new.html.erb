@@ -1,4 +1,4 @@
-<% content_for(:title, 'ログイン') %>
+<% content_for(:title, t('.title')) %>
 <%= render 'shared/top_logo' %>
 <%= render 'shared/flash_message' %>
 <%= form_with url: login_path, method: :post do |f| %>
@@ -9,8 +9,8 @@
   </div>
 <% end %>
 <div class="text-center mt-10">
-  <%= link_to "サインアップはこちら", new_user_path, class: "text-2xl text-dark-black border-b-2 border-dark-black" %>
+  <%= link_to t('.sign_up'), new_user_path, class: "text-2xl text-dark-black border-b-2 border-dark-black" %>
 </div>
 <div class="text-center mt-10">
-  <%= link_to "ご案内はこちら", new_initial_path, class: "text-2xl text-dark-black border-b-2 border-dark-black" %>
+  <%= link_to t('.guidance'), new_initial_path, class: "text-2xl text-dark-black border-b-2 border-dark-black" %>
 </div>

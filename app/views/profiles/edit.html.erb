@@ -1,4 +1,4 @@
-<% content_for(:title, '名前変更') %>
+<% content_for(:title, t('.title')) %>
 <%= render 'shared/flash_message' %>
 <%= form_with model: @user, url: setting_profile_path, local: true do |f| %>
   <div class="block lg:hidden">
@@ -7,7 +7,7 @@
     </div>
     <div class="flex-col mx-48">
       <%= f.text_field :username, class: 'text-center rounded-full w-full bg-white text-dark-black placeholder-gray-200 text-5xl border-natural shadow-sm focus:border-natural focus:ring focus:ring-natural focus:ring-opacity-50 shadow-none py-3 mb-10 far', placeholder: "\uf007 User Name"  %>
-      <%= f.submit '変更', class: 'text-center rounded-full w-full bg-dark-black text-natural placeholder-gray-200 text-5xl py-5' %>
+      <%= f.submit t('.submit'), class: 'text-center rounded-full w-full bg-dark-black text-natural placeholder-gray-200 text-5xl py-5' %>
     </div>
   </div>
   <div class="hidden lg:block">
@@ -16,7 +16,7 @@
     </div>
     <div class="flex justify-center mx-48">
       <%= f.text_field :username, class: 'text-center rounded-full w-64 h-16 bg-white text-dark-black placeholder-gray-200 text-md border-natural shadow-sm focus:border-natural focus:ring focus:ring-natural focus:ring-opacity-50 shadow-none py-3 mb-10 mr-10 far', placeholder: "\uf007 User Name"  %>
-      <%= f.submit '変更', class: 'text-center rounded-full w-64 h-16 bg-dark-black text-natural hover:opacity-75 placeholder-gray-200 text-md py-5' %>
+      <%= f.submit t('.submit'), class: 'text-center rounded-full w-64 h-16 bg-dark-black text-natural hover:opacity-75 placeholder-gray-200 text-md py-5' %>
     </div>
   </div>
 <% end %>

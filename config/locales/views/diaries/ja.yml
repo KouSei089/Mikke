@@ -1,0 +1,103 @@
+ja:
+  users:
+    new:
+      title: 'サインアップ'
+      login: 'ログインはこちら'
+      guidance: 'ご案内はこちら'
+  user_sessions:
+    new:
+      title: 'ログイン'
+      sign_up: 'サインアップはこちら'
+      guidance: 'ご案内はこちら'
+  diaries:
+    index:
+      title: 'トップページ'
+      sentiment_list: '%{username}さんの最近の感情です。'
+      no_posts: '投稿がありません。'
+      advise_posts: '新しい投稿をしてみませんか。'
+    greeting:
+      hello_morning: '%{username}さん、おはようございます。'
+      hello_noon: '%{username}さん、こんにちは。'
+      hello_night: '%{username}さん、こんばんは。'
+      today: '今日は、%{today}です。'
+    new:
+      title: '筆記開示'
+    edit:
+      title: '筆記開示'
+    sentiment_confirm:
+      title: '感情選択'
+      subtitle: '今の感情を選んでみましょう。'
+    show:
+      untitled: 'Untitled'
+  analyses:
+    show:
+      emotion_chart: '感情分析'
+      creativity_chart: '達成率'
+  initials:
+    new:
+      title: 'フロント'
+      subtitle: '初めてご利用される方'
+      login: 'ログインはこちら'
+      tutorial: 'Mikkeとは'
+      terms_of_service: 'ご利用規約'
+      privacy_policy: 'プライバシーポリシー'
+      feedback: 'フィードバック'
+  intros:
+    show:
+      title: 'チュートリアル'
+  pages:
+    privacy_policy:
+      title: 'プライバシーポリシー'
+    terms:
+      title: 'ご利用規約'
+  profiles:
+    edit:
+      title: '名前変更'
+      submit: '変更'
+  settings:
+    show:
+      title: '設定'
+      subtitle: '設定'
+      edit_setting: '編集'
+      reminder: 'リマインダー'
+      tutorial: 'Mikkeとは'
+      terms_of_service: 'ご利用規約'
+      privacy_policy: 'プライバシーポリシー'
+      feedback: 'フィードバック'
+      logout: 'ログアウト'
+  soliloquies:
+    new:
+      title: 'ひとりごと'
+    edit:
+      title: 'ひとりごと'
+    form:
+      soliloquy: 'つぶやき'
+  trivia:
+    show:
+      title: 'エビデンス'
+  shared:
+    delete_modal:
+      title: '本当に削除してよろしいですか？'
+      delete: '削除'
+    header:
+      home: 'ホーム'
+      tutorial: 'Mikkeとは'
+      analysis: '分析'
+      post: '投稿'
+      journaling: 'ジャーナリング'
+      journaling_message: '書く瞑想をはじめませんか。'
+      soliloquy: 'ひとりごと'
+      soliloquy_message: '気軽につぶやきませんか。'
+      setting: '設定'
+      edit_name: '名前変更'
+      feedback: 'フィードバック'
+      feedback_massage: '改善点等こちらまでお願いします。'
+      logout: 'ログアウト'
+    hooter:
+      tutorial: 'Tutorial'
+      trivia: 'Trivia'
+      analysis: 'Analysis'
+      feedback: 'Feedback'
+      blog: 'Blog'
+      terms_of_service: 'Terms of Service'
+      privacy_policy: 'Privacy Policy'
