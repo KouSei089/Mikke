@@ -1,28 +1,24 @@
-<div class="bg-natural rounded px-8 pt-6 pb-8 mb-4">
-  <%= form_with model: @diary, local: true, url: edit_sentiment_confirm_diary_path(@diary) do |f| %>
-    <%= render 'shared/error_messages', model: f.object %>
-    <div class="mb-4">
-      <div class="flex justify-between mb-5">
-        <div class="flex justify-start">
-          <%= render 'shared/back_button' %>
-          <h1 class="text-4xl text-dark-black"><%= t "diaries.new.title" %></h1>
-        </div>
-        <%= button_tag type: 'submit', class: "text-6xl text-light-blue hover:opacity-75" do %>
-          <i class="fab fa-telegram-plane"></i>
-        <% end %>
-      </div>
-      <%= f.text_field :title, class: "bg-white border-natural rounded-lg w-full mb-4 py-2 px-3 text-dark-black shadow-inner focus:border-natural focus:ring focus:ring-natural font-thin placeholder-gray-300", placeholder: "タイトル（最後に決めるのをおすすめします）"  %>
-      <%= f.text_area :text, class: "bg-white border-natural rounded-lg w-full h-64 py-2 px-3 text-dark-black shadow-inner focus:border-natural focus:ring focus:ring-natural font-thin placeholder-gray-300", onkeyup: "ShowLength(value);" %>
-      <!--プログレスバー文字数-->
-      <div class="relative pt-1">
-        <div class="overflow-hidden h-5 mb-4 text-xs flex rounded bg-indigo-100 shadow-inner">
-          <div id="stylewidth" style="width:<%= @diary.creativity %>%" class="shadow-inner flex flex-col text-center whitespace-nowrap text-white justify-center bg-indigo-400"></div>
-        </div>
-        <span class="absolute right-0 text-dark-black font-thin" id="inputpercentage"><%= @diary.creativity %>％</span>
-        <span class="absolute left-0 text-dark-black font-thin" id="inputlength"><%= @diary.word_count %>文字</span>
-      </div>
+<%= render 'shared/error_messages', model: f.object %>
+<div class="mb-4">
+  <div class="flex justify-between mb-5">
+    <div class="flex justify-start">
+      <%= render 'shared/back_button' %>
+      <h1 class="text-4xl text-dark-black"><%= t "diaries.new.title" %></h1>
     </div>
-  <% end %>
+    <%= button_tag type: 'submit', class: "text-6xl text-light-blue hover:opacity-75" do %>
+      <i class="fab fa-telegram-plane"></i>
+    <% end %>
+  </div>
+  <%= f.text_field :title, class: "bg-white border-natural rounded-lg w-full mb-4 py-2 px-3 text-dark-black shadow-inner focus:border-natural focus:ring focus:ring-natural font-thin placeholder-gray-300", placeholder: "タイトル（最後に決めるのをおすすめします）"  %>
+  <%= f.text_area :text, class: "bg-white border-natural rounded-lg w-full h-64 py-2 px-3 text-dark-black shadow-inner focus:border-natural focus:ring focus:ring-natural font-thin placeholder-gray-300", onkeyup: "ShowLength(value);" %>
+  <!--プログレスバー文字数-->
+  <div class="relative pt-1">
+    <div class="overflow-hidden h-5 mb-4 text-xs flex rounded bg-indigo-100 shadow-inner">
+      <div id="stylewidth" style="width:<%= @diary.creativity %>%" class="shadow-inner flex flex-col text-center whitespace-nowrap text-white justify-center bg-indigo-400"></div>
+    </div>
+    <span class="absolute right-0 text-dark-black font-thin" id="inputpercentage"><%= @diary.creativity %>％</span>
+    <span class="absolute left-0 text-dark-black font-thin" id="inputlength"><%= @diary.word_count %>文字</span>
+  </div>
 </div>
 
 <!-- 複数チェックボックス 選択制限 未実装 -->

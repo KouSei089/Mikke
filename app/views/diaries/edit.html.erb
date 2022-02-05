@@ -4,5 +4,9 @@
   <h1 class="text-3xl font-thin"><%= l Time.current, format: :long %></h1>
 </div>
 <%= render 'diaries/timer' %>
-<%= render 'diaries/form' %>
+<div class="bg-natural rounded px-8 pt-6 pb-8 mb-4">
+  <%= form_with model: @diary, local: true, url: edit_sentiment_confirm_diary_path(@diary) do |form| %> 
+    <%= render 'diaries/form', f: form  %>
+  <% end %>
+</div>
 <%= render 'diaries/js_timer_logic' %>
