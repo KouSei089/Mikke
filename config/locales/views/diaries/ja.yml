@@ -55,6 +55,13 @@ ja:
       privacy_policy: 'プライバシーポリシー'
       feedback: 'フィードバック'
       logout: 'ログアウト'
+  soliloquies:
+    new:
+      title: 'ひとりごと'
+    edit:
+      title: 'ひとりごと'
+    form:
+      soliloquy: 'つぶやき'
   shared:
     delete_modal:
       title: '本当に削除してよろしいですか？'
@@ -77,3 +84,7 @@ ja:
       tutorial: 'Tutorial'
       trivia: 'Trivia'
       analysis: 'Analysis'
+      feedback: 'Feedback'
+      blog: 'Blog'
+      terms_of_service: 'Terms of Service'
+      privacy_policy: 'Privacy Policy'
