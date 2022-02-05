@@ -70,25 +70,6 @@
         <p class="text-lg">自分は，ネガティブ思考だ。と思っている人はきっと自分はポジティブだ。と思ってる人よりネガティブになると思う。だから書く内容が，はじめから最後までネガティブな言葉だと気づくといつもよりネガティブな自分になってしまう。</p>
       </div>
     </div>
-
-    <div class="grid grid-cols-2">
-      <% @trivia.each do |t| %>
-        <div class="bg-white mb-20 mx-10 rounded-md shadow-inner">
-          <div class="flex justify-around mt-8 mb-2">
-            <h1 class="border-b-2 border-dark-black text-lg"><%= t.title %></h1>
-            <div class="ml-4 text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 rounded-full bg-gray-100 text-dark-black border hover:text-white hover:bg-dark-black focus:text-white focus:bg-dark-black">
-              <div class="mr-2">
-                <i class="fas fa-tag"></i>
-              </div>
-              <%= t.tag %>
-            </div>
-          </div>
-          <div class="m-8 text-sm">
-            <%= t.description %>
-          </div>
-        </div>
-      <% end %>
-    </div>
   </div>
 </div>
 

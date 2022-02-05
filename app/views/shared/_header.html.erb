@@ -6,6 +6,7 @@
     <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
       <%= link_to t('.home'), root_path, class: 'px-4 py-2 mt-2 text-md text-dark-black text-opacity-50 font-thin bg-transparent md:mt-0 md:ml-4 hover:text-dark-black focus:text-dark-black focus:outline-none focus:shadow-outline border-b-2 border-natural hover:border-dark-black transition duration-700 ease-in-out' %>
       <%= link_to t('.tutorial'), tutorial_path, class: 'px-4 py-2 mt-2 text-md text-dark-black text-opacity-50 font-thin bg-transparent md:mt-0 md:ml-4 hover:text-dark-black focus:text-dark-black focus:outline-none focus:shadow-outline border-b-2 border-natural hover:border-dark-black transition duration-700 ease-in-out' %>
+      <%= link_to t('.trivia'), trivia_path, class: 'px-4 py-2 mt-2 text-md text-dark-black text-opacity-50 font-thin bg-transparent md:mt-0 md:ml-4 hover:text-dark-black focus:text-dark-black focus:outline-none focus:shadow-outline border-b-2 border-natural hover:border-dark-black transition duration-700 ease-in-out' %>
       <%= link_to t('.analysis'), analysis_path, class: 'px-4 py-2 mt-2 text-md text-dark-black text-opacity-50 font-thin bg-transparent md:mt-0 md:ml-4 hover:text-dark-black focus:text-dark-black focus:outline-none focus:shadow-outline border-b-2 border-natural hover:border-dark-black transition duration-700 ease-in-out', "data-turbolinks": false %>
 
       <div @click.away="open = false" class="relative" x-data="{ open: false }">
