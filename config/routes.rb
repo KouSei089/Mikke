@@ -12,6 +12,9 @@ Rails.application.routes.draw do
     collection do
       post 'sentiment_confirm'
     end
+    member do
+      patch 'edit_sentiment_confirm'
+    end
   end
 
   resource :intro, only: [:show]
