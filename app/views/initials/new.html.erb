@@ -1,6 +1,6 @@
-<% content_for(:title, '初期ページ') %>
+<% content_for(:title, t('.title')) %>
 <%= render 'shared/top_logo' %>
-<p class="text-center text-4xl text-dark-black font-hairline">初めてご利用される方</p>
+<p class="text-center text-4xl text-dark-black font-hairline"><%= t '.subtitle' %></p>
 <div class="flex-col mx-32">
   <div class="flex justify-center rounded-full w-full h-48 bg-dark-black text-natural my-10">
       <%= link_to "Sign up", new_user_path, class: "pt-16 px-48 text-5xl font-thin" %>
@@ -10,19 +10,19 @@
   </div>
 </div>
 <div class="text-center mt-10">
-  <%= link_to "ログインはこちら", login_path, class: "text-4xl text-dark-black border-b-2 border-dark-black" %>
+  <%= link_to t('.login'), login_path, class: "text-4xl text-dark-black border-b-2 border-dark-black" %>
 </div>
 <div class="rounded-3xl bg-white py-20 px-48 mt-10 mb-20 mx-10">
   <div class="border-b-2 border-dark-black mb-12 text-center pb-5">
-    <%= link_to 'Mikkeとは', tutorial_path, class: "text-5xl text-dark-black font-thin" %>
+    <%= link_to t('.tutorial'), tutorial_path, class: "text-5xl text-dark-black font-thin" %>
   </div>
   <div class="border-b-2 border-dark-black mb-12 text-center pb-5">
-    <%= link_to 'ご利用規約', page_path('terms'), class: "text-5xl text-dark-black" %>
+    <%= link_to t('.terms_of_service'), page_path('terms'), class: "text-5xl text-dark-black" %>
   </div>
   <div class="border-b-2 border-dark-black mb-12 text-center pb-5">
-    <%= link_to 'プライバシーポリシー', page_path('privacy_policy'), class: "text-5xl text-dark-black" %>
+    <%= link_to t('.privacy_policy'), page_path('privacy_policy'), class: "text-5xl text-dark-black" %>
   </div>
   <div class="border-b-2 border-dark-black mb-12 text-center pb-5">
-    <%= link_to 'フィードバッグ', "#", class: "text-5xl text-dark-black" %>
+    <%= link_to t('.feedback'), "#", class: "text-5xl text-dark-black" %>
   </div>
 </div>

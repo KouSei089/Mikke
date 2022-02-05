@@ -23,4 +23,13 @@ ja:
     show:
       emotion_chart: '感情分析'
       creativity_chart: '達成率'
+  initials:
+    new:
+      title: 'フロント'
+      subtitle: '初めてご利用される方'
+      login: 'ログインはこちら'
+      tutorial: 'Mikkeとは'
+      terms_of_service: 'ご利用規約'
+      privacy_policy: 'プライバシーポリシー'
+      feedback: 'フィードバック'
 
