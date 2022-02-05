@@ -31,6 +31,12 @@ class DiariesController < ApplicationController
     @sentiments_date = Sentiment.all.map(&:name)
   end
 
+  def edit_sentiment_confirm
+    @diary = Diary.find_or_initialize_by(id: params[:id])
+    @diary.assign_attributes(diary_params)
+    @sentiments_date = Sentiment.all.map(&:name)
+  end
+
   def show; end
 
   def edit; end
@@ -38,7 +44,7 @@ class DiariesController < ApplicationController
   def update
     @diary.data_create_logic
     if @diary.update(diary_params)
-      redirect_to root_url, notice: "筆記開示を編集しました。"
+      redirect_to trivium_url(@trivia), notice: "筆記開示を編集しました。"
     else
       render :edit
     end

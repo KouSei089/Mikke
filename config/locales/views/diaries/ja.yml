@@ -26,6 +26,9 @@ ja:
       title: '筆記開示'
     sentiment_confirm:
       title: '感情選択'
+    edit_sentiment_confirm:
+      title: '感情選択'
+    form_sentiment_confirm:
       subtitle: '今の感情を選んでみましょう。'
     show:
       untitled: 'Untitled'

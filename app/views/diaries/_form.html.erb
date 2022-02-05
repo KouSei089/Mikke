@@ -1,5 +1,5 @@
 <div class="bg-natural rounded px-8 pt-6 pb-8 mb-4">
-  <%= form_with model: @diary, local: true, url: { action: :sentiment_confirm } do |f| %>
+  <%= form_with model: @diary, local: true, url: edit_sentiment_confirm_diary_path(@diary) do |f| %>
     <%= render 'shared/error_messages', model: f.object %>
     <div class="mb-4">
       <div class="flex justify-between mb-5">
