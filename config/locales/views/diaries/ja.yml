@@ -4,6 +4,11 @@ ja:
       title: 'サインアップ'
       login: 'ログインはこちら'
       guidance: 'ご案内はこちら'
+  user_sessions:
+    new:
+      title: 'ログイン'
+      sign_up: 'サインアップはこちら'
+      guidance: 'ご案内はこちら'
   diaries:
     index:
       title: 'トップページ'
