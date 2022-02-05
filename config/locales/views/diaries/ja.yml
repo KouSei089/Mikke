@@ -62,6 +62,9 @@ ja:
       title: 'ひとりごと'
     form:
       soliloquy: 'つぶやき'
+  trivia:
+    show:
+      title: 'エビデンス'
   shared:
     delete_modal:
       title: '本当に削除してよろしいですか？'
