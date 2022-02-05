@@ -40,4 +40,8 @@ ja:
       title: 'プライバシーポリシー'
     terms:
       title: 'ご利用規約'
+  profiles:
+    edit:
+      title: '名前変更'
+      submit: '変更'
 
