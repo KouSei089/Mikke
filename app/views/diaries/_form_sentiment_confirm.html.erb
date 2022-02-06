@@ -34,3 +34,16 @@
 <%= f.hidden_field :title %>
 <%= f.hidden_field :text %>
 <% end %>
+
+<script>
+$(function() {
+  $('input[name="diary[sentiment_ids][]"]').change(function() {
+    var len = $('input[name="diary[sentiment_ids][]"]:checked').length;
+    if (len >= 3) {
+      $('input[name="diary[sentiment_ids][]"]').not(':checked').attr('disabled', 'disabled');
+    } else {
+      $('input[name="diary[sentiment_ids][]"]').not(':checked').removeAttr('disabled');
+    }
+  });
+});
+</script>
