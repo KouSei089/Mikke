@@ -17,7 +17,6 @@ ja:
       demo: 'Demoユーザーとしてログインしました。'
   diaries:
     index:
-      title: 'トップページ'
       sentiment_list: '%{username}さんの最近の感情です。'
       no_posts: '投稿がありません。'
       advise_posts: '新しい投稿をしてみませんか。'
@@ -27,13 +26,13 @@ ja:
       hello_night: '%{username}さん、こんばんは。'
       today: '今日は、%{today}です。'
     new:
-      title: '筆記開示'
+      title: 'ジャーナリング'
     edit:
-      title: '筆記開示'
+      title: 'ジャーナリング'
     sentiment_confirm:
-      title: '感情選択'
+      title: 'あなたの感情'
     edit_sentiment_confirm:
-      title: '感情選択'
+      title: 'あなたの感情'
     form_sentiment_confirm:
       subtitle: '今の感情を選んでみましょう。'
     show:
@@ -44,11 +43,12 @@ ja:
       delete: '筆記開示を削除しました。'
   analyses:
     show:
+      title: 'ログ'
       emotion_chart: '感情分析'
       creativity_chart: '達成率'
   initials:
     new:
-      title: 'フロント'
+      title: 'トップページ'
       subtitle: '初めてご利用される方'
       login: 'ログインはこちら'
       tutorial: 'Mikkeとは'
@@ -65,7 +65,7 @@ ja:
       title: 'ご利用規約'
   profiles:
     edit:
-      title: '名前変更'
+      title: 'リネーム'
       submit: '変更'
     flash:
       notice: '名前を変更しました。'
@@ -86,31 +86,36 @@ ja:
     edit:
       title: 'ひとりごと'
     form:
-      soliloquy: 'つぶやき'
+      soliloquy: 'ひとりごと'
     flash:
       notice: 'ひとりごとをつぶやきました。'
       delete: 'ひとりごとを削除しました。'
-  trivia:
+  tutorials:
     show:
-      title: 'エビデンス'
+      title: 'フィロソフィー'
+  trivia:
+    index:
+      title: 'リテラシー'
+    show:
+      title: 'トリビア'
   shared:
     delete_modal:
       title: '本当に削除してよろしいですか？'
       delete: '削除'
     header:
       home: 'ホーム'
-      tutorial: 'Mikkeとは'
-      trivia: '哲学 / 知識'
-      analysis: '分析'
+      tutorial: 'フィロソフィー'
+      trivia: 'リテラシー'
+      analysis: 'ログ'
       post: '投稿'
       journaling: 'ジャーナリング'
       journaling_message: '書く瞑想をはじめませんか。'
       soliloquy: 'ひとりごと'
       soliloquy_message: '気軽につぶやきませんか。'
       setting: '設定'
-      edit_name: '名前変更'
+      edit_name: 'リネーム'
       feedback: 'フィードバック'
-      feedback_massage: '改善点等こちらまでお願いします。'
+      feedback_message: '改善点等こちらまでお願いします。'
       logout: 'ログアウト'
     hooter:
       tutorial: 'Tutorial'

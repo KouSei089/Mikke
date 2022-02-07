@@ -8,7 +8,7 @@ module ApplicationHelper
   end
 
   def page_title(page_title = '')
-    base_title = 'Mikke'
+    base_title = 'Mikke（ミッケ）習慣ジャーナリング'
     page_title.empty? ? base_title : "#{page_title} | #{base_title}"
   end
 end
