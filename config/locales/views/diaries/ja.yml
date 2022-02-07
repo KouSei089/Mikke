@@ -62,6 +62,12 @@ ja:
   intros:
     show:
       title: 'チュートリアル'
+    intro01:
+      alt: 'Mikke（ミッケ）アイコン'
+    intro05:
+      alt: 'Mikke（ミッケ）アイコン'
+    index_header:
+      alt: 'Mikke（ミッケ）アイコン'
   pages:
     privacy_policy:
       title: 'プライバシーポリシー'
@@ -103,10 +109,13 @@ ja:
     show:
       title: 'トリビア'
   shared:
+    top_logo:
+      alt: 'Mikke（ミッケ）アイコン'
     delete_modal:
       title: '本当に削除してよろしいですか？'
       delete: '削除'
     header:
+      alt: 'Mikke（ミッケ）アイコン'
       home: 'ホーム'
       tutorial: 'フィロソフィー'
       trivia: 'リテラシー'
@@ -129,3 +138,4 @@ ja:
       blog: 'Blog'
       terms_of_service: 'Terms of Service'
       privacy_policy: 'Privacy Policy'
+      alt: 'Mikke（ミッケ）アイコン'
