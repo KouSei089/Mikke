@@ -10,7 +10,8 @@
         <%= render 'shared/sentiment_design', object: diary_sentiments %>
       <% end %>
     </div>
-    <div class="h-full mt-20 mx-10">
+    <!-- PCデザイン -->
+    <div class="hidden lg:block h-full mt-20 mx-10">
       <div class="grid grid-cols-12 gap-4">
         <div class="col-span-7">
           <% @diaries.each do |diary| %>
@@ -31,18 +32,22 @@
         <%= will_paginate @diaries %>
       </div>
     </div>
-    <!-- スマホ版のデザイン後ほど検討 -->
-    <!--
-    <div class="visible lg:invisible grid grid-cols-12 gap-4">
-    <% @diaries_created.each do |diary_created| %>
-      <% if diary_created.class == Diary %>
-        <%= render 'diaries/diary_content', diary_created: diary_created %>
-      <% elsif diary_created.class == Soliloquy %>
-        <%= render 'diaries/soliloquy_content', diary_created: diary_created %>
-      <% end %>
-    <% end %>
+    <!-- コメントアウト終了 -->
+    <!-- Phoneデザイン -->
+    <div class="block lg:hidden">
+      <div class="visible lg:invisible grid grid-cols-12 gap-4">
+        <% @diaries_soliloquies.each do |diary_soliloquy| %>
+          <% if diary_soliloquy.class == Diary %>
+            <%= render 'diaries/diary_content', diary_created: diary_soliloquy %>
+          <% elsif diary_soliloquy.class == Soliloquy %>
+            <%= render 'diaries/soliloquy_content', diary_created: diary_soliloquy %>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="text-center">
+        <%= will_paginate @dia %>
+      </div>
     </div>
-    -->
     <!-- コメントアウト終了 -->
   <% else %>
     <div class="pb-20 flex justify-center">
