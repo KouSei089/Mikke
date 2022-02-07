@@ -4,11 +4,13 @@ ja:
       title: 'サインアップ'
       login: 'ログインはこちら'
       guidance: 'ご案内はこちら'
+      submit: 'アカウント作成'
     flash:
       notice: "ユーザー登録に成功しました。"
   user_sessions:
     new:
       title: 'ログイン'
+      subtitle: 'ログイン'
       sign_up: 'サインアップはこちら'
       guidance: 'ご案内はこちら'
     flash:
@@ -50,8 +52,10 @@ ja:
     new:
       title: 'トップページ'
       subtitle: '初めてご利用される方'
+      sign_up: 'サインアップ'
+      demo: 'デモ'
       login: 'ログインはこちら'
-      tutorial: 'Mikkeとは'
+      tutorial: 'フィロソフィー'
       terms_of_service: 'ご利用規約'
       privacy_policy: 'プライバシーポリシー'
       feedback: 'フィードバック'

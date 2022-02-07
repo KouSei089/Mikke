@@ -4,9 +4,9 @@
     <div class="flex justify-start">
       <%= render 'shared/back_button' %>
       <% if @diary.title? %>
-        <div class="text-4xl text-dark-black font-thin"><%= @diary.title %></div>
+        <h1 class="text-4xl text-dark-black font-thin"><%= @diary.title %></h1>
       <% else %>
-        <div class="text-4xl text-dark-black font-thin"><%= t '.untitled' %></div>
+        <h1 class="text-4xl text-dark-black font-thin"><%= t '.untitled' %></h1>
       <% end %>
     </div>
     <div class="text-1xl text-dark-black font-thin"><%= l @diary.created_at, format: :long %></div>

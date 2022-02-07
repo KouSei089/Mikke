@@ -1,13 +1,13 @@
 <% content_for(:title, t('.title')) %>
 <div class="h-screen pb-10">
   <%= render 'shared/top_logo' %>
-  <p class="text-center text-4xl text-dark-black font-hairline"><%= t '.subtitle' %></p>
+  <h1 class="text-center text-4xl text-dark-black font-hairline"><%= t '.subtitle' %></h1>
   <div class="flex-col mx-32">
-    <div class="flex justify-center rounded-full w-full h-48 bg-dark-black text-natural my-10">
-        <%= link_to "Sign up", new_user_path, class: "pt-16 px-48 text-5xl font-thin" %>
+    <div class="flex justify-center rounded-full w-full bg-dark-black text-natural my-10">
+        <%= link_to t('.sign_up'), new_user_path, class: "py-12 px-48 text-4xl font-thin" %>
     </div>
-    <div class="flex justify-center rounded-full w-full h-48 bg-indigo-100 text-dark-black">
-      <%= link_to "Demo", '/demo_login', class: "pt-16 px-48 text-5xl font-thin", method: :post %>
+    <div class="flex justify-center rounded-full w-full bg-indigo-100 text-dark-black">
+      <%= link_to t('.demo'), '/demo_login', class: "py-12 px-48 text-4xl font-thin", method: :post %>
     </div>
   </div>
   <div class="text-center mt-10">
@@ -15,16 +15,16 @@
   </div>
   <div class="rounded-3xl bg-white py-20 px-48 mt-10 mx-10">
     <div class="border-b-2 border-dark-black mb-12 text-center pb-5">
-      <%= link_to t('.tutorial'), tutorial_path, class: "text-5xl text-dark-black font-thin" %>
+      <%= link_to t('.tutorial'), tutorial_path, class: "text-4xl text-dark-black font-thin" %>
     </div>
     <div class="border-b-2 border-dark-black mb-12 text-center pb-5">
-      <%= link_to t('.terms_of_service'), page_path('terms'), class: "text-5xl text-dark-black" %>
+      <%= link_to t('.terms_of_service'), page_path('terms'), class: "text-4xl text-dark-black" %>
     </div>
     <div class="border-b-2 border-dark-black mb-12 text-center pb-5">
-      <%= link_to t('.privacy_policy'), page_path('privacy_policy'), class: "text-5xl text-dark-black" %>
+      <%= link_to t('.privacy_policy'), page_path('privacy_policy'), class: "text-4xl text-dark-black" %>
     </div>
     <div class="border-b-2 border-dark-black mb-12 text-center pb-5">
-      <%= link_to t('.feedback'), "#", class: "text-5xl text-dark-black" %>
+      <%= link_to t('.feedback'), "#", class: "text-4xl text-dark-black" %>
     </div>
   </div>
 </div>
