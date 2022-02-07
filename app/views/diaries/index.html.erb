@@ -3,7 +3,7 @@
   <%= render 'shared/flash_message' %>
   <%= render 'diaries/greeting' %>
 
-  <% if @diaries_created.present? %>
+  <% if @diaries_soliloquies.present? %>
     <h1 class="text-dark-black text-center font-thin text-lg"><%= t '.sentiment_list' , username: current_user.username %></h1>
     <div class="flex flex-wrap mx-64">
       <% @diaries_sentiments.each do |diary_sentiments| %>
@@ -38,9 +38,9 @@
       <div class="visible lg:invisible grid grid-cols-12 gap-4">
         <% @diaries_soliloquies.each do |diary_soliloquy| %>
           <% if diary_soliloquy.class == Diary %>
-            <%= render 'diaries/diary_content', diary_created: diary_soliloquy %>
+            <%= render 'diaries/diary_content', diary: diary_soliloquy %>
           <% elsif diary_soliloquy.class == Soliloquy %>
-            <%= render 'diaries/soliloquy_content', diary_created: diary_soliloquy %>
+            <%= render 'diaries/soliloquy_content', soliloquy: diary_soliloquy %>
           <% end %>
         <% end %>
       </div>
