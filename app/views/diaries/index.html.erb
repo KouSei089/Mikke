@@ -1,4 +1,4 @@
-<% content_for(:title, t('.title')) %>
+<% set_meta_tags title: t('.title') %>
 <div class="pb-64 lg:pb-0 bg-natural">
   <%= render 'shared/flash_message' %>
   <%= render 'diaries/greeting' %>
@@ -55,8 +55,8 @@
         <%= embedded_svg "undraw_no_data_re_kwbl.svg", class: "h-32 w-32" %>
       </div>
       <div class="mt-10">
-        <h1 class="text-md text-dark-black mb-2 m-10"><%= t '.no_posts' %></h1>
-        <h1 class="text-md text-dark-black mb-2 m-10"><%= t '.advise_posts' %></h1>
+        <p class="text-md text-dark-black mb-2 m-10"><%= t '.no_posts' %></p>
+        <p class="text-md text-dark-black mb-2 m-10"><%= t '.advise_posts' %></p>
       </div>
     </div>
   <% end %>

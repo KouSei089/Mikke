@@ -1,7 +1,7 @@
 <div class="col-span-2 lg:col-span-1 m-8">
-  <h1 class="text-4xl text-dark-black mb-2 font-thin"><%= l soliloquy.created_at, format: :day %></h1>
+  <h3 class="text-4xl text-dark-black mb-2 font-thin"><%= l soliloquy.created_at, format: :day %></h3>
   <div class="bg-natural rounded-full h-10 w-10 flex items-center justify-center relative">
-    <h1 class="text-lg text-dark-black"><%= l soliloquy.created_at, format: :day_of_week %></h1>
+    <h4 class="text-lg text-dark-black"><%= l soliloquy.created_at, format: :day_of_week %></h4>
     <%= render 'diaries/wday', object: soliloquy %>
   </div>
 </div>

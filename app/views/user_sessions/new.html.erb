@@ -1,12 +1,12 @@
-<% content_for(:title, t('.title')) %>
+<% set_meta_tags title: t('.title') %>
 <div class="h-screen">
   <%= render 'shared/top_logo' %>
   <%= render 'shared/flash_message' %>
   <%= form_with url: login_path, method: :post do |f| %>
     <div class="flex-col mx-32">
-      <%= f.text_field :email, class: 'text-center rounded-full w-full py-14 mb-12 bg-white text-dark-black placeholder-gray-200 text-5xl border-white focus:border-natural focus:ring focus:ring-white focus:ring-opacity-50 shadow-inner far', placeholder: "\uf0e0 Email"  %>
-      <%= f.password_field :password, class: 'text-center rounded-full w-full py-14 mb-12 bg-white text-dark-black placeholder-gray-200 text-5xl border-white focus:border-white focus:ring focus:ring-white focus:ring-opacity-50  shadow-inner far', placeholder: "Password" %>
-      <%= f.submit 'Login', class: 'text-center rounded-full w-full py-14 bg-dark-black text-natural placeholder-gray-200 text-5xl font-thin' %>
+      <%= f.text_field :email, class: 'text-center rounded-full w-full py-12 mb-12 bg-white text-dark-black placeholder-gray-200 text-4xl border-white focus:border-natural focus:ring focus:ring-white focus:ring-opacity-50 shadow-inner far', placeholder: "\uf0e0 Email"  %>
+      <%= f.password_field :password, class: 'text-center rounded-full w-full py-12 mb-12 bg-white text-dark-black placeholder-gray-200 text-4xl border-white focus:border-white focus:ring focus:ring-white focus:ring-opacity-50  shadow-inner far', placeholder: "Password" %>
+      <%= f.submit t('.subtitle'), class: 'text-center rounded-full w-full py-12 bg-dark-black text-natural placeholder-gray-200 text-4xl font-thin' %>
     </div>
   <% end %>
   <div class="text-center mt-10">

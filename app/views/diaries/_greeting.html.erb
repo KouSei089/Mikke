@@ -6,5 +6,5 @@
   <% else %>
     <h1 class="text-3xl lg:text-sm text-dark-black mb-2"><%= t '.hello_night' , username: current_user.username %></h1>
   <% end %>
-  <h1 class="text-3xl lg:text-sm text-dark-black mb-2 font-thin"><%= t '.today', today: I18n.l(Date.today, format: :long) %></h1>
+  <h2 class="text-3xl lg:text-sm text-dark-black mb-2 font-thin"><%= t '.today', today: I18n.l(Date.today, format: :long) %></h2>
 </div>
