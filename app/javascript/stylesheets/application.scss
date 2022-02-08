@@ -14,8 +14,8 @@ $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
 }
 .pagination * {
   @apply px-3 py-2 mx-2;
-  @apply text-dark-black font-thin no-underline bg-white rounded-lg;
+  @apply text-matte font-thin no-underline bg-white rounded-md;
 }
 .pagination a:hover {
-  @apply font-thin text-natural bg-dark-black;
+  @apply font-thin text-ivory bg-matte;
 }

@@ -1,59 +1,59 @@
 <% set_meta_tags title: t('.title') %>
-<div class="block lg:hidden bg-natural">
+<div class="block lg:hidden bg-ivory">
   <div class="relative">
       <div class="flex justify-center">
         <%= image_tag 'logo_transparent.png', class: 'bg-transparent object-contain h-56 w-56', alt: t('.alt') %>
       </div>
       <div class="absolute right-5 bottom-20">
-        <%= link_to 'ログイン', login_path, class: 'text-4xl text-dark-black mb-24 rounded-lg'  %>
+        <%= link_to 'ログイン', login_path, class: 'text-4xl text-matte mb-24 rounded-lg'  %>
       </div>
     </div>
-  <div class="mx-32 lg:mx-64 bg-dark-black rounded-lg">
-    <div class="mb-20 text-natural">
-      <div class="flex justify-between mb-5 border-b-2 border-natural pb-5">
+  <div class="mx-32 lg:mx-64 rounded-lg">
+    <div class="mb-20 text-matte">
+      <div class="flex justify-between mb-5 border-b-2 border-matte pb-5">
         <h1 class="text-6xl font-thin">Mikke</h1>
         <h2 class="text-sm flex items-end">習慣ジャーナリング</h2>
       </div>
       <h3 class="text-4xl">書く瞑想で</h3>
       <h3 class="text-4xl">新しい自分が見つかる。</h3>
     </div>
-    <div class="mb-20 text-natural">
+    <div class="mb-20 text-matte">
       <h3 class="text-2xl mb-3">ロジカルシンキングが身につく。</h3>
       <p class="text-lg">書く瞑想で、とにかく書くという作業を通じて、自分がなんとなく思っていたことや考えていた思考を言語化することになり、ロジカルシンキングが身につくきっかけになります。書くことで思っていたことを客観的に見つめることが可能となり、自分の考えの間違った部分にも気づきやすくなって、課題の解決に何が必要なのか明確になるはずです。書く瞑想によって課題解決スキルの向上も期待できます。</p>
     </div>
-    <div class="mb-20 text-natural">
+    <div class="mb-20 text-matte">
       <h3 class="text-2xl mb-3">ストレスの解消になる</h3>
       <p class="text-lg">思ったことをひたすら書き出すので、普段たまっていた感情を吐き出すこととなり、ストレスの解消につながります。自分の感情を抑圧し続けると、ストレスはたまり続け、最悪の場合、自分でも気づかないうちに鬱状態となることもありえます。書く瞑想によって心配や不安、悩みを解消できるはずです。</p>
     </div>
-    <div class="mb-20 text-natural">
+    <div class="mb-20 text-matte">
       <h3 class="text-2xl mb-3">自己理解が進む。</h3>
       <p class="text-lg">書く瞑想することで自分自身が、これまで気づかなかった部分を知るようになり、自己分析が進みます。自分に対して否定的な感情を持っていた場合でも、ありのままの自分を受け入れたり、自分に自信を持てたりするようになるでしょう。</p>
     </div>
   </div>
-  <h1 class="text-center text-4xl text-dark-black font-hairline"><%= t '.subtitle' %></h1>
+  <h1 class="text-center text-4xl text-matte font-hairline"><%= t '.subtitle' %></h1>
   <div class="flex-col mx-32">
-    <div class="flex justify-center rounded-full w-full bg-dark-black text-natural my-10">
+    <div class="flex justify-center rounded-full w-full bg-matte text-ivory my-10">
         <%= link_to t('.sign_up'), new_user_path, class: "py-12 px-48 text-4xl font-thin" %>
     </div>
-    <div class="flex justify-center rounded-full w-full bg-indigo-100 text-dark-black">
+    <div class="flex justify-center rounded-full w-full bg-ice-green text-matte">
       <%= link_to t('.demo'), '/demo_login', class: "py-12 px-48 text-4xl font-thin", method: :post %>
     </div>
   </div>
   <div class="text-center mt-10">
-    <%= link_to t('.login'), login_path, class: "text-4xl text-dark-black border-b-2 border-dark-black" %>
+    <%= link_to t('.login'), login_path, class: "text-4xl text-matte border-b-2 border-matte" %>
   </div>
   <div class="rounded-3xl bg-white py-20 px-48 mt-10 mx-10">
-    <div class="border-b-2 border-dark-black mb-12 text-center pb-5">
-      <%= link_to t('.tutorial'), tutorial_path, class: "text-4xl text-dark-black font-thin" %>
+    <div class="border-b-2 border-matte mb-12 text-center pb-5">
+      <%= link_to t('.tutorial'), tutorial_path, class: "text-4xl text-matte font-thin" %>
     </div>
     <div class="border-b-2 border-dark-black mb-12 text-center pb-5">
       <%= link_to t('.terms_of_service'), page_path('terms'), class: "text-4xl text-dark-black" %>
     </div>
-    <div class="border-b-2 border-dark-black mb-12 text-center pb-5">
-      <%= link_to t('.privacy_policy'), page_path('privacy_policy'), class: "text-4xl text-dark-black" %>
+    <div class="border-b-2 border-matte mb-12 text-center pb-5">
+      <%= link_to t('.privacy_policy'), page_path('privacy_policy'), class: "text-4xl text-matte" %>
     </div>
-    <div class="border-b-2 border-dark-black mb-12 text-center pb-5">
-      <%= link_to t('.feedback'), "#", class: "text-4xl text-dark-black" %>
+    <div class="border-b-2 border-matte mb-12 text-center pb-5">
+      <%= link_to t('.feedback'), "#", class: "text-4xl text-matte" %>
     </div>
   </div>
 </div>

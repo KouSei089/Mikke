@@ -1,5 +1,5 @@
 <% set_meta_tags title: t('.title') %>
-<div class="bg-natural h-auto xl:flex xl:justify-center">
+<div class="bg-ivory h-auto xl:flex xl:justify-center">
   <div class="px-32 xl:pr-10 xl:w-full">
     <div class="grid grid-cols-10 gap-4 py-10">
       <h1 class="text-4xl text-dark-black font-thin col-span-8"><%= t '.emotion_chart' %></h1>
@@ -32,9 +32,9 @@ var myChart = new Chart(ctx, {
    label: 'Positive',
    data: gon.positive_scores,
    fill:true,
-   borderColor:"#FF5F5F",
-   backgroundColor:"rgba(255,182,185,0.9)",
-   pointBackgroundColor: "#FF5F5F",
+   borderColor:"#FFBCBC",
+   backgroundColor:"rgba(255, 188, 188, 0.9)",
+   pointBackgroundColor: "#FFBCBC",
    pointBorderWidth: 2,
    pointHoverBackgroundColor: "#fff",
    pointHoverBorderWidth: 2,
@@ -43,9 +43,9 @@ var myChart = new Chart(ctx, {
    label: 'Negative',
    data: gon.negative_scores,
    fill:true,
-   borderColor:"#3399FF",
-   backgroundColor:"rgba(185,237,248,0.9)",
-   pointBackgroundColor: "#3399FF",
+   borderColor:"#B5EAEA",
+   backgroundColor:"rgba(181, 234, 234, 0.9)",
+   pointBackgroundColor: "#B5EAEA",
    pointBorderWidth: 2,
    pointHoverBackgroundColor: "#fff",
    pointHoverBorderWidth: 2,
@@ -75,9 +75,9 @@ var Chart = new Chart(ctx, {
    label: 'Creativity(％)',
    data: gon.creative_sizes,
    fill:true,
-   borderColor: '#f6d55c',
-   backgroundColor: "rgba(240,216,121,0.8)",
-   pointBackgroundColor: "#f6d55c",
+   borderColor: '#E9896A',
+   backgroundColor: "rgba(233, 137, 106, 0.9)",
+   pointBackgroundColor: "#E9896A",
    pointBorderWidth: 2,
    pointHoverBackgroundColor: "#fff",
    pointHoverBorderWidth: 2,
