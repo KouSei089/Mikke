@@ -10,25 +10,25 @@
     </label>
   </div>
   <form name="timer">
-    <div x-show="isShow" class="flex items-center justify-center border-b border-dark-black w-auto relative">
-      <input type="tel" value="10" maxlength="2" oninput="value = value.replace(/[^0-9]+/i,'');" class="bg-ivory  border rounded w-12 py-2 px-3 text-dark-black border-ivory focus:border-natural focus:ring-0 font-thin">
-      <p class="text-dark-black mr-3 font-thin">min</p>
-      <input type="tel" value="00" maxlength="2" oninput="value = value.replace(/[^0-9]+/i,'');" class="bg-ivory  border rounded w-12 py-2 px-3 text-dark-black border-ivory focus:border-natural focus:ring-0 mr-3 font-thin">
-      <p class="text-dark-black mr-3 font-thin">sec</p>
+    <div x-show="isShow" class="flex items-center justify-center border-b border-matte w-auto relative">
+      <input type="tel" value="10" maxlength="2" oninput="value = value.replace(/[^0-9]+/i,'');" class="bg-ivory  border rounded w-12 py-2 px-3 text-matte border-ivory focus:border-natural focus:ring-0 font-thin">
+      <p class="text-matte mr-3 font-thin">min</p>
+      <input type="tel" value="00" maxlength="2" oninput="value = value.replace(/[^0-9]+/i,'');" class="bg-ivory  border rounded w-12 py-2 px-3 text-matte border-ivory focus:border-natural focus:ring-0 mr-3 font-thin">
+      <p class="text-matte mr-3 font-thin">sec</p>
 
       <div x-data="{ open: true }">
         <div x-show="open"  @click="open = false">
-          <%= button_tag type: "button", class: "py-2 px-3 bg-ivory text-dark-black hover:opacity-75", onclick: "cntStart()" do %>
+          <%= button_tag type: "button", class: "py-2 px-3 bg-ivory text-matte hover:opacity-75", onclick: "cntStart()" do %>
             <i class="fas fa-play fa-sm"></i>
           <% end %>
         </div>
         <div x-show="!open" @click="open = true">
-          <%= button_tag type: "button", class: "py-2 px-3 bg-ivory text-dark-black hover:opacity-75", onclick: "cntStop()" do %>
+          <%= button_tag type: "button", class: "py-2 px-3 bg-ivory text-matte hover:opacity-75", onclick: "cntStop()" do %>
             <i class="fas fa-pause"></i>
           <% end %>
         </div>
       </div>
-      <p class="text-dark-black text-xs absolute bottom-0 right-0">※時間を設定することができます。</p>
+      <p class="text-matte text-xs absolute bottom-0 right-0">※時間を設定することができます。</p>
     </div>
   </form>
 </div>
