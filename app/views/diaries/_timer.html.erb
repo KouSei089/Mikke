@@ -1,29 +1,29 @@
-<div x-data="{isShow: true}" class="bg-natural rounded px-8 pt-3 pb-3">
+<div x-data="{isShow: true}" class="bg-ivory rounded px-8 pt-3 pb-3">
   <div class="flex justify-center mb-2">
     <label for="toogleButton" class="flex items-center cursor-pointer">
       <div class="px-2">タイマー</div>
       <div class="relative">
         <input id="toogleButton" type="checkbox" class="hidden" @click="isShow = !isShow" />
-        <div class="toggle-path bg-light-blue w-9 h-5 rounded-full shadow-inner"></div>
+        <div class="toggle-path bg-ice-green w-9 h-5 rounded-full shadow-inner"></div>
         <div class="toggle-circle absolute w-3.5 h-3.5 bg-white rounded-full shadow"></div>
       </div>
     </label>
   </div>
   <form name="timer">
     <div x-show="isShow" class="flex items-center justify-center border-b border-dark-black w-auto relative">
-      <input type="tel" value="10" maxlength="2" oninput="value = value.replace(/[^0-9]+/i,'');" class="bg-natural  border rounded w-12 py-2 px-3 text-dark-black border-natural focus:border-natural focus:ring-0 font-thin">
+      <input type="tel" value="10" maxlength="2" oninput="value = value.replace(/[^0-9]+/i,'');" class="bg-ivory  border rounded w-12 py-2 px-3 text-dark-black border-ivory focus:border-natural focus:ring-0 font-thin">
       <p class="text-dark-black mr-3 font-thin">min</p>
-      <input type="tel" value="00" maxlength="2" oninput="value = value.replace(/[^0-9]+/i,'');" class="bg-natural  border rounded w-12 py-2 px-3 text-dark-black border-natural focus:border-natural focus:ring-0 mr-3 font-thin">
+      <input type="tel" value="00" maxlength="2" oninput="value = value.replace(/[^0-9]+/i,'');" class="bg-ivory  border rounded w-12 py-2 px-3 text-dark-black border-ivory focus:border-natural focus:ring-0 mr-3 font-thin">
       <p class="text-dark-black mr-3 font-thin">sec</p>
 
       <div x-data="{ open: true }">
         <div x-show="open"  @click="open = false">
-          <%= button_tag type: "button", class: "py-2 px-3 bg-natural text-dark-black hover:opacity-75", onclick: "cntStart()" do %>
+          <%= button_tag type: "button", class: "py-2 px-3 bg-ivory text-dark-black hover:opacity-75", onclick: "cntStart()" do %>
             <i class="fas fa-play fa-sm"></i>
           <% end %>
         </div>
         <div x-show="!open" @click="open = true">
-          <%= button_tag type: "button", class: "py-2 px-3 bg-natural text-dark-black hover:opacity-75", onclick: "cntStop()" do %>
+          <%= button_tag type: "button", class: "py-2 px-3 bg-ivory text-dark-black hover:opacity-75", onclick: "cntStop()" do %>
             <i class="fas fa-pause"></i>
           <% end %>
         </div>

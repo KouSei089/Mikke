@@ -5,7 +5,7 @@
       <%= render 'shared/back_button' %>
       <h1 class="text-4xl text-dark-black"><%= t "diaries.new.title" %></h1>
     </div>
-    <%= button_tag type: 'submit', class: "text-6xl text-light-blue hover:opacity-75" do %>
+    <%= button_tag type: 'submit', class: "text-6xl text-amber hover:opacity-75" do %>
       <i class="fab fa-telegram-plane"></i>
     <% end %>
   </div>
@@ -13,7 +13,7 @@
   <%= f.text_area :text, class: "bg-white border-natural rounded-lg w-full h-64 py-2 px-3 text-dark-black shadow-inner focus:border-natural focus:ring focus:ring-natural font-thin placeholder-gray-300", onkeyup: "ShowLength(value);" %>
   <!--プログレスバー文字数-->
   <div class="relative pt-1">
-    <div class="overflow-hidden h-5 mb-4 text-xs flex rounded bg-indigo-100 shadow-inner">
+    <div class="overflow-hidden h-5 mb-4 text-xs flex rounded bg-amber shadow-inner">
       <div id="stylewidth" style="width:<%= @diary.creativity %>%" class="shadow-inner flex flex-col text-center whitespace-nowrap text-white justify-center bg-indigo-400"></div>
     </div>
     <span class="absolute right-0 text-dark-black font-thin" id="inputpercentage"><%= @diary.creativity %>％</span>

@@ -33,6 +33,15 @@ module.exports = {
       'pink-white': '#f9f7eb',
       'tiffany': '#a1cec1',
       'light-blue': '#96B9DB',
+      'mulberry': '#96858f',
+      'lapis_lazuli': '#6d7993',
+      'ash-gray': '#9099a2',
+      'sky-gray': '#d5d5d5',
+      'ivory': '#F7F1F0',
+      'amber': '#E9896A',
+      'matte': '#414141',
+      'ice-green': '#C0D8C0',
+      'baby-blue': '#D7E9F7'
     },
     spacing: {
       px: '1px',
