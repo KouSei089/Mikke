@@ -9,7 +9,7 @@
       <i class="fab fa-telegram-plane"></i>
     <% end %>
   </div>
-  <%= f.text_field :title, class: "bg-white border-natural rounded-lg w-full mb-4 py-2 px-3 text-dark-black shadow-inner focus:border-natural focus:ring focus:ring-natural font-thin placeholder-gray-300", placeholder: "タイトル（最後に決めるのをおすすめします）"  %>
+  <%= f.text_field :title, class: "bg-white border-natural rounded-lg w-full mb-4 py-2 px-3 text-dark-black shadow-inner focus:border-natural focus:ring focus:ring-natural font-thin placeholder-gray-300", placeholder: "タイトル（最後に決めるのをおすすめします）", value: @write %>
   <%= f.text_area :text, class: "bg-white border-natural rounded-lg w-full h-64 py-2 px-3 text-dark-black shadow-inner focus:border-natural focus:ring focus:ring-natural font-thin placeholder-gray-300", onkeyup: "ShowLength(value);" %>
   <!--プログレスバー文字数-->
   <div class="relative pt-1">
