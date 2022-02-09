@@ -9,9 +9,11 @@ class DiariesController < ApplicationController
     diaries_soliloquies_mix = @diaries | @soliloquies
     diaries_soliloquies_sort = diaries_soliloquies_mix.sort! { |a, b| b.created_at <=> a.created_at }
     @diaries_soliloquies = diaries_soliloquies_sort.paginate(page: params[:page], per_page: 15)
+    @write = Write.find(rand(Write.first.id..Write.last.id))
   end
 
   def new
+    @write = params[:title].presence || ""
     @diary = Diary.new
   end
 

@@ -1,7 +1,8 @@
-<% set_meta_tags title: t('.title') %>
 <div class="pb-64 lg:pb-0 bg-ivory">
   <%= render 'shared/flash_message' %>
-  <%= render 'diaries/greeting' %>
+  <div id="diary">
+    <%= render 'diaries/greeting' %>
+  </div>
 
   <% if @diaries_soliloquies.present? %>
     <h1 class="text-dark-black text-center font-thin text-lg"><%= t '.sentiment_list' , username: current_user.username %></h1>
