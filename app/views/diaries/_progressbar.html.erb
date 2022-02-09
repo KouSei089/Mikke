@@ -1,25 +1,17 @@
 <% if object.creativity > 100 %>
-  <div class="overflow-hidden h-5 text-xs flex rounded bg-red-100">
-    <div id="stylewidth" style="width:<%= object.creativity %>%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-400"></div>
+  <div class="overflow-hidden h-5 text-xs flex rounded bg-lilac">
+    <div id="stylewidth" style="width:<%= object.creativity %>%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-violet"></div>
   </div>
-<% elsif object.creativity > 80 %>
-  <div class="overflow-hidden h-5 text-xs flex rounded bg-pink-100">
-    <div id="stylewidth" style="width:<%= object.creativity %>%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-pink-400"></div>
+<% elsif object.creativity > 75 %>
+  <div class="overflow-hidden h-5 text-xs flex rounded bg-moss-blue">
+    <div id="stylewidth" style="width:<%= object.creativity %>%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-night-blue"></div>
   </div>
-<% elsif object.creativity > 60 %>
-  <div class="overflow-hidden h-5 text-xs flex rounded bg-orange-100">
-    <div id="stylewidth" style="width:<%= object.creativity %>%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-orange-400"></div>
-  </div>
-<% elsif object.creativity > 40 %>
-  <div class="overflow-hidden h-5 text-xs flex rounded bg-yellow-100">
-    <div id="stylewidth" style="width:<%= object.creativity %>%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-yellow-400"></div>
-  </div>
-<% elsif object.creativity > 20 %>
-  <div class="overflow-hidden h-5 text-xs flex rounded bg-green-100">
-    <div id="stylewidth" style="width:<%= object.creativity %>%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-400"></div>
+<% elsif object.creativity > 50 %>
+  <div class="overflow-hidden h-5 text-xs flex rounded bg-sea-blue">
+    <div id="stylewidth" style="width:<%= object.creativity %>%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-bottle-blue"></div>
   </div>
 <% else %>
-  <div class="overflow-hidden h-5 text-xs flex rounded bg-indigo-100">
-    <div id="stylewidth" style="width:<%= object.creativity %>%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-indigo-400"></div>
+  <div class="overflow-hidden h-5 text-xs flex rounded bg-sky-gray">
+    <div id="stylewidth" style="width:<%= object.creativity %>%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-lapis_lazuli"></div>
   </div>
 <% end %>

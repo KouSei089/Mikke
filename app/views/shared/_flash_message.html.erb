@@ -1,7 +1,7 @@
 <% flash.each do |key, value| %>
   <% if key == 'notice'%>
   <div x-data="{ isShow: true }">
-    <div x-show="isShow" class="flex bg-green-100 rounded-lg p-4 mb-4 mx-5 text-sm text-green-700 relative" role="alert">
+    <div x-show="isShow" class="flex bg-opal-green rounded-lg p-4 mb-4 mx-5 text-sm text-jade-green relative" role="alert">
         <%= heroicon('information-circle',style: :outline, class_name: 'w-5 h-5 inline mr-3') %>
         <span><%= value %></span>
         <span class="absolute top-0 bottom-0 right-0 px-4 py-4">
