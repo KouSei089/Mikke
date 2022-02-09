@@ -2,6 +2,7 @@
   <%= render 'shared/flash_message' %>
   <div id="diary">
     <%= render 'diaries/greeting' %>
+    <%= render 'diaries/question_select', write: @write %>
   </div>
 
   <% if @diaries_soliloquies.present? %>
