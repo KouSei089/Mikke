@@ -8,18 +8,18 @@
   <% end %>
   <h2 class="text-xl lg:text-sm text-matte mb-2 font-thin"><%= t '.today', today: I18n.l(Date.today, format: :long) %></h2>
   <div class="rounded-lg py-3 mb-2 text-matte bg-white hover:bg-blue-300 shadow-inner relative">
-  <%= link_to new_diary_path(title: @write.title), remote: true do %>
+  <%= link_to new_diary_path(title: @write.title) do %>
     <div class="flex justify-center">
       <div class="mr-5 text-2xl">
         <i class="fas fa-check"></i>
       </div>
       <div class="text-xl lg:text-sm text-matte font-thin"><%= @write.title %></div>
      </div>
-    <%= link_to root_path do %>
-      <div class="absolute right-3 bottom-3 text-2xl rouded-lg text-amber">
-        <i class="fas fa-random"></i>
-      </div>
-    <% end %>
+     <%= link_to root_path do %>
+        <div class="absolute right-3 bottom-3 text-2xl rouded-lg text-amber">
+          <i class="fas fa-random"></i>
+        </div>
+      <% end %>
   <% end %>
   </div>
   <p class="text-right text-sm lg:text-xs text-matte font-thin">書きたい内容を見つけて見ましょう。</p>
