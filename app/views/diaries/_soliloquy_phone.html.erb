@@ -16,7 +16,7 @@
           <%= link_to heroicon('pencil-alt', style: :outline,class_name: 'h-5 w-5 text-dark-black'), edit_soliloquy_path(soliloquy) %>
         </div>
         <div class="rounded-full h-12 w-12 flex items-center justify-center bg-white text-dark-black">
-        <%= link_to heroicon('trash', style: :outline,class_name: 'h-5 w-5 text-dark-black'), soliloquy_path(soliloquy), data: { confirm: 'Are you sure?' }, method: :delete %>
+          <%= render 'diaries/delete_soliloquy', soliloquy: soliloquy %>
         </div>
       </div>
     </div>
