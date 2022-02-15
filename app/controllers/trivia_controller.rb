@@ -1,7 +1,7 @@
 class TriviaController < ApplicationController
   def index
     @trivia = Trivia.all
-    @trivia_philosophy = Trivia.all
+    @evidence = Evidence.all
   end
 
   def show
