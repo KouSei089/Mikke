@@ -1,10 +1,10 @@
 <% set_meta_tags title: t('.title') %>
-<div class="bg-natural">
-  <div class="mx-32 lg:mx-64">
-    <h1 class="text-6xl font-thin mb-10 pb-5 border-b-2 border-dark-black text-dark-black">Trivia</h1>
-    <div class="flex justify-between mx-64 my-20">
+<div class="bg-ivory md:pb-64">
+  <div class="mx-32 lg:mx-16">
+    <h1 class="text-6xl font-thin mb-10 pb-5 border-b-2 border-dark-black text-dark-black">Evidence</h1>
+    <div class="flex justify-between mx-64 lg:mx-32 md:mx-24 my-20">
       <div class="text-natural">
-        <%= embedded_svg "undraw_mornings_re_cofi.svg", class: "h-64 w-64" %>
+        <%= embedded_svg "undraw_bibliophile_re_xarc.svg", class: "h-64 w-64" %>
       </div>
       <div class="text-dark-black font-thin ml-10">
         <h1 class="text-2xl mb-5 pb-3">Essence</h1>
@@ -12,11 +12,11 @@
       </div>
     </div>
   </div>
-  <div class="grid grid-cols-2">
-    <% @trivia.each do |t| %>
-      <div class="bg-white mb-20 mx-10 rounded-md shadow-inner">
+  <div class="grid grid-cols-2 lg:grid-cols-1 md:grid-cols-1">
+    <% @evidence.each do |t| %>
+      <div class="bg-white mb-20 md:mb-10 mx-10 md:mx-24 rounded-md shadow-inner">
         <div class="flex justify-around mt-8 mb-2">
-          <h1 class="border-b-2 border-dark-black text-lg"><%= t.title %></h1>
+          <h1 class="border-b-2 border-dark-black text-lg md:text-md"><%= t.title %></h1>
           <div class="ml-4 text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 rounded-full bg-gray-100 text-dark-black border hover:text-white hover:bg-dark-black focus:text-white focus:bg-dark-black">
             <div class="mr-2">
               <i class="fas fa-tag"></i>
@@ -30,21 +30,21 @@
       </div>
     <% end %>
   </div>
-  <div class="mx-32 lg:mx-64">
-    <h1 class="text-6xl font-thin mb-10 pb-5 border-b-2 border-dark-black text-dark-black">Philosophy</h1>
-    <div class="flex justify-between mx-64 my-20">
+  <div class="mx-32 lg:mx-16">
+    <h1 class="text-6xl font-thin lg:mt-10 md:mt-10 mb-10 pb-5 border-b-2 border-dark-black text-matte">Trivia</h1>
+    <div class="flex justify-between mx-64 lg:mx-32 md:mx-24 my-20">
       <div class="text-natural">
-        <%= embedded_svg "undraw_mornings_re_cofi.svg", class: "h-64 w-64" %>
+        <%= embedded_svg "undraw_meditation_re_gll0.svg", class: "h-64 w-64" %>
       </div>
       <div class="text-dark-black font-thin ml-10">
         <h1 class="text-2xl mb-5 pb-3">Essence</h1>
-        <p class="text-lg">エビデンスがあることで少しでも信憑性が上がればと思います。多くのことはロジックベースだけでは受け入れられないこともあるでしょう。ですがその手助けに少しでもなればと思います。</p>
+        <p class="text-lg">トリビアでは、瞑想や書くことに関する知識や事柄を紹介します。興味や習慣継続を少しでもサポートできればと思います。</p>
       </div>
     </div>
   </div>
-  <div class="grid grid-cols-2">
-    <% @trivia_philosophy.each do |t| %>
-      <div class="bg-white mb-20 mx-10 rounded-md shadow-inner">
+  <div class="grid grid-cols-2 lg:grid-cols-1 md:grid-cols-1">
+    <% @trivia.each do |t| %>
+      <div class="bg-white mb-20 md:mb-10 mx-10 md:mx-24 rounded-md shadow-inner">
         <div class="flex justify-around mt-8 mb-2">
           <h1 class="border-b-2 border-dark-black text-lg"><%= t.title %></h1>
           <div class="ml-4 text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 rounded-full bg-gray-100 text-dark-black border hover:text-white hover:bg-dark-black focus:text-white focus:bg-dark-black">
