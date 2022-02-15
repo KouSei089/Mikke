@@ -27,7 +27,6 @@ RSpec.describe 'Soliloquy', type: :system do
     end
 
     it 'soliloquyが正しく編集できる' do
-      visit new_initial_path
       visit login_path
       fill_in 'email', with: 'foo@example.com'
       fill_in 'password', with: '123456'
