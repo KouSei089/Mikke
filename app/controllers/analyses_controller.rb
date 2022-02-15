@@ -3,7 +3,7 @@ class AnalysesController < ApplicationController
     @diaries = current_user.diaries.all
     @diaries_score = @diaries.group_by_day(:created_at, last: 7).average(:emotion_point)
     gon.chartdays = @diaries_score.map(&:first)
-    @chartdates = @diaries_score.map(&:second)
+    @positives = @diaries_score.map(&:second)
     @negatives = @diaries_score.map(&:second)
     gon.positive_scores = positive_analyses
     gon.negative_scores = negative_analyses
@@ -15,7 +15,7 @@ class AnalysesController < ApplicationController
   private
 
     def positive_analyses
-      @chartdates.map do |score|
+      @positives.map do |score|
         if score.nil? || score.negative?
           _positive_score = 0.05
         elsif score.positive?
