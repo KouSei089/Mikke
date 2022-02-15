@@ -1,14 +1,14 @@
 <% set_meta_tags title: t('.title') %>
 <div class="bg-ivory md:pb-64">
   <div class="mx-32 lg:mx-16">
-    <h1 class="text-6xl font-thin mb-10 pb-5 border-b-2 border-dark-black text-dark-black">Evidence</h1>
+    <h1 class="text-6xl font-thin mb-10 pb-5 border-b-2 border-dark-black text-dark-black"><%= t '.evidence' %></h1>
     <div class="flex justify-between mx-64 lg:mx-32 md:mx-24 my-20">
       <div class="text-natural">
         <%= embedded_svg "undraw_bibliophile_re_xarc.svg", class: "h-64 w-64" %>
       </div>
       <div class="text-dark-black font-thin ml-10">
-        <h1 class="text-2xl mb-5 pb-3">Essence</h1>
-        <p class="text-lg">エビデンスがあることで少しでも信憑性が上がればと思います。多くのことはロジックベースだけでは受け入れられないこともあるでしょう。ですがその手助けに少しでもなればと思います。</p>
+        <h1 class="text-2xl mb-5 pb-3"><%= t '.essence' %></h1>
+        <p class="text-lg"><%= t '.evidence_description' %></p>
       </div>
     </div>
   </div>
@@ -31,14 +31,14 @@
     <% end %>
   </div>
   <div class="mx-32 lg:mx-16">
-    <h1 class="text-6xl font-thin lg:mt-10 md:mt-10 mb-10 pb-5 border-b-2 border-dark-black text-matte">Trivia</h1>
+    <h1 class="text-6xl font-thin lg:mt-10 md:mt-10 mb-10 pb-5 border-b-2 border-dark-black text-matte"><%= t '.trivia' %></h1>
     <div class="flex justify-between mx-64 lg:mx-32 md:mx-24 my-20">
       <div class="text-natural">
         <%= embedded_svg "undraw_meditation_re_gll0.svg", class: "h-64 w-64" %>
       </div>
       <div class="text-dark-black font-thin ml-10">
-        <h1 class="text-2xl mb-5 pb-3">Essence</h1>
-        <p class="text-lg">トリビアでは、瞑想や書くことに関する知識や事柄を紹介します。興味や習慣継続を少しでもサポートできればと思います。</p>
+        <h1 class="text-2xl mb-5 pb-3"><%= t '.essence' %></h1>
+        <p class="text-lg"><%= t '.trivia_description' %></p>
       </div>
     </div>
   </div>
