@@ -46,7 +46,11 @@ ja:
   analyses:
     show:
       title: 'ログ'
-      emotion_chart: '感情分析'
+      emotion_chart: 'あなたの感情のクオリティ'
+      post_week: '過去１週間'
+      emotion_description: 'あなたの毎日のジャーナリングを記録して、感情のクオリティを分析します。'
+      positive_description: 'ピンクの幅が大きいほどポジティブの傾向です。'
+      negative_description: 'ミズイロの幅が大きいほどネガティブの傾向です。'
       creativity_chart: '達成率'
   initials:
     new:

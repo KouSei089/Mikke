@@ -4,11 +4,26 @@
     <div class="grid grid-cols-10 gap-4 py-10">
       <h1 class="text-4xl text-dark-black font-thin col-span-8"><%= t '.emotion_chart' %></h1>
       <button class="bg-white text-dark-black rounded-full px-5 py-2 col-span-2 font-thin">
-        Week
+        <%= t '.post_week' %>
       </button>
+    </div>
+    <div class="flex justify-center mx-34 text-matte">
+      <div class="text-ivory">
+        <%= embedded_svg "undraw_growth_chart_r99m.svg", class: "h-28 w-48" %>
+      </div>
+      <p class="text-lg my-10 mx-10"><%= t '.emotion_description' %></p>
     </div>
     <div class="chart-container p-20 bg-white rounded-3xl flex justify-center">
         <canvas id="myChart"></canvas>
+    </div>
+    <div class="my-5 p-4 rounded-lg bg-pink-white text-matte">
+      <div class="flex justify-start">
+        <i class="fas fa-question-circle text-3xl m-2 pr-2"></i>
+        <div class="mt-1">
+          <p class="text-sm"><%= t '.positive_description' %></p>
+          <p class="text-sm"><%= t '.negative_description' %></p>
+        </div>
+      </div>
     </div>
   </div>
 
