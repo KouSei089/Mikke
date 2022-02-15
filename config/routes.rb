@@ -25,4 +25,6 @@ Rails.application.routes.draw do
   post 'login' => "user_sessions#create"
   post 'logout' => 'user_sessions#destroy', :as => :logout
   post '/demo_login', to: 'user_sessions#demo_login'
+  get '*not_found' => 'application#routing_error'
+  post '*not_found' => 'application#routing_error'
 end
