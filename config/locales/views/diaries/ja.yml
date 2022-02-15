@@ -51,7 +51,10 @@ ja:
       emotion_description: 'あなたの毎日のジャーナリングを記録して、感情のクオリティを分析します。'
       positive_description: 'ピンクの幅が大きいほどポジティブの傾向です。'
       negative_description: 'ミズイロの幅が大きいほどネガティブの傾向です。'
-      creativity_chart: '達成率'
+      creativity_chart: 'あなたのクリエイティビティ'
+      creativity_description: 'あなたの書いたジャーナリングの文字数に応じて、あなたのクリエイティビティが計測されます。'
+      creativity_explanation: 'ジャーナリングで書く量が増えることで、自分をより知ることができ、クリエイティブになれるはずです。'
+      creativity_logic: '計測ロジックは、５００文字で１００％、２５０文字で５０％です。'
   initials:
     new:
       title: 'トップページ'
