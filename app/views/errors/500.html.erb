@@ -1,0 +1,18 @@
+<% set_meta_tags title: 'Not Found' %>
+<div class="pb-64 lg:pb-0 bg-ivory">
+  <div class="mx-32">
+    <div class="flex justify-center">
+      <div class="text-ivory">
+        <%= embedded_svg "undraw_server_down_s-4-lk.svg", class: "h-64 w-64" %>
+      </div>
+      <div class="text-matte mt-12 mx-24">
+        <h1 class="text-2xl mb-5">アクセスしようとしたページは、表示できませんでした。</h1>
+        <p class="text-md mb-5">サービスがメンテナンス中であるか、</p>
+        <p class="text-md mb-5">サービスのプログラム上に問題がある可能性があります。</p>
+        <%= link_to 'javascript:history.back()' do %>
+          <div class="rounded-md p-3 bg-amber text-ivory text-md w-44">前のページに戻る<i class="fas fa-chevron-right ml-2"></i></div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
