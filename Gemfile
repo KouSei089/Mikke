@@ -38,7 +38,6 @@ gem 'cancancan'
 gem 'faker'
 gem 'gimei'
 gem 'active_hash'
-gem 'high_voltage'
 gem 'will_paginate'
 gem 'meta-tags'
 
