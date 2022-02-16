@@ -4,10 +4,10 @@
   </div>
   <div class="invisible lg:visible flex justify-start">
     <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
-      <%= link_to t('.home'), root_path, class: 'px-4 py-2 mt-2 text-md text-dark-black text-opacity-50 font-thin bg-transparent md:mt-0 md:ml-4 hover:text-dark-black focus:text-dark-black focus:outline-none focus:shadow-outline border-b-2 border-natural hover:border-dark-black transition duration-700 ease-in-out' %>
-      <%= link_to t('.tutorial'), tutorial_path, class: 'px-4 py-2 mt-2 text-md text-dark-black text-opacity-50 font-thin bg-transparent md:mt-0 md:ml-4 hover:text-dark-black focus:text-dark-black focus:outline-none focus:shadow-outline border-b-2 border-natural hover:border-dark-black transition duration-700 ease-in-out' %>
-      <%= link_to t('.trivia'), trivia_path, class: 'px-4 py-2 mt-2 text-md text-dark-black text-opacity-50 font-thin bg-transparent md:mt-0 md:ml-4 hover:text-dark-black focus:text-dark-black focus:outline-none focus:shadow-outline border-b-2 border-natural hover:border-dark-black transition duration-700 ease-in-out' %>
-      <%= link_to t('.analysis'), analysis_path, class: 'px-4 py-2 mt-2 text-md text-dark-black text-opacity-50 font-thin bg-transparent md:mt-0 md:ml-4 hover:text-dark-black focus:text-dark-black focus:outline-none focus:shadow-outline border-b-2 border-natural hover:border-dark-black transition duration-700 ease-in-out', "data-turbolinks": false %>
+      <%= link_to t('.home'), root_path, class: 'px-4 py-2 mt-2 text-md text-dark-black text-opacity-50 font-thin bg-transparent md:mt-0 md:ml-4 hover:text-dark-black focus:text-dark-black focus:outline-none focus:shadow-outline border-b-2 border-ivory hover:border-dark-black transition duration-700 ease-in-out' %>
+      <%= link_to t('.tutorial'), tutorial_path, class: 'px-4 py-2 mt-2 text-md text-dark-black text-opacity-50 font-thin bg-transparent md:mt-0 md:ml-4 hover:text-dark-black focus:text-dark-black focus:outline-none focus:shadow-outline border-b-2 border-ivory hover:border-dark-black transition duration-700 ease-in-out' %>
+      <%= link_to t('.trivia'), trivia_path, class: 'px-4 py-2 mt-2 text-md text-dark-black text-opacity-50 font-thin bg-transparent md:mt-0 md:ml-4 hover:text-dark-black focus:text-dark-black focus:outline-none focus:shadow-outline border-b-2 border-ivory hover:border-dark-black transition duration-700 ease-in-out' %>
+      <%= link_to t('.analysis'), analysis_path, class: 'px-4 py-2 mt-2 text-md text-dark-black text-opacity-50 font-thin bg-transparent md:mt-0 md:ml-4 hover:text-dark-black focus:text-dark-black focus:outline-none focus:shadow-outline border-b-2 border-ivory hover:border-dark-black transition duration-700 ease-in-out', "data-turbolinks": false %>
 
       <div @click.away="open = false" class="relative" x-data="{ open: false }">
         <button @click="open = !open" class="flex flex-row bg-white items-center w-full px-4 py-2 mt-2 text-md text-dark-black  font-thin text-left bg-transparent rounded-lg md:w-auto md:inline md:mt-0 md:ml-4 hover:text-dark-black focus:text-dark-black hover:bg-white focus:bg-white focus:outline-none focus:shadow-outline focus:text-opacity-50 transition duration-700" >
@@ -18,7 +18,7 @@
           <div class="px-2 pt-2 pb-2 bg-white rounded-md">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
               <%= link_to new_diary_path, class: 'flex row items-start rounded-lg bg-transparent p-2 text-dark-black text-opacity-50 hover:text-dark-black hover:bg-gray-50 focus:text-dark-black focus:bg-gray-200 focus:outline-none focus:shadow-outline transition duration-500' do %>
-                <div class="bg-light-blue text-white rounded-lg p-3">
+                <div class="bg-ice-green text-white rounded-lg p-3">
                   <%= heroicon 'pencil', class_name: 'md:h-6 md:w-6 h-4 w-4' %>
                 </div>
                 <div class="ml-3">
@@ -27,7 +27,7 @@
                 </div>
               <% end %>
               <%= link_to new_soliloquy_path, class: 'flex row items-start rounded-lg bg-transparent p-2 text-dark-black text-opacity-50 hover:text-dark-black hover:bg-gray-50 focus:text-dark-black focus:bg-gray-200 focus:outline-none focus:shadow-outline transition duration-500' do %>
-                <div class="bg-light-blue text-white rounded-lg p-3">
+                <div class="bg-ice-green text-white rounded-lg p-3">
                   <%= heroicon 'chat', class_name: 'md:h-6 md:w-6 h-4 w-4' %>
                 </div>
                 <div class="ml-3">
@@ -48,7 +48,7 @@
           <div class="px-2 pt-2 pb-2 bg-white rounded-md">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
               <%= link_to edit_setting_profile_path, class: 'flex row items-start rounded-lg bg-transparent p-2 text-dark-black text-opacity-50 hover:text-dark-black hover:bg-gray-50 focus:text-dark-black focus:bg-gray-200 focus:outline-none focus:shadow-outline transition duration-500' do %>
-                <div class="bg-red-300 text-white rounded-lg p-3">
+                <div class="bg-baby-pink text-white rounded-lg p-3">
                   <%= heroicon 'identification', class_name: 'md:h-6 md:w-6 h-4 w-4' %>
                 </div>
                 <div class="ml-3">
@@ -56,7 +56,7 @@
                 </div>
               <% end %>
               <%= link_to terms_regulation_path, class: 'flex row items-start rounded-lg bg-transparent p-2 text-dark-black text-opacity-50 hover:text-dark-black hover:bg-gray-50 focus:text-dark-black focus:bg-gray-200 focus:outline-none focus:shadow-outline transition duration-500' do %>
-                <div class="bg-red-300 text-white rounded-lg p-3">
+                <div class="bg-baby-pink text-white rounded-lg p-3">
                   <%= heroicon 'light-bulb', class_name: 'md:h-6 md:w-6 h-4 w-4' %>
                 </div>
                 <div class="ml-3">
@@ -65,7 +65,7 @@
                 </div>
               <% end %>
               <%= link_to :logout, method: :post, class: 'flex row items-start rounded-lg bg-transparent p-2 text-dark-black text-opacity-50 hover:text-dark-black hover:bg-gray-50 focus:text-dark-black focus:bg-gray-200 focus:outline-none focus:shadow-outline transition duration-500 logoutClick' do %>
-                <div class="bg-red-400 text-white rounded-lg p-3">
+                <div class="bg-agate text-white rounded-lg p-3">
                   <%= heroicon 'logout', class_name: 'md:h-6 md:w-6 h-4 w-4' %>
                 </div>
                 <div class="ml-3">
