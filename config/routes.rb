@@ -3,6 +3,12 @@ Rails.application.routes.draw do
   root 'diaries#index'
   resource :initial, only: [:new]
   resources :trivia, only: [:index, :show]
+  resource :regulation, only: [:terms, :privacy] do
+    collection do
+      get 'terms'
+      get 'privacy'
+    end
+  end
   resource :setting, only: [:show] do
     resource :profile, only: [:edit, :update]
   end
