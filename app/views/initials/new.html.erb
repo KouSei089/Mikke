@@ -58,13 +58,13 @@
   </div>
 </div>
 <!-- PCデザイン -->
-<div class="hidden lg:block bg-natural">
+<div class="hidden lg:block bg-ivory">
   <div class="grid grid-cols-4 gap-4">
     <div class="col-span-2">
       <div class="flex justify-center">
         <%= image_tag 'logo_transparent.png', class: 'bg-transparent object-contain h-56 w-56', alt: t('.alt') %>
       </div>
-      <div class="bg-natural px-10">
+      <div class="bg-ivory px-10">
         <div class="mb-10 text-dark-black">
           <div class="flex justify-between mb-5 border-b-2 border-dark-black pb-5">
             <h1 class="text-6xl font-thin">Mikke</h1>
@@ -93,7 +93,7 @@
         <div class="flex justify-center rounded-full bg-dark-black text-natural my-10">
             <%= link_to t('.sign_up'), new_user_path, class: "py-10 px-24 text-xl font-thin" %>
         </div>
-        <div class="flex justify-center rounded-full bg-indigo-100 text-dark-black">
+        <div class="flex justify-center rounded-full bg-ice-green text-dark-black">
           <%= link_to t('.demo'), '/demo_login', class: "py-10 px-24 text-xl font-thin", method: :post %>
         </div>
       </div>
@@ -101,9 +101,6 @@
         <%= link_to t('.login'), login_path, class: "text-xl text-dark-black border-b-2 border-dark-black" %>
       </div>
       <div class="rounded-3xl bg-white py-10 px-24 mt-5 mx-5">
-        <div class="border-b-2 border-dark-black mb-12 text-center pb-5">
-          <%= link_to t('.tutorial'), tutorial_path, class: "text-xl text-dark-black font-thin" %>
-        </div>
         <div class="border-b-2 border-dark-black mb-12 text-center pb-5">
           <%= link_to t('.terms_of_service'), terms_regulation_path, class: "text-xl text-dark-black" %>
         </div>

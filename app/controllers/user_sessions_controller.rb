@@ -26,7 +26,7 @@ class UserSessionsController < ApplicationController
       password: 'password1234',
       password_confirmation: 'password1234'
     )
-    20.times do
+    5.times do
       Diary.create!(
         user_id: demo_user.id,
         title: Faker::Book.title,

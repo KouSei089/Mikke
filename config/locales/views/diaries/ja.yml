@@ -19,7 +19,7 @@ ja:
       demo: 'Demoユーザーとしてログインしました。'
   diaries:
     index:
-      sentiment_list: '%{username}さんの最近の感情です。'
+      sentiment_list: '%{username}さんの最近の気持ち。'
       no_posts: '投稿がありません。'
       advise_posts: '新しい投稿をしてみませんか。'
     greeting:

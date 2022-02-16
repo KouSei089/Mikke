@@ -8,6 +8,10 @@
     <i class="fab fa-telegram-plane"></i>
   <% end %>
 </div>
+<div class="px-20 lg:px-64 flex justify-start text-matte">
+  <i class="fas fa-question-circle text-xl m-2 pr-2"></i>
+  <p class="text-md mt-1">最大３つまで選択できます。</p>
+</div>
 <section class="grid grid-cols-3 lg:grid-cols-6 gap-4 mx-auto xl:mx-64 text-center">
   <%= f.collection_check_boxes :sentiment_ids, Sentiment.all, :id, :name do |t| %>
     <% if ["激怒", "怒り", "苛立ち"].include?(t.text)  %>
