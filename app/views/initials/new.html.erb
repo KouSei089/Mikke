@@ -1,116 +1,165 @@
 <% set_meta_tags title: t('.title') %>
-<div class="block lg:hidden bg-ivory">
+<div class="block lg:block bg-ivory">
   <div class="relative">
-      <div class="flex justify-center">
-        <%= image_tag 'logo_transparent.png', class: 'bg-transparent object-contain h-56 w-56', alt: t('.alt') %>
+      <div class="flex justfity-start px-8 pt-8">
+        <%= image_tag 'logo_transparent.png', class: 'bg-transparent object-contain h-64 w-64', alt: t('.alt') %>
       </div>
       <div class="absolute right-5 bottom-20">
-        <%= link_to 'ログイン', login_path, class: 'text-4xl text-matte mb-24 rounded-lg'  %>
-      </div>
-    </div>
-  <div class="mx-32 lg:mx-64 rounded-lg">
-    <div class="mb-20 text-matte">
-      <div class="flex justify-between mb-5 border-b-2 border-matte pb-5">
-        <h1 class="text-6xl font-thin">Mikke</h1>
-        <h2 class="text-sm flex items-end">習慣ジャーナリング</h2>
-      </div>
-      <h3 class="text-4xl">書く瞑想で</h3>
-      <h3 class="text-4xl">新しい自分が見つかる。</h3>
-    </div>
-    <div class="mb-20 text-matte">
-      <h3 class="text-2xl mb-3">ロジカルシンキングが身につく。</h3>
-      <p class="text-lg">書く瞑想で、とにかく書くという作業を通じて、自分がなんとなく思っていたことや考えていた思考を言語化することになり、ロジカルシンキングが身につくきっかけになります。書くことで思っていたことを客観的に見つめることが可能となり、自分の考えの間違った部分にも気づきやすくなって、課題の解決に何が必要なのか明確になるはずです。書く瞑想によって課題解決スキルの向上も期待できます。</p>
-    </div>
-    <div class="mb-20 text-matte">
-      <h3 class="text-2xl mb-3">ストレスの解消になる</h3>
-      <p class="text-lg">思ったことをひたすら書き出すので、普段たまっていた感情を吐き出すこととなり、ストレスの解消につながります。自分の感情を抑圧し続けると、ストレスはたまり続け、最悪の場合、自分でも気づかないうちに鬱状態となることもありえます。書く瞑想によって心配や不安、悩みを解消できるはずです。</p>
-    </div>
-    <div class="mb-20 text-matte">
-      <h3 class="text-2xl mb-3">自己理解が進む。</h3>
-      <p class="text-lg">書く瞑想することで自分自身が、これまで気づかなかった部分を知るようになり、自己分析が進みます。自分に対して否定的な感情を持っていた場合でも、ありのままの自分を受け入れたり、自分に自信を持てたりするようになるでしょう。</p>
-    </div>
-  </div>
-  <h1 class="text-center text-4xl text-matte font-hairline"><%= t '.subtitle' %></h1>
-  <div class="flex-col mx-32">
-    <div class="flex justify-center rounded-full w-full bg-matte text-ivory my-10">
-        <%= link_to t('.sign_up'), new_user_path, class: "py-12 px-48 text-4xl font-thin" %>
-    </div>
-    <div class="flex justify-center rounded-full w-full bg-ice-green text-matte">
-      <%= link_to t('.demo'), '/demo_login', class: "py-12 px-48 text-4xl font-thin", method: :post %>
-    </div>
-  </div>
-  <div class="text-center mt-10">
-    <%= link_to t('.login'), login_path, class: "text-4xl text-matte border-b-2 border-matte" %>
-  </div>
-  <div class="rounded-3xl bg-white py-20 px-48 mt-10 mx-10">
-    <div class="border-b-2 border-matte mb-12 text-center pb-5">
-      <%= link_to t('.tutorial'), tutorial_path, class: "text-4xl text-matte font-thin" %>
-    </div>
-    <div class="border-b-2 border-dark-black mb-12 text-center pb-5">
-      <%= link_to t('.terms_of_service'), terms_regulation_path, class: "text-4xl text-dark-black" %>
-    </div>
-    <div class="border-b-2 border-matte mb-12 text-center pb-5">
-      <%= link_to t('.privacy_policy'), privacy_regulation_path, class: "text-4xl text-matte" %>
-    </div>
-    <div class="border-b-2 border-matte mb-12 text-center pb-5">
-      <%= link_to t('.feedback'), "#", class: "text-4xl text-matte" %>
-    </div>
-  </div>
-</div>
-<!-- PCデザイン -->
-<div class="hidden lg:block bg-ivory">
-  <div class="grid grid-cols-4 gap-4">
-    <div class="col-span-2">
-      <div class="flex justify-center">
-        <%= image_tag 'logo_transparent.png', class: 'bg-transparent object-contain h-56 w-56', alt: t('.alt') %>
-      </div>
-      <div class="bg-ivory px-10">
-        <div class="mb-10 text-dark-black">
-          <div class="flex justify-between mb-5 border-b-2 border-dark-black pb-5">
-            <h1 class="text-6xl font-thin">Mikke</h1>
-            <h2 class="text-sm flex items-end">習慣ジャーナリング</h2>
+        <div @click.away="open = false" class="relative" x-data="{ open: false }">
+          <button @click="open = !open" class="flex flex-row bg-white items-center w-full px-4 py-2 mt-2 text-md text-dark-black  font-thin text-left bg-transparent rounded-lg md:w-auto md:inline md:mt-0 md:ml-4 hover:text-dark-black focus:text-dark-black hover:bg-white focus:bg-white focus:outline-none focus:shadow-outline focus:text-opacity-50 transition duration-700" >
+            <%= heroicon 'menu', class_name: 'h-10 w-10' %>
+          </button>
+          <div x-show="open" x-transition:enter="transition ease-out duration-700" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-500" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full md:max-w-screen-sm md:w-screen mt-2 origin-top-right">
+            <div class="px-2 pt-2 pb-2 bg-white rounded-md">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <%= link_to new_user_path, class: 'flex row items-start rounded-lg bg-transparent p-2 text-dark-black text-opacity-50 hover:text-dark-black hover:bg-gray-50 focus:text-dark-black focus:bg-gray-200 focus:outline-none focus:shadow-outline transition duration-500' do %>
+                  <div class="bg-matte opacity-75 text-white rounded-lg p-3">
+                    <%= heroicon 'user-add', class_name: 'md:h-6 md:w-6 h-4 w-4' %>
+                  </div>
+                  <div class="ml-3">
+                    <p class="font-hairline">サインアップ</p>
+                    <p class="text-sm font-thin">初めての方</p>
+                  </div>
+                <% end %>
+                <%= link_to '/demo_login', class: 'flex row items-start rounded-lg bg-transparent p-2 text-dark-black text-opacity-50 hover:text-dark-black hover:bg-gray-50 focus:text-dark-black focus:bg-gray-200 focus:outline-none focus:shadow-outline transition duration-500' do %>
+                  <div class="bg-ice-green text-white rounded-lg p-3">
+                    <%= heroicon 'user', class_name: 'md:h-6 md:w-6 h-4 w-4' %>
+                  </div>
+                  <div class="ml-3">
+                    <p class="font-thin">デモ</p>
+                    <p class="text-sm font-thin">機能を試したい方</p>
+                  </div>
+                <% end %>
+                <%= link_to login_path, class: 'flex row items-start rounded-lg bg-transparent p-2 text-dark-black text-opacity-50 hover:text-dark-black hover:bg-gray-50 focus:text-dark-black focus:bg-gray-200 focus:outline-none focus:shadow-outline transition duration-500' do %>
+                  <div class="bg-amber text-white rounded-lg p-3">
+                    <%= heroicon 'login', class_name: 'md:h-6 md:w-6 h-4 w-4' %>
+                  </div>
+                  <div class="ml-3">
+                    <p class="font-thin">ログイン</p>
+                    <p class="text-sm font-thin">アカウントをお持ちの方</p>
+                  </div>
+                <% end %>
+              </div>
+            </div>
           </div>
-          <h3 class="text-4xl">書く瞑想で</h3>
-          <h3 class="text-4xl">新しい自分が見つかる。</h3>
         </div>
-        <div class="mb-10 text-dark-black">
+      </div>
+    </div>
+  <div class="mx-32 lg:mx-64 px-8">
+    <div class="text-matte flex justify-between">
+      <div>
+        <h3 class="text-6xl mb-2">書く瞑想で</h3>
+        <h3 class="text-6xl">新しい自分が見つかる。</h3>
+      </div>
+      <div class="text-ivory">
+        <%= embedded_svg "undraw_mindfulness_scgo.svg", class: "h-48 w-64" %>
+      </div>
+    </div>
+    <div class="mb-20 text-matte">
+      <h3 class="text-2xl mb-3">Mikke（ミッケ）習慣ジャーナリング </h3>
+      <p class="text-lg">Mikke（ミッケ）とは、ジャーナリングをデジタルで実現し、感情の分析や習慣化しやすいようにサポートするサービスです。</p>
+    </div>
+    <div class="flex justify-center">
+      <div class="rounded-md bg-matte text-ivory text-2xl px-8 py-4 mr-5">
+        <%= link_to 'サインアップ', new_user_path %>
+      </div>
+      <div class="rounded-md bg-ice-green text-matte text-2xl px-8 py-4 ml-5">
+        <%= link_to '機能を試す', '/demo_login' %>
+      </div>
+    </div>
+    <div class="text-center my-10">
+      <%= link_to 'ログインはこちら', login_path, class: "text-matte text-xl border-matte border-b-2" %>
+    </div>
+  </div>
+  <div class="bg-amber">
+    <div class="mx-32 lg:mx-64 px-8">
+      <h2 class="py-20 text-4xl text-ivory">Mikke（ミッケ）で実現できること。</h2>
+      <div class="pb-20 text-ivory flex justify-between">
+        <div class="text-amber">
+          <%= embedded_svg "undraw_logic_re_nyb4.svg", class: "h-48 w-64" %>
+        </div>
+        <div class="mx-12">
           <h3 class="text-xl mb-3">ロジカルシンキングが身につく。</h3>
           <p class="text-md">書く瞑想で、とにかく書くという作業を通じて、自分がなんとなく思っていたことや考えていた思考を言語化することになり、ロジカルシンキングが身につくきっかけになります。書くことで思っていたことを客観的に見つめることが可能となり、自分の考えの間違った部分にも気づきやすくなって、課題の解決に何が必要なのか明確になるはずです。書く瞑想によって課題解決スキルの向上も期待できます。</p>
         </div>
-        <div class="mb-10 text-dark-black">
-          <h3 class="text-xl mb-3">ストレスの解消になる</h3>
+      </div>
+      <div class="pb-20 text-ivory flex justify-between">
+        <div class="mx-12">
+          <h3 class="text-xl mb-3">ストレスの解消になる。</h3>
           <p class="text-md">思ったことをひたすら書き出すので、普段たまっていた感情を吐き出すこととなり、ストレスの解消につながります。自分の感情を抑圧し続けると、ストレスはたまり続け、最悪の場合、自分でも気づかないうちに鬱状態となることもありえます。書く瞑想によって心配や不安、悩みを解消できるはずです。</p>
         </div>
-        <div class="text-dark-black">
+        <div class="text-amber">
+          <%= embedded_svg "undraw_feeling_happy_jymo.svg", class: "h-48 w-64" %>
+        </div>
+      </div>
+      <div class="pb-20 text-ivory flex justify-between">
+        <div class="text-amber">
+          <%= embedded_svg "undraw_segment_analysis_re_ocsl.svg", class: "h-48 w-64" %>
+        </div>
+        <div class="mx-12">
           <h3 class="text-xl mb-3">自己理解が進む。</h3>
           <p class="text-md">書く瞑想することで自分自身が、これまで気づかなかった部分を知るようになり、自己分析が進みます。自分に対して否定的な感情を持っていた場合でも、ありのままの自分を受け入れたり、自分に自信を持てたりするようになるでしょう。</p>
         </div>
       </div>
     </div>
-    <div class="col-span-2">
-      <h1 class="text-center text-xl text-dark-black mt-20"><%= t '.subtitle' %></h1>
-      <div class="flex-col mx-32">
-        <div class="flex justify-center rounded-full bg-dark-black text-natural my-10">
-            <%= link_to t('.sign_up'), new_user_path, class: "py-10 px-24 text-xl font-thin" %>
-        </div>
-        <div class="flex justify-center rounded-full bg-ice-green text-dark-black">
-          <%= link_to t('.demo'), '/demo_login', class: "py-10 px-24 text-xl font-thin", method: :post %>
-        </div>
+  </div>
+  <div class="bg-matte">
+    <div class="mx-32 lg:mx-64 px-8">
+      <h2 class="py-20 text-4xl text-ivory">Mikke（ミッケ）の機能。</h2>
+      <div class="pb-20 text-ivory">
+        <h3 class="text-xl mb-3">シンプルで書きやすいジャーナリング。</h3>
+        <p class="text-md">ジャーナリングを継続することに特化したフォーマットになっています。</p>
+        <p class="text-md">タイマー、文字数・書く量の見える化など、あなたのモチベーションをサポートして、継続しやすい仕組みになっています。</p>
       </div>
-      <div class="text-center mt-10">
-        <%= link_to t('.login'), login_path, class: "text-xl text-dark-black border-b-2 border-dark-black" %>
+      <div class="pb-20 text-ivory">
+        <h3 class="text-xl mb-3">書く内容を提案してくれる。</h3>
+        <p class="text-md">「書こうと思っても、何を書けばいいかわからない。」そんなときに使える。ジャーナリングする内容を提案します。</p>
+        <p class="text-md"><i class="fas fa-random"></i>をクリックまたはタッチすることで、ほかの提案内容にランダムで変更することができます。</p>
       </div>
-      <div class="rounded-3xl bg-white py-10 px-24 mt-5 mx-5">
-        <div class="border-b-2 border-dark-black mb-12 text-center pb-5">
-          <%= link_to t('.terms_of_service'), terms_regulation_path, class: "text-xl text-dark-black" %>
+      <div class="pb-20 text-ivory">
+        <h3 class="text-xl mb-3">今の気分を選択できる。</h3>
+        <p class="text-md">AIが分析するものとは別に、自分で書いたときの感情を選択できます。</p>
+        <p class="text-md">自動分析とは別に自分の感情を選択することで、そのときあなた自身が「どう思っていたか」を記録することができます。記録してあるデータを、後から客観的に見直すことができます。</p>
+      </div>
+      <div class="pb-20 text-ivory">
+        <h3 class="text-xl mb-3">書くことの意味を教えてくれる。</h3>
+        <p class="text-md">書き終わったあとに、毎回小さなトリビア・エビデンスを教えてくれます。書くこと、ジャーナリングをする意味をロジカルに理解することで、書くことへの意義や人生にどれだけ貢献するか。情報を共有します。</p>
+      </div>
+      <div class="pb-20 text-ivory">
+        <h3 class="text-xl mb-3">書いたジャーナリングを分析してくれる。</h3>
+        <p class="text-md">AIがジャーナリングの結果を分析してくれます。</p>
+        <p class="text-md">分析した内容は、ポジティブとネガティブを判定して、感情のクオリティを波で表します。ピンクの幅が大きいほどポジティブの傾向、ミズイロの幅が大きいほどネガティブの傾向と。視覚的にわかりやすくなっています。</p>
+      </div>
+    </div>
+  </div>
+  <div class="bg-ivory">
+    <div class="mx-32 lg:mx-64 px-8">
+      <div class="py-10 text-matte">
+        <h3 class="text-2xl mb-5 text-center">今すぐ、書きませんか。</h3>
+          <div class="flex justify-center">
+          <div class="rounded-md bg-matte text-ivory text-md px-4 py-2 mr-2">
+            <%= link_to 'サインアップ', new_user_path %>
+          </div>
+          <div class="rounded-md bg-ice-green text-matte text-md px-4 py-2 ml-2">
+            <%= link_to '機能を試す', '/demo_login' %>
+          </div>
         </div>
-        <div class="border-b-2 border-dark-black mb-12 text-center pb-5">
-          <%= link_to t('.privacy_policy'), privacy_regulation_path, class: "text-xl text-dark-black" %>
-        </div>
-        <div class="border-b-2 border-dark-black mb-12 text-center pb-5">
-          <%= link_to t('.feedback'), "#", class: "text-xl text-dark-black" %>
+        <div class="text-center mt-3">
+          <%= link_to 'ログインはこちら', login_path, class: "text-matte text-md border-matte border-b-2" %>
         </div>
       </div>
     </div>
+  </div>
+  <div>
+    <footer id="footer" class="bg-white w-full">
+      <div class="flex justify-around border-b border-gray-200 py-8">
+        <%= link_to 'Terms of Service', terms_regulation_path, class: "focus:outline-none focus:underline font-thin text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50" %>
+        <%= link_to 'Privacy Policy', privacy_regulation_path, class: "focus:outline-none focus:underline font-thin text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50" %>
+      </div>
+      <div class="py-8 flex flex-col justify-center items-center">
+        <%=  image_tag 'logo_transparent.png', class: 'object-contain h-32 w-32', alt: t('.alt')%>
+        <p tabindex="0" class="focus:outline-none mt-6 font-thin text-xs lg:text-sm leading-none text-dark-black">2022 Mikke.</p>
+      </div>
+    </footer>
   </div>
 </div>
