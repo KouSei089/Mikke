@@ -24,5 +24,5 @@ global.Chart = Chart;
 require("chartkick")
 require("chart.js")
 
-//import '@fortawesome/fontawesome-free/js/all'
+import '@fortawesome/fontawesome-free/js/all'
 import '../stylesheets/application.scss'
