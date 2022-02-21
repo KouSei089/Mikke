@@ -20,11 +20,12 @@ class UserSessionsController < ApplicationController
 
   def demo_login
     random_value = SecureRandom.hex
+    random_value_pass = rand(11_111..99_999)
     demo_user = User.create!(
       username: Gimei.last.kanji,
-      email: "test_#{random_value}@example.com",
-      password: 'password1234',
-      password_confirmation: 'password1234'
+      email: "demo_#{random_value}@example.com",
+      password: "demou#{random_value_pass}",
+      password_confirmation: "demou#{random_value_pass}"
     )
     5.times do
       Diary.create!(

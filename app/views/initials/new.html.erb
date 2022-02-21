@@ -21,7 +21,7 @@
                     <p class="text-sm font-thin">初めての方</p>
                   </div>
                 <% end %>
-                <%= link_to '/demo_login', class: 'flex row items-start rounded-lg bg-transparent p-2 text-dark-black text-opacity-50 hover:text-dark-black hover:bg-gray-50 focus:text-dark-black focus:bg-gray-200 focus:outline-none focus:shadow-outline transition duration-500' do %>
+                <%= link_to '/demo_login', method: :post, class: 'flex row items-start rounded-lg bg-transparent p-2 text-dark-black text-opacity-50 hover:text-dark-black hover:bg-gray-50 focus:text-dark-black focus:bg-gray-200 focus:outline-none focus:shadow-outline transition duration-500' do %>
                   <div class="bg-ice-green text-white rounded-lg p-3">
                     <%= heroicon 'user', class_name: 'md:h-6 md:w-6 h-4 w-4' %>
                   </div>
@@ -64,7 +64,7 @@
         <%= link_to 'サインアップ', new_user_path %>
       </div>
       <div class="rounded-md bg-ice-green text-matte text-2xl px-8 py-4 ml-5">
-        <%= link_to '機能を試す', '/demo_login' %>
+        <%= link_to '機能を試す', '/demo_login', method: :post %>
       </div>
     </div>
     <div class="text-center my-10">
@@ -141,7 +141,7 @@
             <%= link_to 'サインアップ', new_user_path %>
           </div>
           <div class="rounded-md bg-ice-green text-matte text-md px-4 py-2 ml-2">
-            <%= link_to '機能を試す', '/demo_login' %>
+            <%= link_to '機能を試す', '/demo_login', method: :post  %>
           </div>
         </div>
         <div class="text-center mt-3">
