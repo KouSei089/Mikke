@@ -2,6 +2,10 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root 'diaries#index'
   resource :initial, only: [:new]
+  get 'login' => 'user_sessions#new', :as => :login
+  post 'login' => "user_sessions#create"
+  post 'logout' => 'user_sessions#destroy', :as => :logout
+  post '/demo_login', to: 'user_sessions#demo_login'
   resources :trivia, only: [:index, :show]
   resource :regulation, only: [:terms, :privacy] do
     collection do
@@ -27,10 +31,6 @@ Rails.application.routes.draw do
   resource :analysis, only: [:show]
   resources :users
   resources :soliloquies
-  get 'login' => 'user_sessions#new', :as => :login
-  post 'login' => "user_sessions#create"
-  post 'logout' => 'user_sessions#destroy', :as => :logout
-  post '/demo_login', to: 'user_sessions#demo_login'
   get '*not_found' => 'application#routing_error'
   post '*not_found' => 'application#routing_error'
 end
