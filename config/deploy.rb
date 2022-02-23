@@ -6,6 +6,13 @@ set :repo_url, 'git@github.com:KouSei089/Mikke.git'
 set :rbenv_ruby, File.read('.ruby-version').strip
 set :branch, ENV['BRANCH'] || 'main'
 
+set :pg_without_sudo, false
+set :pg_host, 'localhost'
+set :pg_database, 'portfolio'
+set :pg_username, 'postgres'
+set :pg_ask_for_password, true
+set :port, 22
+
 set :nginx_config_name, "#{fetch(:application)}.conf"
 set :nginx_sites_enabled_path, '/etc/nginx/conf.d'
 
