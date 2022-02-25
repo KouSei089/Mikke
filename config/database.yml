@@ -80,7 +80,7 @@ test:
 #
 production:
   <<: *default
-  database: "#"
+  database: a_mikke_production
   username: postgres
-  password: "#"
-  host: "#"
+  password: <%= Rails.application.credentials.db[:password] %>
+  host: <%= Rails.application.credentials.db[:hostname] %>
