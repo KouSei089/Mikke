@@ -1,0 +1,12 @@
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=<%= ::Temple::Utils.escape_html_safe((G-CWJRHHLWP9)) %>">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CWJRHHLWP9D');
+  if (<%= ::Temple::Utils.escape_html_safe((raw current_user.to_json)) %>){
+    gtag('set', {'user_id': <%= ::Temple::Utils.escape_html_safe((raw current_user.to_json)) %>.id});
+  }
+</script>
