@@ -9,28 +9,28 @@
           <%= f.label :username, class: "text-xl lg:text-md text-matte ml-2" %>
           <div class="rounded-md bg-agate ml-1 px-2 text-xl lg:text-md text-ivory">必須</div>
         </div>
-        <%= f.text_field :username, class: 'text-center rounded-full w-full py-12 lg:py-8 bg-white text-dark-black placeholder-gray-200 text-4xl lg:text-2xl border-white focus:border-white focus:ring focus:ring-white focus:ring-opacity-50 shadow-inner far', placeholder: "\uf007 User Name" %>
+        <%= f.text_field :username, class: 'text-center rounded-full w-full py-12 lg:py-8 bg-white text-dark-black placeholder-gray-300 text-4xl lg:text-2xl border-white focus:border-white focus:ring focus:ring-white focus:ring-opacity-50 shadow-inner font-thin', placeholder: "User Name" %>
       </div>
       <div class="mb-12 lg:mb-6">
         <div class="flex justify-start mb-1">
           <%= f.label :email, class: "text-xl lg:text-md text-matte ml-2" %>
           <div class="rounded-md bg-agate ml-1 px-2 text-xl lg:text-md text-ivory">必須</div>
         </div>
-        <%= f.text_field :email, class: 'text-center rounded-full w-full py-12 lg:py-8 bg-white text-dark-black placeholder-gray-200 text-4xl lg:text-2xl border-white focus:border-white focus:ring focus:ring-white focus:ring-opacity-50 shadow-inner far', placeholder: "\uf0e0 Email" %>
+        <%= f.text_field :email, class: 'text-center rounded-full w-full py-12 lg:py-8 bg-white text-dark-black placeholder-gray-300 text-4xl lg:text-2xl border-white focus:border-white focus:ring focus:ring-white focus:ring-opacity-50 shadow-inner font-thin', placeholder: "Email" %>
       </div>
       <div class="mb-12 lg:mb-6">
         <div class="flex justify-start mb-1">
           <%= f.label :password, class: "text-xl lg:text-md text-matte ml-2" %>
           <div class="rounded-md bg-agate ml-1 px-2 text-xl lg:text-md text-ivory">必須</div>
         </div>
-        <%= f.password_field :password, class: 'text-center rounded-full w-full py-12 lg:py-8 bg-white text-dark-black placeholder-gray-200 text-4xl lg:text-2xl border-white focus:border-white focus:ring focus:ring-white focus:ring-opacity-50 shadow-inner far', placeholder: "Password" %>
+        <%= f.password_field :password, class: 'text-center rounded-full w-full py-12 lg:py-8 bg-white text-dark-black placeholder-gray-300 text-4xl lg:text-2xl border-white focus:border-white focus:ring focus:ring-white focus:ring-opacity-50 shadow-inner font-thin', placeholder: "Password" %>
       </div>
       <div class="mb-12 lg:mb-6">
         <div class="flex justify-start mb-1">
           <%= f.label :password_confirmation, class: "text-xl lg:text-md text-matte ml-2" %>
           <div class="rounded-md bg-agate ml-1 px-2 text-xl lg:text-md text-ivory">必須</div>
         </div>
-        <%= f.password_field :password_confirmation, class: 'text-center rounded-full w-full py-12 lg:py-8 bg-white text-dark-black placeholder-gray-200 text-4xl lg:text-2xl border-white focus:border-white focus:ring focus:ring-white focus:ring-opacity-50 shadow-inner far', placeholder: "Password Confirmation" %>
+        <%= f.password_field :password_confirmation, class: 'text-center rounded-full w-full py-12 lg:py-8 bg-white text-dark-black placeholder-gray-300 text-4xl lg:text-2xl border-white focus:border-white focus:ring focus:ring-white focus:ring-opacity-50 shadow-inner font-thin', placeholder: "Password Confirmation" %>
         <p class="text-xs ml-4 mt-1 opacity-75">パスワードは8文字以上にしてください。英数字の両方を含む必要があります。</p>
       </div>
       <%= f.submit t('.submit'), class: 'text-center rounded-full w-full mt-5 py-12 lg:py-8 bg-matte text-natural placeholder-gray-200 text-4xl lg:text-2xl font-thin' %>
