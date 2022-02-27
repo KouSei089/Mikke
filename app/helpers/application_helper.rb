@@ -26,7 +26,7 @@ module ApplicationHelper
         title: 'Mikke（ミッケ）習慣ジャーナリング',
         description: 'Mikke（ミッケ）習慣ジャーナリング 書く瞑想で、新しい自分が見つかる。 ジャーナリングとは、頭に浮かぶ思考をありのまま書き出すということです。書く瞑想とも呼ばれています。Mikke（ミッケ）では、ジャーナリングをデジタルで実現し、感情の分析や習慣化しやすいようにサポートするサービスです',
         type: 'website',
-        url: request.original_url,
+        # url: request.original_url,
         image: image_url('logo.png'),
         locale: 'ja_JP'
       }
