@@ -30,13 +30,13 @@ class DiariesController < ApplicationController
   def sentiment_confirm
     @diary = Diary.find_or_initialize_by(id: params[:id])
     @diary.assign_attributes(diary_params)
-    @sentiments_date = Sentiment.all.map(&:name)
+    @sentiments_date = Sentiment.all.pluck(:name)
   end
 
   def edit_sentiment_confirm
     @diary = Diary.find_or_initialize_by(id: params[:id])
     @diary.assign_attributes(diary_params)
-    @sentiments_date = Sentiment.all.map(&:name)
+    @sentiments_date = Sentiment.all.pluck(:name)
   end
 
   def show; end

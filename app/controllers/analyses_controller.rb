@@ -1,15 +1,12 @@
 class AnalysesController < ApplicationController
   def show
-    @diaries = current_user.diaries.all
-    @diaries_score = @diaries.group_by_day(:created_at, last: 7).average(:emotion_point)
-    gon.chartdays = @diaries_score.map(&:first)
-    @positives = @diaries_score.map(&:second)
-    @negatives = @diaries_score.map(&:second)
+    gon.chartdays = current_user.diaries.group_by_day(:created_at, last: 7).average(:emotion_point).map(&:first)
+    @positives = current_user.diaries.group_by_day(:created_at, last: 7).average(:emotion_point).map(&:second)
+    @negatives = current_user.diaries.group_by_day(:created_at, last: 7).average(:emotion_point).map(&:second)
     gon.positive_scores = positive_analyses
     gon.negative_scores = negative_analyses
-    @diaries_creative = current_user.diaries.pluck(:created_at, :creativity)
-    gon.creative_days = @diaries_creative.map { |creative_day| creative_day[0].strftime("%m/%d\n%H:%S") }
-    gon.creative_sizes = @diaries_creative.map(&:second)
+    gon.creative_days = current_user.diaries.pluck(:created_at).map { |creative_day| creative_day.strftime("%m/%d\n%H:%S") }
+    gon.creative_sizes = current_user.diaries.pluck(:creativity)
   end
 
   private
