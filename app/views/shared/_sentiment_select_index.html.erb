@@ -1,0 +1,55 @@
+<% if ["激怒", "怒り", "苛立ち"].include?(sentiment_date)  %>
+  <div class="rounded-tl-3xl rounded-tr-2xl rounded-bl-2xl rounded-br-3xl py-2 px-6 bg-baby-pink text-matte">
+    <div class="text-center">
+      <%= sentiment_date %>
+    </div>
+  </div>
+<% elsif ["警戒", "予期", "関心"].include?(sentiment_date) %>
+  <div class="rounded-tl-2xl rounded-tr-3xl rounded-bl-3xl rounded-br-2xl py-2 px-6 bg-apricot text-matte">
+    <div class="text-center">
+      <%= sentiment_date %>
+    </div>
+  </div>
+<% elsif ["夢心地", "喜び", "平穏"].include?(sentiment_date) %>
+  <div class="rounded-tl-3xl rounded-tr-3xl rounded-bl-2xl rounded-br-xl py-2 px-6 bg-honey text-matte">
+    <div class="text-center">
+      <%= sentiment_date %>
+    </div>
+  </div>
+<% elsif ["尊い", "信頼", "容認"].include?(sentiment_date) %>
+  <div class="rounded-tl-xl rounded-tr-3xl rounded-bl-3xl rounded-br-2xl py-2 px-6 bg-opal-green text-matte">
+    <div class="text-center">
+      <%= sentiment_date %>
+    </div>
+  </div>
+<% elsif ["恐れ", "心配", "不安"].include?(sentiment_date) %>
+  <div class="rounded-tl-xl rounded-tr-3xl rounded-bl-2xl rounded-br-2xl py-2 px-6 bg-sea-green text-matte">
+    <div class="text-center">
+      <%= sentiment_date %>
+    </div>
+  </div>
+<% elsif ["悲劇", "悲しみ", "感傷"].include?(sentiment_date) %>
+  <div class="rounded-tl-xl rounded-tr-3xl rounded-bl-2xl rounded-br-2xl py-2 px-6 bg-sea-green text-matte">
+    <div class="text-center">
+      <%= sentiment_date %>
+    </div>
+  </div>
+<% elsif ["驚愕", "驚き", "動揺"].include?(sentiment_date) %>
+  <div class="rounded-tl-xl rounded-tr-3xl rounded-bl-2xl rounded-br-2xl py-2 px-6 bg-moss-blue text-matte">
+    <div class="text-center">
+      <%= sentiment_date %>
+    </div>
+  </div>
+<% elsif ["憎む", "嫌悪", "退屈"].include?(sentiment_date) %>
+  <div class="rounded-tl-xl rounded-tr-3xl rounded-bl-2xl rounded-br-2xl py-2 px-6 bg-lilac text-matte">
+    <div class="text-center">
+      <%= sentiment_date %>
+    </div>
+  </div>
+<% else %>
+  <div class="rounded-tl-3xl rounded-tr-3xl rounded-bl-2xl rounded-br-xl py-2 px-6 bg-sky-gray text-matte">
+    <div class="text-center">
+      <%= sentiment_date %>
+    </div>
+  </div>
+<% end %>
