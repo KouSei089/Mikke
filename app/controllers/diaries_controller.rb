@@ -5,10 +5,10 @@ class DiariesController < ApplicationController
   def index
     @diaries = current_user.diaries.paginate(page: params[:page], per_page: 10).order(created_at: :desc)
     @soliloquies = current_user.soliloquies.all.order(created_at: :desc)
-    @diaries_sentiments = current_user.diaries.includes(:sentiments).order(created_at: :desc).limit(5)
     diaries_soliloquies_mix = @diaries | @soliloquies
     diaries_soliloquies_sort = diaries_soliloquies_mix.sort! { |a, b| b.created_at <=> a.created_at }
     @diaries_soliloquies = diaries_soliloquies_sort.paginate(page: params[:page], per_page: 15)
+    @diaries_sentiments = current_user.diaries.includes(:sentiments).order(created_at: :desc).limit(5).pluck(:name)
     @write = Write.find(rand(Write.first.id..Write.last.id))
   end
 
