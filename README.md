@@ -104,7 +104,6 @@ AIがジャーナリングの結果を分析してくれます。
 
 
 # ER図
-
 https://drive.google.com/file/d/1nwkziDUveW9O5yagABVugj1nracOZgWf/view?usp=sharing
 
 # インフラ構成図
