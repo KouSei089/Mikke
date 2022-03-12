@@ -1,7 +1,7 @@
 <% set_meta_tags title: t('.title') %>
 <div class="flex justify-center">
   <i class="fas fa-calendar text-3xl text-matte mr-3 mb-1 shadow-lg"></i>
-  <h1 class="text-3xl font-thin text-matte"><%= l Time.current, format: :long %></h1>
+  <h1 class="text-3xl md:text-4xl font-thin text-matte"><%= l Time.current, format: :long %></h1>
 </div>
 <%= render 'diaries/timer' %>
 <div class="bg-ivory rounded px-8 pt-6 pb-8 mb-4">
