@@ -3,7 +3,7 @@ ja:
     new:
       title: 'サインアップ'
       login: 'ログインはこちら'
-      guidance: 'ご案内はこちら'
+      guidance: 'トップページはこちら'
       submit: 'アカウント作成'
     flash:
       notice: "ユーザー登録に成功しました。"
@@ -12,7 +12,7 @@ ja:
       title: 'ログイン'
       subtitle: 'ログイン'
       sign_up: 'サインアップはこちら'
-      guidance: 'ご案内はこちら'
+      guidance: 'トップページはこちら'
     flash:
       notice: 'ログインしました。'
       alert: 'ログインに失敗しました。'
