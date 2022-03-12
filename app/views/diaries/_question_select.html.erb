@@ -1,17 +1,17 @@
-<div class="rounded-lg m-5 p-5 text-center bg-pink-white">
+<div class="rounded-lg m-5 p-5 text-center bg-pink-white relative">
   <p class="text-xl text-matte font-bold mb-2"><i class="fas fa-question-circle"></i>質問に答えて、自分を見つけてみませんか？</p>
-  <div class="rounded-lg py-3 mb-2 text-matte bg-white shadow-inner relative">
-  <%= link_to new_diary_path(title: write.title) do %>
-    <div class="text-2xl flex justify-center hover:opacity-75">
-      <i class="fas fa-check mr-5"></i>
-      <p class="text-xl lg:text-md text-matte font-thin md:font-light items-center"><%= write.title %></p>
-    </div>
-    <%= link_to root_path do %>
-        <div class="absolute right-3 bottom-3 lg:bottom-2 text-2xl rouded-lg text-amber">
-          <i class="fas fa-random"></i>
-        </div>
-      <% end %>
-  <% end %>
+  <div class="rounded-lg py-3 mb-3 text-matte bg-white shadow-inner relative">
+    <%= link_to new_diary_path(title: write.title) do %>
+      <div class="text-2xl flex justify-center hover:opacity-75">
+        <i class="fas fa-check mr-5"></i>
+        <p class="text-xl lg:text-md text-matte font-thin items-center"><%= write.title %></p>
+      </div>
+    <% end %>
   </div>
-  <p class="text-right text-sm lg:text-xs text-matte font-thin md:font-light mt-4"><i class="fas fa-random"></i>マークをクリックまたはタッチすることで質問が変わります。</p>
+  <%= link_to root_path do %>
+    <div class="text-3xl rounded-full h-12 w-12 flex items-center justify-center text-white bg-amber absolute right-1 bottom-0.5 shadow-inner">
+      <i class="fas fa-random"></i>
+    </div>
+  <% end %>
+  <p class="text-right text-sm lg:text-xs text-matte font-thin mt-4 mr-10"><i class="fas fa-random"></i>マークをクリックまたはタッチすることで質問が変わります。</p>
 </div>
