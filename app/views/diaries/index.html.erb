@@ -4,7 +4,7 @@
   <%= render 'diaries/question_select', write: @write %>
 
   <% if @diaries_soliloquies.present? %>
-    <h1 class="text-matte text-center font-thin text-lg mb-5"><%= t '.sentiment_list' , username: current_user.username %></h1>
+    <h1 class="text-matte text-center font-thin md:font-light text-lg mb-5"><%= t '.sentiment_list' , username: current_user.username %></h1>
     <div class="flex flex-wrap mx-64">
       <%= render partial: 'shared/sentiment_select_index', collection: @diaries_sentiments, as: "sentiment_date" %>
     </div>
@@ -50,8 +50,8 @@
         <%= embedded_svg "undraw_no_data_re_kwbl.svg", class: "h-32 w-32" %>
       </div>
       <div class="mt-10">
-        <p class="text-md text-dark-black mb-2 m-10"><%= t '.no_posts' %></p>
-        <p class="text-md text-dark-black mb-2 m-10"><%= t '.advise_posts' %></p>
+        <p class="text-md text-matte mb-2 m-10"><%= t '.no_posts' %></p>
+        <p class="text-md text-matte mb-2 m-10"><%= t '.advise_posts' %></p>
       </div>
     </div>
   <% end %>

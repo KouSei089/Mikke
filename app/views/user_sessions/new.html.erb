@@ -9,16 +9,16 @@
           <%= f.label 'メールアドレス', class: "text-xl lg:text-md text-matte ml-2" %>
           <div class="rounded-md bg-agate ml-1 px-2 text-xl lg:text-md text-ivory">必須</div>
         </div>
-        <%= f.text_field :email, class: 'text-center rounded-full w-full py-12 lg:py-8 bg-white text-dark-black placeholder-gray-300 text-5xl lg:text-2xl border-white focus:border-white focus:ring focus:ring-white focus:ring-opacity-50 shadow-inner font-thin', placeholder: "Email" %>
+        <%= f.text_field :email, class: 'text-center rounded-full w-full py-12 lg:py-8 bg-white text-matte placeholder-gray-300 text-5xl lg:text-2xl border-white focus:border-white focus:ring focus:ring-white focus:ring-opacity-50 shadow-inner font-thin md:font-light', placeholder: "Email" %>
       </div>
       <div class="my-12 lg:my-6">
         <div class="flex justify-start mb-1">
           <%= f.label 'パスワード', class: "text-xl lg:text-md text-matte ml-2" %>
           <div class="rounded-md bg-agate ml-1 px-2 text-xl lg:text-md text-ivory">必須</div>
         </div>
-        <%= f.password_field :password, class: 'text-center rounded-full w-full py-12 lg:py-8 bg-white text-dark-black placeholder-gray-300 text-5xl lg:text-2xl border-white focus:border-white focus:ring focus:ring-white focus:ring-opacity-50 shadow-inner font-thin', placeholder: "Password" %>
+        <%= f.password_field :password, class: 'text-center rounded-full w-full py-12 lg:py-8 bg-white text-matte placeholder-gray-300 text-5xl lg:text-2xl border-white focus:border-white focus:ring focus:ring-white focus:ring-opacity-50 shadow-inner font-thin md:font-light', placeholder: "Password" %>
       </div>
-      <%= f.submit t('.subtitle'), class: 'text-center rounded-full w-full mt-5 py-12 lg:py-8 bg-matte text-natural placeholder-gray-300 text-5xl lg:text-2xl font-thin' %>
+      <%= f.submit t('.subtitle'), class: 'text-center rounded-full w-full mt-5 py-12 lg:py-8 bg-matte text-natural placeholder-gray-300 text-5xl lg:text-2xl font-thin md:font-light' %>
     </div>
   <% end %>
   <div class="text-center mt-5">

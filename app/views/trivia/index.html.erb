@@ -1,12 +1,12 @@
 <% set_meta_tags title: t('.title') %>
 <div class="bg-ivory lg:pb-5 md:pb-64">
   <div class="mx-32 lg:mx-16">
-    <h1 class="text-6xl font-thin mb-10 pb-5 border-b-2 border-dark-black text-dark-black"><%= t '.evidence' %></h1>
+    <h1 class="text-6xl font-thin md:font-light mb-10 pb-5 border-b-2 border-matte text-matte"><%= t '.evidence' %></h1>
     <div class="flex justify-between mx-64 lg:mx-32 md:mx-24 my-20">
       <div class="text-natural">
         <%= embedded_svg "undraw_bibliophile_re_xarc.svg", class: "h-64 w-64" %>
       </div>
-      <div class="text-dark-black font-thin ml-10">
+      <div class="text-matte font-thin md:font-light ml-10">
         <h1 class="text-2xl mb-5 pb-3"><%= t '.essence' %></h1>
         <p class="text-lg"><%= t '.evidence_description' %></p>
       </div>
@@ -16,8 +16,8 @@
     <% @evidence.each do |t| %>
       <div class="bg-white mb-20 md:mb-10 mx-10 md:mx-24 rounded-md shadow-inner">
         <div class="flex justify-around mt-8 mb-2">
-          <h1 class="border-b-2 border-dark-black text-lg md:text-md"><%= t.title %></h1>
-          <div class="ml-4 text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 rounded-full bg-gray-100 text-dark-black border hover:text-white hover:bg-dark-black focus:text-white focus:bg-dark-black">
+          <h1 class="border-b-2 border-matte text-lg md:text-md"><%= t.title %></h1>
+          <div class="ml-4 text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 rounded-full bg-gray-100 text-matte border hover:text-white hover:bg-matte focus:text-white focus:bg-matte">
             <div class="mr-2">
               <i class="fas fa-tag"></i>
             </div>
@@ -31,12 +31,12 @@
     <% end %>
   </div>
   <div class="mx-32 lg:mx-16">
-    <h1 class="text-6xl font-thin lg:mt-10 md:mt-10 mb-10 pb-5 border-b-2 border-dark-black text-matte"><%= t '.trivia' %></h1>
+    <h1 class="text-6xl font-thin md:font-light lg:mt-10 md:mt-10 mb-10 pb-5 border-b-2 border-matte text-matte"><%= t '.trivia' %></h1>
     <div class="flex justify-between mx-64 lg:mx-32 md:mx-24 my-20">
       <div class="text-natural">
         <%= embedded_svg "undraw_meditation_re_gll0.svg", class: "h-64 w-64" %>
       </div>
-      <div class="text-dark-black font-thin ml-10">
+      <div class="text-matte font-thin md:font-light ml-10">
         <h1 class="text-2xl mb-5 pb-3"><%= t '.essence' %></h1>
         <p class="text-lg"><%= t '.trivia_description' %></p>
       </div>
@@ -46,8 +46,8 @@
     <% @trivia.each do |t| %>
       <div class="bg-white mb-20 md:mb-10 mx-10 md:mx-24 rounded-md shadow-inner">
         <div class="flex justify-around mt-8 mb-2">
-          <h1 class="border-b-2 border-dark-black text-lg"><%= t.title %></h1>
-          <div class="ml-4 text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 rounded-full bg-gray-100 text-dark-black border hover:text-white hover:bg-dark-black focus:text-white focus:bg-dark-black">
+          <h1 class="border-b-2 border-matte text-lg"><%= t.title %></h1>
+          <div class="ml-4 text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 rounded-full bg-gray-100 text-matte border hover:text-white hover:bg-matte focus:text-white focus:bg-matte">
             <div class="mr-2">
               <i class="fas fa-tag"></i>
             </div>

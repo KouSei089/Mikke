@@ -1,10 +1,10 @@
 <div class="col-span-2 lg:col-span-1 m-8">
-  <h3 class="text-4xl text-dark-black mb-2 font-thin"><%= l diary.created_at, format: :day %></h3>
+  <h3 class="text-4xl text-matte mb-2 font-thin md:font-light"><%= l diary.created_at, format: :day %></h3>
   <div class="bg-white rounded-full h-10 w-10 flex items-center justify-center relative">
-    <h4 class="text-lg text-dark-black font-thin"><%= l diary.created_at, format: :day_of_week %></h4>
+    <h4 class="text-lg text-matte font-thin"><%= l diary.created_at, format: :day_of_week %></h4>
     <%= render 'diaries/wday', object: diary %>
   </div>
-  <h3 class="text-lg text-dark-black font-thin"><%= l diary.created_at, format: :year_month %></h3>
+  <h3 class="text-lg text-matte font-thin md:font-light"><%= l diary.created_at, format: :year_month %></h3>
 </div>
 <div class="p-8 col-span-10 lg:col-span-5">
   <div class="bg-white rounded-3xl relative">
@@ -15,7 +15,7 @@
       </div>
       <div class="bg-white rounded">
       <%= render 'diaries/progressbar', object: diary %>
-      <p class="text-sm text-center text-dark-black font-thin">Creativity</p>
+      <p class="text-sm text-center text-matte font-thin md:font-light">Creativity</p>
       </div>
     </div>
   </div>

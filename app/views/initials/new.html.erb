@@ -5,37 +5,37 @@
       </div>
       <div class="absolute right-5 bottom-20">
         <div @click.away="open = false" class="relative" x-data="{ open: false }">
-          <button @click="open = !open" class="flex flex-row bg-white items-center w-full px-4 py-2 mt-2 text-md text-dark-black  font-thin text-left bg-transparent rounded-lg md:w-auto md:inline md:mt-0 md:ml-4 hover:text-dark-black focus:text-dark-black hover:bg-white focus:bg-white focus:outline-none focus:shadow-outline focus:text-opacity-50 transition duration-700" >
+          <button @click="open = !open" class="flex flex-row bg-white items-center w-full px-4 py-2 mt-2 text-md text-matte font-thin md:font-light text-left bg-transparent rounded-lg md:w-auto md:inline md:mt-0 md:ml-4 hover:text-matte focus:text-matte hover:bg-white focus:bg-white focus:outline-none focus:shadow-outline focus:text-opacity-50 transition duration-700" >
             <%= heroicon 'menu', class_name: 'h-10 w-10' %>
           </button>
           <div x-show="open" x-transition:enter="transition ease-out duration-700" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-500" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full md:max-w-screen-sm md:w-screen mt-2 origin-top-right">
             <div class="px-2 pt-2 pb-2 bg-white rounded-md">
               <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <%= link_to new_user_path, class: 'flex row items-start rounded-lg bg-transparent p-2 text-dark-black text-opacity-75 hover:text-dark-black hover:bg-gray-50 focus:text-dark-black focus:bg-gray-200 focus:outline-none focus:shadow-outline transition duration-500' do %>
+                <%= link_to new_user_path, class: 'flex row items-start rounded-lg bg-transparent p-2 text-matte text-opacity-75 hover:text-matte hover:bg-gray-50 focus:text-matte focus:bg-gray-200 focus:outline-none focus:shadow-outline transition duration-500' do %>
                   <div class="bg-matte opacity-75 text-white rounded-lg p-3">
                     <%= heroicon 'user-add', class_name: 'md:h-6 md:w-6 h-4 w-4' %>
                   </div>
                   <div class="ml-3">
                     <p class="font-hairline">サインアップ</p>
-                    <p class="text-sm font-thin">初めての方</p>
+                    <p class="text-sm font-thin md:font-light">初めての方</p>
                   </div>
                 <% end %>
-                <%= link_to '/demo_login', method: :post, class: 'flex row items-start rounded-lg bg-transparent p-2 text-dark-black text-opacity-75 hover:text-dark-black hover:bg-gray-50 focus:text-dark-black focus:bg-gray-200 focus:outline-none focus:shadow-outline transition duration-500' do %>
+                <%= link_to '/demo_login', method: :post, class: 'flex row items-start rounded-lg bg-transparent p-2 text-matte text-opacity-75 hover:text-matte hover:bg-gray-50 focus:text-matte focus:bg-gray-200 focus:outline-none focus:shadow-outline transition duration-500' do %>
                   <div class="bg-ice-green text-white rounded-lg p-3">
                     <%= heroicon 'user', class_name: 'md:h-6 md:w-6 h-4 w-4' %>
                   </div>
                   <div class="ml-3">
-                    <p class="font-thin">デモ</p>
-                    <p class="text-sm font-thin">機能を試したい方</p>
+                    <p class="font-thin md:font-light">デモ</p>
+                    <p class="text-sm font-thin md:font-light">機能を試したい方</p>
                   </div>
                 <% end %>
-                <%= link_to login_path, class: 'flex row items-start rounded-lg bg-transparent p-2 text-dark-black text-opacity-75 hover:text-dark-black hover:bg-gray-50 focus:text-dark-black focus:bg-gray-200 focus:outline-none focus:shadow-outline transition duration-500' do %>
+                <%= link_to login_path, class: 'flex row items-start rounded-lg bg-transparent p-2 text-matte text-opacity-75 hover:text-matte hover:bg-gray-50 focus:text-matte focus:bg-gray-200 focus:outline-none focus:shadow-outline transition duration-500' do %>
                   <div class="bg-amber text-white rounded-lg p-3">
                     <%= heroicon 'login', class_name: 'md:h-6 md:w-6 h-4 w-4' %>
                   </div>
                   <div class="ml-3">
-                    <p class="font-thin">ログイン</p>
-                    <p class="text-sm font-thin">アカウントをお持ちの方</p>
+                    <p class="font-thin md:font-light">ログイン</p>
+                    <p class="text-sm font-thin md:font-light">アカウントをお持ちの方</p>
                   </div>
                 <% end %>
               </div>
@@ -176,12 +176,12 @@
   <div>
     <footer id="footer" class="bg-white w-full">
       <div class="flex justify-around border-b border-gray-200 py-8">
-        <%= link_to 'Terms of Service', terms_regulation_path, class: "focus:outline-none focus:underline font-thin text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50" %>
-        <%= link_to 'Privacy Policy', privacy_regulation_path, class: "focus:outline-none focus:underline font-thin text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50" %>
+        <%= link_to 'Terms of Service', terms_regulation_path, class: "focus:outline-none focus:underline font-thin md:font-light text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50" %>
+        <%= link_to 'Privacy Policy', privacy_regulation_path, class: "focus:outline-none focus:underline font-thin md:font-light text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50" %>
       </div>
       <div class="py-8 flex flex-col justify-center items-center">
         <%=  image_tag 'logo_transparent.png', class: 'object-contain h-32 w-32', alt: t('.alt')%>
-        <p tabindex="0" class="focus:outline-none mt-6 font-thin text-xs lg:text-sm leading-none text-dark-black">2022 Mikke.</p>
+        <p tabindex="0" class="focus:outline-none mt-6 font-thin md:font-light text-xs lg:text-sm leading-none text-matte">2022 Mikke.</p>
       </div>
     </footer>
   </div>

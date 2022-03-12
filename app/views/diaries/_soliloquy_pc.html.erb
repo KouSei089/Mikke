@@ -1,8 +1,8 @@
 <div class="flex justify-center">
   <div class="p-8">
-    <h3 class="text-4xl text-dark-black mb-2 font-thin"><%= l soliloquy.created_at, format: :day %></h3>
+    <h3 class="text-4xl text-matte mb-2 font-thin"><%= l soliloquy.created_at, format: :day %></h3>
     <div class="bg-white rounded-full h-10 w-10 flex items-center justify-center relative">
-      <h4 class="text-lg text-dark-black"><%= l soliloquy.created_at, format: :day_of_week %></h4>
+      <h4 class="text-lg text-matte"><%= l soliloquy.created_at, format: :day_of_week %></h4>
       <%= render 'diaries/wday', object: soliloquy %>
     </div>
   </div>
@@ -13,10 +13,10 @@
           <p class="text-gray-600 w-48"><%= soliloquy.text %></p>
         </div>
         <div class="absolute right-0 bottom-0 flex justify-center">
-          <div class="rounded-full h-8 w-8 flex items-center justify-center bg-white text-dark-black hover:opacity-75">
-            <%= link_to heroicon('pencil-alt', style: :outline,class_name: 'h-4 w-4 text-dark-black'), edit_soliloquy_path(soliloquy) %>
+          <div class="rounded-full h-8 w-8 flex items-center justify-center bg-white text-matte hover:opacity-75">
+            <%= link_to heroicon('pencil-alt', style: :outline,class_name: 'h-4 w-4 text-matte'), edit_soliloquy_path(soliloquy) %>
           </div>
-          <div class="rounded-full h-8 w-8 flex items-center justify-center bg-white text-dark-black">
+          <div class="rounded-full h-8 w-8 flex items-center justify-center bg-white text-matte">
             <%= render 'diaries/delete_soliloquy', soliloquy: soliloquy %>
           </div>
         </div>

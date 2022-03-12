@@ -4,33 +4,33 @@
     <div class="flex justify-start">
       <%= render 'shared/back_button' %>
       <% if @diary.title? %>
-        <h1 class="text-4xl text-dark-black font-thin"><%= @diary.title %></h1>
+        <h1 class="text-4xl text-matte font-thin md:font-light"><%= @diary.title %></h1>
       <% else %>
-        <h1 class="text-4xl text-dark-black font-thin"><%= t '.untitled' %></h1>
+        <h1 class="text-4xl text-matte font-thin md:font-light"><%= t '.untitled' %></h1>
       <% end %>
     </div>
-    <div class="text-1xl text-dark-black font-thin"><%= l @diary.created_at, format: :long %></div>
+    <div class="text-1xl text-matte font-thin md:font-light"><%= l @diary.created_at, format: :long %></div>
   </div>
   <div class="bg-white rounded-3xl">
     <div class="py-8 px-16">
       <div class="mt-8 text-center">
-        <p class="text-gray-600 font-thin"><%=safe_join(@diary.text.split("\n"),tag(:br))%></p>
+        <p class="text-gray-600 font-thin md:font-light"><%=safe_join(@diary.text.split("\n"),tag(:br))%></p>
       </div>
       <div class="relative pt-1 mt-3">
         <%= render 'diaries/progressbar', object: @diary %>
         <div class="mt-5">
-          <span class="absolute right-0 text-dark-black font-thin"><%= @diary.creativity %>％</span>
-          <span class="absolute left-0 text-dark-black font-thin"><%= @diary.word_count %>文字</span>
+          <span class="absolute right-0 text-matte font-thin md:font-light"><%= @diary.creativity %>％</span>
+          <span class="absolute left-0 text-matte font-thin md:font-light"><%= @diary.word_count %>文字</span>
         </div>
       </div>
       <div class="flex justify-center mt-10">
         <%= render 'shared/sentiment_select', object: @diary %>
       </div>
       <div class="flex justify-end mt-10">
-        <div class="flex items-center justify-center bg-white text-dark-black hover:opacity-75 mr-5">
+        <div class="flex items-center justify-center bg-white text-matte hover:opacity-75 mr-5">
           <%= link_to heroicon('pencil-alt', style: :outline,class_name: 'h-10 w-10'), edit_diary_path(@diary) %>
         </div>
-        <div class="flex items-center justify-center bg-white text-dark-black">
+        <div class="flex items-center justify-center bg-white text-matte">
           <%= render 'shared/delete_modal', object: @diary %>
         </div>
       </div>
