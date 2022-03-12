@@ -23,6 +23,7 @@ gem 'gimei'
 gem 'active_hash'
 gem 'will_paginate'
 gem 'meta-tags'
+gem 'config', '2.0.0'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -34,6 +35,7 @@ group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'bullet'
+  gem 'letter_opener_web', '~> 1.0'
 end
 
 group :development do
