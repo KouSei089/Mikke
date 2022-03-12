@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount LetterOpenerWeb::Engine, at: '/letter_opener' if Rails.env.development?
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root 'diaries#index'
   resource :initial, only: [:new]
@@ -6,6 +7,7 @@ Rails.application.routes.draw do
   post 'login' => "user_sessions#create"
   post 'logout' => 'user_sessions#destroy', :as => :logout
   post '/demo_login', to: 'user_sessions#demo_login'
+  resources :password_resets, only: [:new, :create, :edit, :update]
   resources :trivia, only: [:index, :show]
   resource :regulation, only: [:terms, :privacy] do
     collection do

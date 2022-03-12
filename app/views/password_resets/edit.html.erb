@@ -1,0 +1,25 @@
+<div class="bg-ivory">
+  <%= render 'shared/top_logo' %>
+  <%= render 'shared/flash_message' %>
+  <%= form_with model: @user, url: password_reset_path(@token), local: true do |f| %>
+    <div class="flex flex-col mx-32 lg:mx-64 px-0 lg:px-48">
+      <div class="my-12 lg:my-6">
+        <div class="text-center text-2xl text-matte">新しいパスワードを設定</div>
+        <div class="flex justify-start mb-1">
+          <%= f.label '新しいパスワード', class: "text-xl lg:text-md text-matte ml-2" %>
+        </div>
+        <%= f.password_field :password, class: 'text-center rounded-full w-full py-12 lg:py-8 bg-white text-matte placeholder-gray-300 text-5xl lg:text-2xl border-white focus:border-white focus:ring focus:ring-white focus:ring-opacity-50 shadow-inner font-thin md:font-light' %>
+      </div>
+      <div class="my-12 lg:my-6">
+        <div class="flex justify-start mb-1">
+          <%= f.label '新しいパスワードの再入力', class: "text-xl lg:text-md text-matte ml-2" %>
+        </div>
+        <%= f.password_field :password_confirmation, class: 'text-center rounded-full w-full py-12 lg:py-8 bg-white text-matte placeholder-gray-300 text-5xl lg:text-2xl border-white focus:border-white focus:ring focus:ring-white focus:ring-opacity-50 shadow-inner font-thin md:font-light' %>
+      </div>
+      <%= f.submit "送信", class: 'text-center rounded-full w-full mt-5 py-12 lg:py-8 bg-matte text-natural placeholder-gray-300 text-5xl lg:text-2xl font-thin md:font-light' %>
+    </div>
+  <% end %>
+  <div class="text-center mt-5">
+    <%= link_to "トップページはこちら", new_initial_path, class: "text-2xl text-matte border-b-2 border-matte" %>
+  </div>
+</div>
