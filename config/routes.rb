@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   post 'login' => "user_sessions#create"
   post 'logout' => 'user_sessions#destroy', :as => :logout
   post '/demo_login', to: 'user_sessions#demo_login'
+  resources :password_resets, only: [:create, :edit, :update]
   resources :trivia, only: [:index, :show]
   resource :regulation, only: [:terms, :privacy] do
     collection do
