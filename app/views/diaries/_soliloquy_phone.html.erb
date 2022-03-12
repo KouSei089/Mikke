@@ -1,5 +1,5 @@
 <div class="col-span-2 lg:col-span-1 m-8">
-  <h3 class="text-4xl text-matte mb-2 font-thin"><%= l soliloquy.created_at, format: :day %></h3>
+  <h3 class="text-4xl text-matte mb-2 font-thin md:font-light"><%= l soliloquy.created_at, format: :day %></h3>
   <div class="bg-natural rounded-full h-10 w-10 flex items-center justify-center relative">
     <h4 class="text-lg text-matte"><%= l soliloquy.created_at, format: :day_of_week %></h4>
     <%= render 'diaries/wday', object: soliloquy %>

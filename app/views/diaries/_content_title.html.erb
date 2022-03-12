@@ -1,8 +1,8 @@
 <% if object.title? %>
-  <h1 class="text-2xl font-thin text-matte hover:opacity-75 mb-5"><%= link_to object.title, diary_path(object) %></h1>
+  <h1 class="text-2xl font-thin md:font-light text-matte hover:opacity-75 mb-5"><%= link_to object.title, diary_path(object) %></h1>
 <% else %>
-  <h1 class="text-2xl font-thin text-matte hover:opacity-75 mb-5"><%= link_to "Untitled", diary_path(object) %></h1>
+  <h1 class="text-2xl font-thin md:font-light text-matte hover:opacity-75 mb-5"><%= link_to "Untitled", diary_path(object) %></h1>
 <% end %>
-<p class="text-matte hover:opacity-75 font-thin mb-5">
+<p class="text-matte hover:opacity-75 font-thin md:font-light mb-5">
   <%= link_to truncate(object.text, length: 20), diary_path(object) %>
 </p>
