@@ -57,7 +57,6 @@ ja:
       creativity_logic: '計測ロジックは、５００文字で１００％、２５０文字で５０％です。'
   initials:
     new:
-      title: 'トップページ'
       subtitle: '初めてご利用される方'
       sign_up: 'サインアップ'
       demo: 'デモ'
