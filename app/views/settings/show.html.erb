@@ -1,9 +1,9 @@
 <% set_meta_tags title: t('.title') %>
 <div class="bg-ivory pb-64 mb-20">
   <%= render 'shared/flash_message' %>
-  <h1 class="text-center text-5xl text-dark-black font-hairline"><%= t '.subtitle' %></h1>
+  <h1 class="text-center text-5xl text-matte font-hairline"><%= t '.subtitle' %></h1>
   <div class="flex-col mx-32">
-    <div class="text-center rounded-full w-full h-48 py-14 my-12 bg-white text-dark-black">
+    <div class="text-center rounded-full w-full h-48 py-14 my-12 bg-white text-matte">
       <div class="flex justify-center">
         <%= heroicon('user', style: :outline, class_name: 'h-24 w-24 mr-10') %>
         <%= link_to @current_user.username, new_user_path, class: "rounded-full text-5xl self-center" %>
@@ -11,20 +11,20 @@
       </div>
     </div>
     <!-- hidden function -->
-    <!--<div class="flex justify-center rounded-full w-full h-48 bg-white text-dark-black">
+    <!--<div class="flex justify-center rounded-full w-full h-48 bg-white text-matte">
         <%= link_to t('.reminder'), "#", class: "pt-16 px-48 text-5xl" %>
     </div> -->
   </div>
 
   <div class="rounded-3xl bg-white py-20 px-48 mt-10 mb-20 mx-10">
-    <div class="border-b-2 border-dark-black mb-12 text-center pb-5">
-      <%= link_to t('.tutorial'), tutorial_path, class: "text-5xl text-dark-black font-thin" %>
+    <div class="border-b-2 border-matte mb-12 text-center pb-5">
+      <%= link_to t('.tutorial'), tutorial_path, class: "text-5xl text-matte font-thin" %>
     </div>
-    <div class="border-b-2 border-dark-black mb-12 text-center pb-5">
-      <%= link_to t('.terms_of_service'), terms_regulation_path, class: "text-5xl text-dark-black font-thin" %>
+    <div class="border-b-2 border-matte mb-12 text-center pb-5">
+      <%= link_to t('.terms_of_service'), terms_regulation_path, class: "text-5xl text-matte font-thin" %>
     </div>
-    <div class="border-b-2 border-dark-black mb-12 text-center pb-5">
-      <%= link_to t('.privacy_policy'), privacy_regulation_path, class: "text-5xl text-dark-black font-thin" %>
+    <div class="border-b-2 border-matte mb-12 text-center pb-5">
+      <%= link_to t('.privacy_policy'), privacy_regulation_path, class: "text-5xl text-matte font-thin" %>
     </div>
   </div>
   <div class="mx-32">

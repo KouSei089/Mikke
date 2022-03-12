@@ -4,20 +4,20 @@
   </div>
   <div class="invisible lg:visible flex justify-start">
     <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
-      <%= link_to t('.home'), root_path, class: 'px-4 py-2 mt-2 text-md text-dark-black text-opacity-50 font-thin bg-transparent md:mt-0 md:ml-4 hover:text-dark-black focus:text-dark-black focus:outline-none focus:shadow-outline border-b-2 border-ivory hover:border-dark-black transition duration-700 ease-in-out' %>
-      <%= link_to t('.tutorial'), tutorial_path, class: 'px-4 py-2 mt-2 text-md text-dark-black text-opacity-50 font-thin bg-transparent md:mt-0 md:ml-4 hover:text-dark-black focus:text-dark-black focus:outline-none focus:shadow-outline border-b-2 border-ivory hover:border-dark-black transition duration-700 ease-in-out' %>
-      <%= link_to t('.trivia'), trivia_path, class: 'px-4 py-2 mt-2 text-md text-dark-black text-opacity-50 font-thin bg-transparent md:mt-0 md:ml-4 hover:text-dark-black focus:text-dark-black focus:outline-none focus:shadow-outline border-b-2 border-ivory hover:border-dark-black transition duration-700 ease-in-out' %>
-      <%= link_to t('.analysis'), analysis_path, class: 'px-4 py-2 mt-2 text-md text-dark-black text-opacity-50 font-thin bg-transparent md:mt-0 md:ml-4 hover:text-dark-black focus:text-dark-black focus:outline-none focus:shadow-outline border-b-2 border-ivory hover:border-dark-black transition duration-700 ease-in-out', "data-turbolinks": false %>
+      <%= link_to t('.home'), root_path, class: 'px-4 py-2 mt-2 text-md text-matte text-opacity-50 font-thin bg-transparent md:mt-0 md:ml-4 hover:text-matte focus:text-matte focus:outline-none focus:shadow-outline border-b-2 border-ivory hover:border-matte transition duration-700 ease-in-out' %>
+      <%= link_to t('.tutorial'), tutorial_path, class: 'px-4 py-2 mt-2 text-md text-matte text-opacity-50 font-thin bg-transparent md:mt-0 md:ml-4 hover:text-matte focus:text-matte focus:outline-none focus:shadow-outline border-b-2 border-ivory hover:border-matte transition duration-700 ease-in-out' %>
+      <%= link_to t('.trivia'), trivia_path, class: 'px-4 py-2 mt-2 text-md text-matte text-opacity-50 font-thin bg-transparent md:mt-0 md:ml-4 hover:text-matte focus:text-matte focus:outline-none focus:shadow-outline border-b-2 border-ivory hover:border-matte transition duration-700 ease-in-out' %>
+      <%= link_to t('.analysis'), analysis_path, class: 'px-4 py-2 mt-2 text-md text-matte text-opacity-50 font-thin bg-transparent md:mt-0 md:ml-4 hover:textmatte focus:text-matte focus:outline-none focus:shadow-outline border-b-2 border-ivory hover:border-matte transition duration-700 ease-in-out', "data-turbolinks": false %>
 
       <div @click.away="open = false" class="relative" x-data="{ open: false }">
-        <button @click="open = !open" class="flex flex-row bg-white items-center w-full px-4 py-2 mt-2 text-md text-dark-black  font-thin text-left bg-transparent rounded-lg md:w-auto md:inline md:mt-0 md:ml-4 hover:text-dark-black focus:text-dark-black hover:bg-white focus:bg-white focus:outline-none focus:shadow-outline focus:text-opacity-50 transition duration-700" >
+        <button @click="open = !open" class="flex flex-row bg-white items-center w-full px-4 py-2 mt-2 text-md text-matte  font-thin text-left bg-transparent rounded-lg md:w-auto md:inline md:mt-0 md:ml-4 hover:text-matte focus:text-matte hover:bg-white focus:bg-white focus:outline-none focus:shadow-outline focus:text-opacity-50 transition duration-700" >
           <span><%= t '.post' %></span>
           <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-700 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
         </button>
         <div x-show="open" x-transition:enter="transition ease-out duration-700" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-500" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full md:max-w-screen-sm md:w-screen mt-2 origin-top-right">
           <div class="px-2 pt-2 pb-2 bg-white rounded-md">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <%= link_to new_diary_path, class: 'flex row items-start rounded-lg bg-transparent p-2 text-dark-black text-opacity-50 hover:text-dark-black hover:bg-gray-50 focus:text-dark-black focus:bg-gray-200 focus:outline-none focus:shadow-outline transition duration-500' do %>
+              <%= link_to new_diary_path, class: 'flex row items-start rounded-lg bg-transparent p-2 text-matte text-opacity-50 hover:text-matte hover:bg-gray-50 focus:text-matte focus:bg-gray-200 focus:outline-none focus:shadow-outline transition duration-500' do %>
                 <div class="bg-ice-green text-white rounded-lg p-3">
                   <%= heroicon 'pencil', class_name: 'md:h-6 md:w-6 h-4 w-4' %>
                 </div>
@@ -26,7 +26,7 @@
                   <p class="text-sm font-thin"><%= t '.journaling_message' %></p>
                 </div>
               <% end %>
-              <%= link_to new_soliloquy_path, class: 'flex row items-start rounded-lg bg-transparent p-2 text-dark-black text-opacity-50 hover:text-dark-black hover:bg-gray-50 focus:text-dark-black focus:bg-gray-200 focus:outline-none focus:shadow-outline transition duration-500' do %>
+              <%= link_to new_soliloquy_path, class: 'flex row items-start rounded-lg bg-transparent p-2 text-matte text-opacity-50 hover:text-matte hover:bg-gray-50 focus:text-matte focus:bg-gray-200 focus:outline-none focus:shadow-outline transition duration-500' do %>
                 <div class="bg-ice-green text-white rounded-lg p-3">
                   <%= heroicon 'chat', class_name: 'md:h-6 md:w-6 h-4 w-4' %>
                 </div>
@@ -40,14 +40,14 @@
         </div>
       </div>
       <div @click.away="open = false" class="relative" x-data="{ open: false }">
-        <button @click="open = !open" class="flex flex-row bg-dark-black items-center w-full px-4 py-2 mt-2 text-md text-natural  font-thin text-left bg-transparent rounded-lg md:w-auto md:inline md:mt-0 md:ml-4 hover:text-dark-black focus:text-dark-black hover:bg-white focus:bg-white focus:outline-none focus:shadow-outline focus:text-opacity-50 transition duration-700">
+        <button @click="open = !open" class="flex flex-row bg-matte items-center w-full px-4 py-2 mt-2 text-md text-natural  font-thin text-left bg-transparent rounded-lg md:w-auto md:inline md:mt-0 md:ml-4 hover:text-matte focus:text-matte hover:bg-white focus:bg-white focus:outline-none focus:shadow-outline focus:text-opacity-50 transition duration-700">
           <span><%= t '.setting' %></span>
           <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-700 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
         </button>
         <div x-show="open" x-transition:enter="transition ease-out duration-700" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-500" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full md:max-w-screen-sm md:w-screen mt-2 origin-top-right">
           <div class="px-2 pt-2 pb-2 bg-white rounded-md">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <%= link_to edit_setting_profile_path, class: 'flex row items-start rounded-lg bg-transparent p-2 text-dark-black text-opacity-50 hover:text-dark-black hover:bg-gray-50 focus:text-dark-black focus:bg-gray-200 focus:outline-none focus:shadow-outline transition duration-500' do %>
+              <%= link_to edit_setting_profile_path, class: 'flex row items-start rounded-lg bg-transparent p-2 text-matte text-opacity-50 hover:text-matte hover:bg-gray-50 focus:text-matte focus:bg-gray-200 focus:outline-none focus:shadow-outline transition duration-500' do %>
                 <div class="bg-baby-pink text-white rounded-lg p-3">
                   <%= heroicon 'identification', class_name: 'md:h-6 md:w-6 h-4 w-4' %>
                 </div>
@@ -55,7 +55,7 @@
                   <p class="font-thin"><%= t '.edit_name' %></p>
                 </div>
               <% end %>
-              <%= link_to terms_regulation_path, class: 'flex row items-start rounded-lg bg-transparent p-2 text-dark-black text-opacity-50 hover:text-dark-black hover:bg-gray-50 focus:text-dark-black focus:bg-gray-200 focus:outline-none focus:shadow-outline transition duration-500' do %>
+              <%= link_to terms_regulation_path, class: 'flex row items-start rounded-lg bg-transparent p-2 text-matte text-opacity-50 hover:text-matte hover:bg-gray-50 focus:text-matte focus:bg-gray-200 focus:outline-none focus:shadow-outline transition duration-500' do %>
                 <div class="bg-baby-pink text-white rounded-lg p-3">
                   <%= heroicon 'light-bulb', class_name: 'md:h-6 md:w-6 h-4 w-4' %>
                 </div>
@@ -64,7 +64,7 @@
                   <p class="text-sm font-thin"><%= t '.feedback_message' %></p>
                 </div>
               <% end %>
-              <%= link_to :logout, method: :post, class: 'flex row items-start rounded-lg bg-transparent p-2 text-dark-black text-opacity-50 hover:text-dark-black hover:bg-gray-50 focus:text-dark-black focus:bg-gray-200 focus:outline-none focus:shadow-outline transition duration-500 logoutClick' do %>
+              <%= link_to :logout, method: :post, class: 'flex row items-start rounded-lg bg-transparent p-2 text-matte text-opacity-50 hover:text-matte hover:bg-gray-50 focus:text-matte focus:bg-gray-200 focus:outline-none focus:shadow-outline transition duration-500 logoutClick' do %>
                 <div class="bg-agate text-white rounded-lg p-3">
                   <%= heroicon 'logout', class_name: 'md:h-6 md:w-6 h-4 w-4' %>
                 </div>

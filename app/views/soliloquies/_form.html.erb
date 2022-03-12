@@ -4,12 +4,12 @@
     <div class="flex justify-between mb-5">
       <div class="flex justify-start">
         <%= render 'shared/back_button' %>
-        <h1 class="text-4xl text-dark-black"><%= t '.soliloquy' %></h1>
+        <h1 class="text-4xl text-matte"><%= t '.soliloquy' %></h1>
       </div>
       <%= button_tag type: 'submit', class: "text-6xl text-amber hover:opacity-75" do %>
         <i class="fab fa-telegram-plane"></i>
       <% end %>
     </div>
-    <%= f.text_field :text, class: "bg-white border-natural rounded-lg w-full pt-2 pb-64 py-2 text-dark-black shadow-inner focus:border-natural focus:ring focus:ring-natural placeholder-gray-400 font-thin", placeholder: "今、何を考えていますか" %>
+    <%= f.text_field :text, class: "bg-white border-natural rounded-lg w-full pt-2 pb-64 py-2 text-matte shadow-inner focus:border-natural focus:ring focus:ring-natural placeholder-gray-400 font-thin", placeholder: "今、何を考えていますか" %>
   <% end %>
 </div>

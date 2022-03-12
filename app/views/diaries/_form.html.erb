@@ -9,15 +9,15 @@
       <i class="fab fa-telegram-plane"></i>
     <% end %>
   </div>
-  <%= f.text_field :title, class: "text-xl md:text-5xl bg-white border-natural rounded-lg w-full mb-4 py-2 px-3 text-dark-black shadow-inner focus:border-natural focus:ring focus:ring-natural font-thin placeholder-gray-400", placeholder: "テーマ(入力しないとUntitledになります)", value: @write %>
-  <%= f.text_area :text, class: "text-xl md:text-5xl bg-white border-natural rounded-lg w-full h-64 md:h-96 py-2 px-3 text-dark-black shadow-inner focus:border-natural focus:ring focus:ring-natural font-thin placeholder-gray-400", onkeyup: "ShowLength(value);" %>
+  <%= f.text_field :title, class: "text-xl md:text-5xl bg-white border-natural rounded-lg w-full mb-4 py-2 px-3 text-matte shadow-inner focus:border-natural focus:ring focus:ring-natural font-thin placeholder-gray-400", placeholder: "テーマ(入力しないとUntitledになります)", value: @write %>
+  <%= f.text_area :text, class: "text-xl md:text-5xl bg-white border-natural rounded-lg w-full h-64 md:h-96 py-2 px-3 text-matte shadow-inner focus:border-natural focus:ring focus:ring-natural font-thin placeholder-gray-400", onkeyup: "ShowLength(value);" %>
   <!--プログレスバー文字数-->
   <div class="relative pt-1">
     <div class="overflow-hidden h-5 md:h-12 mb-4 text-xs flex rounded bg-sky-gray shadow-inner">
       <div id="stylewidth" style="width:<%= @diary.creativity %>%" class="shadow-inner flex flex-col text-center whitespace-nowrap text-white justify-center bg-lapis_lazuli"></div>
     </div>
-    <span class="absolute right-0 text-dark-black text-xl md:text-3xl font-thin" id="inputpercentage"><%= @diary.creativity %>％</span>
-    <span class="absolute left-0 text-dark-black text-xl md:text-3xl font-thin" id="inputlength"><%= @diary.word_count %>文字</span>
+    <span class="absolute right-0 text-matte text-xl md:text-3xl font-thin" id="inputpercentage"><%= @diary.creativity %>％</span>
+    <span class="absolute left-0 text-matte text-xl md:text-3xl font-thin" id="inputlength"><%= @diary.word_count %>文字</span>
   </div>
 </div>
 
