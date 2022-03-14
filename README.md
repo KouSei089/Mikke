@@ -100,13 +100,9 @@ AIがジャーナリングの結果を分析してくれます。
 - unDraw（ロゴ）
 - Draw.io（ER図、 インフラ構成図の作成）
 
-## 主要なGem
-
-
 # ER図
-https://drive.google.com/file/d/1nwkziDUveW9O5yagABVugj1nracOZgWf/view?usp=sharing
+![mikke drawio](https://user-images.githubusercontent.com/77420123/158146761-f6687ebb-f74a-4b66-a8cb-22555e29eb7d.png)
 
 # インフラ構成図
-
-# 今後の計画
+![Mikkeインフラ構成図 drawio (1)](https://user-images.githubusercontent.com/77420123/158134227-bc6bce51-5c91-4848-8d89-54089b8ecb3e.png)
 
