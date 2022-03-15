@@ -1,36 +1,56 @@
+![SPM is supported](https://img.shields.io/badge/thank_you-for_visiting-green)
+
+![SPM is supported](https://img.shields.io/badge/Ruby-v2.6.6-red)
+![SPM is supported](https://img.shields.io/badge/Rails-v6.0.4.1-red)
 # Mikke（ミッケ）習慣ジャーナリング
-『書くこと（ジャーナリング）』をデジタルで実現し，感情の分析や習慣化しやすいようにサポートするサービスです。
 
 ![facebook_cover_photo_2](https://user-images.githubusercontent.com/77420123/156925044-28afc804-387d-4ef0-8580-2ecc1db46d05.png)
-# 登場人物
-- ネガティブ感情になりやすく，メンタル改善したい人
-- 思考、感情を言語化・分析したい人
-- ジャーナリングや筆記開示を知ってる人
-# ユーザーが抱える問題
-- コロナ禍もあり、感情を吐き出す場所がないため、抱えてしまいネガティブ感情になりやすい
-- 悩みが言語化されてないので解決方法がわからない
-- ジャーナリングや書く書く瞑想は聞いたことがあるけど，敷居が高いと感じている
-# 解決方法
-- 『書くこと（ジャーナリング）』で思考や感情を可視化して解決策を自発的に発見できるようになる
-- 『書くこと（ジャーナリング）』をデジタルでサポートすることで敷居を下げる。また継続しやすくなる。
 
-# 望む未来
-- 思考や感情を客観的に捉えられるようになり、メタ認知できるようになる
-- 『書くこと（ジャーナリング）』を通じて日々の生活の解像度が上がり幸せや感謝の気持ちに気づける
+<img src="https://user-images.githubusercontent.com/77420123/158318062-1a23db6a-2c3d-4a4c-937b-32fcda60da3e.svg" width="30px">
+<img src="https://user-images.githubusercontent.com/77420123/158318205-376da0e6-a7b8-4ac3-ac0a-fea96f46a947.svg" width="30px">
+<img src="https://user-images.githubusercontent.com/77420123/158318263-52895546-6b8d-444c-84d2-0b3ae023ffe7.svg" width="30px">
+<img src="https://user-images.githubusercontent.com/77420123/158318333-e34b8cda-a1e0-40c5-acb9-5db9f32d8a33.svg" width="30px">
+<img src="https://user-images.githubusercontent.com/77420123/158318496-22415afd-ba21-4996-878f-6404a26a5c74.svg" width="30px">
+<img src="https://user-images.githubusercontent.com/77420123/158320756-00105329-7c1b-4bff-a95b-45081b526876.svg" width="30px">
+<img src="https://user-images.githubusercontent.com/77420123/158318581-a035babd-d665-483b-bf8b-aa7e2ee5a8fe.svg" width="30px">
+<img src="https://user-images.githubusercontent.com/77420123/158318651-8e8ab40e-71e9-4909-8997-f60d095acd45.svg" width="30px">
+<img src="https://user-images.githubusercontent.com/77420123/158318969-44e7e15c-0e3e-446d-a4f6-08fa01c62a49.svg" width="30px">
+<img src="https://user-images.githubusercontent.com/77420123/158318719-d823eb6a-a938-4f8f-9600-2d3f1a6ac435.svg" width="30px">
+<img src="https://user-images.githubusercontent.com/77420123/158318814-f9e57d17-52d1-4a4d-816f-c038bbd550ce.svg" width="30px">
+<img src="https://user-images.githubusercontent.com/77420123/158318842-dc3fb64c-e075-443f-9f14-69d03b106933.svg" width="30px">
 
-# サービスを作った背景
-自分の感情を言語化したり、思考の癖を理解することが苦手なこともあり、人と1対1で話すのが苦手だった。
-ある本をきっかけに『書くこと（ジャーナリング）』を毎日するようになり、感情の言語化だったり、思考の癖、日々どんなことを考えているか客観的に捉えられるようになり、人と話すときに話題に困らなくなり、話すこと自体も好きになった。
+# 📦プロダクト
+『書くこと（ジャーナリング）』をデジタルで実現し，感情の分析や習慣化しやすいようにサポートするサービスです。
 
-このサービスでは、『書くこと（ジャーナリング）』を通じて、日々の生活の解像度が上がり幸せや感謝の気持ちに気づけるきっかけになれると嬉しいと願っている。
-
-# マーケット
+# 📊マーケット
 - 鬱や不安感がある方
 - ネガティブ感情を減らしたい方
 - 感情を言語化できるようになりたい方
 - 瞑想に興味がある方
 
-# サービスデモ
+# 👤登場人物
+- ネガティブ感情になりやすく，メンタル改善したい人
+- 思考、感情を言語化・分析したい人
+- ジャーナリングや筆記開示を知ってる人
+# 🌀ユーザーが抱える問題
+- コロナ禍もあり、感情を吐き出す場所がないため、抱えてしまいネガティブ感情になりやすい
+- 悩みが言語化されてないので解決方法がわからない
+- ジャーナリングや書く書く瞑想は聞いたことがあるけど，敷居が高いと感じている
+# 💡解決方法
+- 『書くこと（ジャーナリング）』で思考や感情を可視化して解決策を自発的に発見できるようになる
+- 『書くこと（ジャーナリング）』をデジタルでサポートすることで敷居を下げる。また継続しやすくなる。
+
+# ✨望む未来
+- 思考や感情を客観的に捉えられるようになり、メタ認知できるようになる
+- 『書くこと（ジャーナリング）』を通じて日々の生活の解像度が上がり幸せや感謝の気持ちに気づける
+
+# 👣サービスを作った背景
+自分の感情を言語化したり、思考の癖を理解することが苦手なこともあり、人と1対1で話すのが苦手だった。
+ある本をきっかけに『書くこと（ジャーナリング）』を毎日するようになり、感情の言語化だったり、思考の癖、日々どんなことを考えているか客観的に捉えられるようになり、人と話すときに話題に困らなくなり、話すこと自体も好きになった。
+
+このサービスでは、『書くこと（ジャーナリング）』を通じて、日々の生活の解像度が上がり幸せや感謝の気持ちに気づけるきっかけになれると嬉しいと願っている。
+
+# 🎮サービスデモ
 ## シンプルで書きやすいジャーナリング。
 ジャーナリングを継続することに特化したフォーマットになっています。タイマー、文字数・書く量の見える化など、あなたのモチベーションをサポートして、継続しやすい仕組みになっています。
 
@@ -60,21 +80,34 @@ AIがジャーナリングの結果を分析してくれます。
 <img src="https://user-images.githubusercontent.com/77420123/156876129-8c25401a-01cb-4036-ad2d-79717aab668a.png" width="120px">
 
 
-# 使用技術
+# 🔧使用技術
 ## フロントエンド
-- HTML, CSS
+- HTML
+- CSS
+- SCSS
 - TailwindCSS
 - Javascript
 - Jquery
+- Alpine.js
 ## バックエンド
 - Ruby 2.6.6
 - Rails 6.0.4.1
-- Rspec
+- Rspec 3.10.1
+- Google Cloud Natural Language API
 ## インフラ
 - Capistrano
-- AWS（EC2, ALB, RDS, Route53, VPC, IAM）
-- PostgreSQL
-- nginx
+- Nginx
+- Puma
+- AWS
+    - EC2
+        - Amazon Linux2(t2.micro)
+    - ALB
+    - RDS
+        - PostgreSQL
+    - Route53
+    - VPC
+    - IAM
+
 ## その他
 - Git / Github
 - VSCode
