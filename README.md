@@ -60,24 +60,6 @@ AIがジャーナリングの結果を分析してくれます。
 <img src="https://user-images.githubusercontent.com/77420123/156876129-8c25401a-01cb-4036-ad2d-79717aab668a.png" width="120px">
 
 
-- タイマー機能でジャーナリングの時間を計ってくれる
-    [![Image from Gyazo](https://i.gyazo.com/3d7b96cc31f240dc2574c90988136d5a.gif)](https://gyazo.com/3d7b96cc31f240dc2574c90988136d5a)
-    [![Image from Gyazo](https://i.gyazo.com/498498e777566b5df40f75318e89413a.gif)](https://gyazo.com/498498e777566b5df40f75318e89413a)
-
-    - ジャーナリングの結果をポジティブ / ネガティブ分析し，グラフ化してくれる
-    <img width="240" alt="スクリーンショット 2022-03-06 19 03 34" src="https://user-images.githubusercontent.com/77420123/156918444-e378a857-55f6-425e-83fc-d0e447dc6372.png">
-
-    - ジャーナリングの量を判定し，グラフ化してくれる
-    [![Image from Gyazo](https://i.gyazo.com/193544b12cbfa7a7598dc51fa2c08ee2.gif)](https://gyazo.com/193544b12cbfa7a7598dc51fa2c08ee2)
-    <img width="240" alt="スクリーンショット 2022-03-06 19 09 28" src="https://user-images.githubusercontent.com/77420123/156918623-f8122b68-54cd-46fe-b6a5-1e7c88eaafd9.png">
-
-    - ジャーナリングを終えた後，書くこと・瞑想についてのエビデンスを教えてくれる
-    <img width="1481" alt="スクリーンショット 2022-03-06 21 58 54" src="https://user-images.githubusercontent.com/77420123/156924288-f2c28cc7-a6c3-4d9c-8bfe-5532614639e1.png">
-    [![Image from Gyazo](https://i.gyazo.com/ed6d032ef7f348bb0f7d3f038a994e96.gif)](https://gyazo.com/ed6d032ef7f348bb0f7d3f038a994e96)
-
-    - ジャーナリングするテーマを提供してくれる
-    [![Image from Gyazo](https://i.gyazo.com/fba5d06253fbcc121f1738038ecfa358.gif)](https://gyazo.com/fba5d06253fbcc121f1738038ecfa358)
-
 # 使用技術
 ## フロントエンド
 - HTML, CSS
@@ -104,5 +86,4 @@ AIがジャーナリングの結果を分析してくれます。
 ![mikke drawio](https://user-images.githubusercontent.com/77420123/158146761-f6687ebb-f74a-4b66-a8cb-22555e29eb7d.png)
 
 # インフラ構成図
-![Mikkeインフラ構成図 drawio (1)](https://user-images.githubusercontent.com/77420123/158134227-bc6bce51-5c91-4848-8d89-54089b8ecb3e.png)
-
+![a-mikke](https://user-images.githubusercontent.com/77420123/158315271-b9e90a16-19b1-445a-9bb9-ed1587af34bb.png)
