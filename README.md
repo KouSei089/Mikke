@@ -4,7 +4,7 @@
 ![SPM is supported](https://img.shields.io/badge/Rails-v6.0.4.1-red)
 # Mikke（ミッケ）習慣ジャーナリング
 
-![facebook_cover_photo_2](https://user-images.githubusercontent.com/77420123/156925044-28afc804-387d-4ef0-8580-2ecc1db46d05.png)
+![名称未設定のデザイン (1)](https://user-images.githubusercontent.com/77420123/158323130-0acfeb96-8c4c-4e55-81ad-4c2c23045e7f.png)
 
 <img src="https://user-images.githubusercontent.com/77420123/158318062-1a23db6a-2c3d-4a4c-937b-32fcda60da3e.svg" width="75px"><img src="https://user-images.githubusercontent.com/77420123/158318205-376da0e6-a7b8-4ac3-ac0a-fea96f46a947.svg" width="75px">
 <img src="https://user-images.githubusercontent.com/77420123/158318263-52895546-6b8d-444c-84d2-0b3ae023ffe7.svg" width="75px">
