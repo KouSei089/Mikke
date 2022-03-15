@@ -6,18 +6,17 @@
 
 ![facebook_cover_photo_2](https://user-images.githubusercontent.com/77420123/156925044-28afc804-387d-4ef0-8580-2ecc1db46d05.png)
 
-<img src="https://user-images.githubusercontent.com/77420123/158318062-1a23db6a-2c3d-4a4c-937b-32fcda60da3e.svg" width="30px">
-<img src="https://user-images.githubusercontent.com/77420123/158318205-376da0e6-a7b8-4ac3-ac0a-fea96f46a947.svg" width="30px">
-<img src="https://user-images.githubusercontent.com/77420123/158318263-52895546-6b8d-444c-84d2-0b3ae023ffe7.svg" width="30px">
-<img src="https://user-images.githubusercontent.com/77420123/158318333-e34b8cda-a1e0-40c5-acb9-5db9f32d8a33.svg" width="30px">
-<img src="https://user-images.githubusercontent.com/77420123/158318496-22415afd-ba21-4996-878f-6404a26a5c74.svg" width="30px">
-<img src="https://user-images.githubusercontent.com/77420123/158320756-00105329-7c1b-4bff-a95b-45081b526876.svg" width="30px">
-<img src="https://user-images.githubusercontent.com/77420123/158318581-a035babd-d665-483b-bf8b-aa7e2ee5a8fe.svg" width="30px">
-<img src="https://user-images.githubusercontent.com/77420123/158318651-8e8ab40e-71e9-4909-8997-f60d095acd45.svg" width="30px">
-<img src="https://user-images.githubusercontent.com/77420123/158318969-44e7e15c-0e3e-446d-a4f6-08fa01c62a49.svg" width="30px">
-<img src="https://user-images.githubusercontent.com/77420123/158318719-d823eb6a-a938-4f8f-9600-2d3f1a6ac435.svg" width="30px">
-<img src="https://user-images.githubusercontent.com/77420123/158318814-f9e57d17-52d1-4a4d-816f-c038bbd550ce.svg" width="30px">
-<img src="https://user-images.githubusercontent.com/77420123/158318842-dc3fb64c-e075-443f-9f14-69d03b106933.svg" width="30px">
+<img src="https://user-images.githubusercontent.com/77420123/158318062-1a23db6a-2c3d-4a4c-937b-32fcda60da3e.svg" width="75px"><img src="https://user-images.githubusercontent.com/77420123/158318205-376da0e6-a7b8-4ac3-ac0a-fea96f46a947.svg" width="75px">
+<img src="https://user-images.githubusercontent.com/77420123/158318263-52895546-6b8d-444c-84d2-0b3ae023ffe7.svg" width="75px">
+<img src="https://user-images.githubusercontent.com/77420123/158318333-e34b8cda-a1e0-40c5-acb9-5db9f32d8a33.svg" width="75px">
+<img src="https://user-images.githubusercontent.com/77420123/158318496-22415afd-ba21-4996-878f-6404a26a5c74.svg" width="75px">
+<img src="https://user-images.githubusercontent.com/77420123/158320756-00105329-7c1b-4bff-a95b-45081b526876.svg" width="75px">
+<img src="https://user-images.githubusercontent.com/77420123/158318581-a035babd-d665-483b-bf8b-aa7e2ee5a8fe.svg" width="75px">
+<img src="https://user-images.githubusercontent.com/77420123/158318651-8e8ab40e-71e9-4909-8997-f60d095acd45.svg" width="75px">
+<img src="https://user-images.githubusercontent.com/77420123/158318969-44e7e15c-0e3e-446d-a4f6-08fa01c62a49.svg" width="75px">
+<img src="https://user-images.githubusercontent.com/77420123/158318719-d823eb6a-a938-4f8f-9600-2d3f1a6ac435.svg" width="75px">
+<img src="https://user-images.githubusercontent.com/77420123/158318814-f9e57d17-52d1-4a4d-816f-c038bbd550ce.svg" width="75px">
+<img src="https://user-images.githubusercontent.com/77420123/158318842-dc3fb64c-e075-443f-9f14-69d03b106933.svg" width="75px">
 
 # 📦プロダクト
 『書くこと（ジャーナリング）』をデジタルで実現し，感情の分析や習慣化しやすいようにサポートするサービスです。
