@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   has_many :diaries, dependent: :destroy
   has_many :soliloquies, dependent: :destroy
-  VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{8,}+\z/i.freeze
+  VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)(?=.*?[!-~&&[^a-z\d]])[!-~]{8,100}+\z/i.freeze
 
   authenticates_with_sorcery!
   validates :username, presence: true
