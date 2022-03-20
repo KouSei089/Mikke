@@ -29,7 +29,6 @@ Rails.application.routes.draw do
     end
   end
 
-  resource :intro, only: [:show]
   resource :analysis, only: [:show]
   resources :users
   resources :soliloquies
