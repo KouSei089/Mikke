@@ -65,15 +65,6 @@ ja:
       terms_of_service: 'ご利用規約'
       privacy_policy: 'プライバシーポリシー'
       feedback: 'フィードバック'
-  intros:
-    show:
-      title: 'チュートリアル'
-    intro01:
-      alt: 'Mikke（ミッケ）アイコン'
-    intro05:
-      alt: 'Mikke（ミッケ）アイコン'
-    index_header:
-      alt: 'Mikke（ミッケ）アイコン'
   regulations:
     privacy:
       title: 'プライバシーポリシー'

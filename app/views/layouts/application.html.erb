@@ -19,9 +19,7 @@
 
   <body>
     <div class="w-full h-screen bg-ivory">
-      <% if current_page?(intro_path) %>
-        <%= yield %>
-      <% elsif current_user %>
+      <% if current_user %>
         <%= render 'shared/header' %>
         <%= yield %>
         <%= render 'shared/hooter' %>
