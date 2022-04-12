@@ -5,7 +5,7 @@ RSpec.describe 'ログイン・ログアウト', type: :system, js: true do
 
   describe 'サインアップ' do
     it 'ユーザーの新規作成後、ログインが成功する' do
-      visit new_initial_path
+      visit initial_path
       visit new_user_path
       fill_in 'user[username]', with: 'foo'
       fill_in 'user[email]', with: 'foo@example.com'
@@ -16,7 +16,7 @@ RSpec.describe 'ログイン・ログアウト', type: :system, js: true do
     end
 
     it 'サインアップが失敗してエラーメッセージが表示される' do
-      visit new_initial_path
+      visit initial_path
       visit new_user_path
       fill_in 'user[username]', with: ''
       fill_in 'user[email]', with: ''
@@ -35,7 +35,7 @@ RSpec.describe 'ログイン・ログアウト', type: :system, js: true do
       before { create(:test_user) }
 
       it 'ログインに成功する' do
-        visit new_initial_path
+        visit initial_path
         visit login_path
         fill_in 'email', with: 'test@example.com'
         fill_in 'password', with: '123456'
@@ -45,7 +45,7 @@ RSpec.describe 'ログイン・ログアウト', type: :system, js: true do
     end
 
     it 'ログインに失敗してエラーメッセージが表示される' do
-      visit new_initial_path
+      visit initial_path
       visit login_path
       fill_in 'email', with: ''
       fill_in 'password', with: ''

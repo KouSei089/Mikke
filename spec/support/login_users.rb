@@ -1,6 +1,6 @@
 module LoginUsers
   def login(_user)
-    visit new_initial_path
+    visit initial_path
     visit new_user_path
     fill_in 'user[username]', with: 'foo'
     fill_in 'user[email]', with: 'foo@example.com'
