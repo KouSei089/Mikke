@@ -1,6 +1,7 @@
 class DiariesController < ApplicationController
   before_action :set_diary, only: [:show, :edit, :update, :destroy]
   before_action :set_trivia, only: [:create, :update]
+  before_action :set_sentiment_confirm, only: [:sentiment_confirm, :edit_sentiment_confirm]
 
   def index
     @diaries = current_user.diaries.paginate(page: params[:page], per_page: 10).order(created_at: :desc)
@@ -27,17 +28,9 @@ class DiariesController < ApplicationController
     end
   end
 
-  def sentiment_confirm
-    @diary = Diary.find_or_initialize_by(id: params[:id])
-    @diary.assign_attributes(diary_params)
-    @sentiments_date = Sentiment.all.pluck(:name)
-  end
+  def sentiment_confirm; end
 
-  def edit_sentiment_confirm
-    @diary = Diary.find_or_initialize_by(id: params[:id])
-    @diary.assign_attributes(diary_params)
-    @sentiments_date = Sentiment.all.pluck(:name)
-  end
+  def edit_sentiment_confirm; end
 
   def show; end
 
@@ -69,5 +62,11 @@ class DiariesController < ApplicationController
 
     def set_trivia
       @trivia = Trivia.find(rand(Trivia.first.id..Trivia.last.id))
+    end
+
+    def set_sentiment_confirm
+      @diary = Diary.find_or_initialize_by(id: params[:id])
+      @diary.assign_attributes(diary_params)
+      @sentiments_date = Sentiment.all.pluck(:name)
     end
 end

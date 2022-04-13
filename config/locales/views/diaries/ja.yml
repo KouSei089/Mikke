@@ -17,6 +17,11 @@ ja:
       notice: 'ログインしました。'
       alert: 'ログインに失敗しました。'
       demo: 'Demoユーザーとしてログインしました。'
+  password_resets:
+    flash:
+      sent: 'メールを送信しました。'
+      notice: '新しいパスワードに変更しました。'
+      danger: 'パスワードの変更に失敗しました。'
   diaries:
     index:
       sentiment_list: '%{username}さんの最近の気持ち。'

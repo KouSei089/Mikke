@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   mount LetterOpenerWeb::Engine, at: '/letter_opener' if Rails.env.development?
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root 'diaries#index'
-  resource :initial, only: [:new]
+  get 'initial', to: 'initials#new', as: :initial
+  # resource :initial, only: [:new]
   get 'login' => 'user_sessions#new', :as => :login
   post 'login' => "user_sessions#create"
   post 'logout' => 'user_sessions#destroy', :as => :logout
