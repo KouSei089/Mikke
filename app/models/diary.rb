@@ -8,6 +8,10 @@ class Diary < ApplicationRecord
 
   validates :text, presence: true
 
+  scope :self_user, ->(user) { where(user_id: user) }
+  scope :order_desc, -> { order(created_at: :desc) }
+  scope :sent_diary_name, -> { includes(:sentiments).order(created_at: :desc).limit(5).pluck(:name) }
+
   def data_create_logic
     self.creativity = text.length / 5
     self.word_count = text.length
