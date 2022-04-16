@@ -1,6 +1,6 @@
 class AnalysesController < ApplicationController
   def show
-    gon.chartdays = current_user.diaries.group_by_day(:created_at, last: 7).average(:emotion_point).map(&:first)
+    gon.chartdays = Diary.group_by_day(:created_at, last: 7).average(:emotion_point).map(&:first)
     @positives = current_user.diaries.group_by_day(:created_at, last: 7).average(:emotion_point).map(&:second)
     @negatives = current_user.diaries.group_by_day(:created_at, last: 7).average(:emotion_point).map(&:second)
     gon.positive_scores = positive_analyses
