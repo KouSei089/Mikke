@@ -14,6 +14,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'rails_heroicons', '~> 0.6.0'
 gem 'rails-i18n'
 gem 'sorcery'
+gem 'draper'
 gem 'groupdate'
 gem 'gon', '~> 6.2.0'
 gem 'rails_admin', '~> 2.0'
