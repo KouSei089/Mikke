@@ -2,7 +2,7 @@
   <div class="bg-transparent flex justify-start">
     <%= link_to image_tag('logo_transparent.png'), root_path, class: 'object-contain h-64 w-64', alt: t('.alt') %>
   </div>
-  <div class="invisible lg:visible flex justify-start">
+  <div class="invisible lg:visible flex justify-start mr-5">
     <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
       <%= link_to t('.home'), root_path, class: 'px-4 py-2 mt-2 text-md text-matte text-opacity-50 font-thin md:font-light bg-transparent md:mt-0 md:ml-4 hover:text-matte focus:text-matte focus:outline-none focus:shadow-outline border-b-2 border-ivory hover:border-matte transition duration-700 ease-in-out' %>
       <%= link_to t('.tutorial'), tutorial_path, class: 'px-4 py-2 mt-2 text-md text-matte text-opacity-50 font-thin md:font-light bg-transparent md:mt-0 md:ml-4 hover:text-matte focus:text-matte focus:outline-none focus:shadow-outline border-b-2 border-ivory hover:border-matte transition duration-700 ease-in-out' %>
