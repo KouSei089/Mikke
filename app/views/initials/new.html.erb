@@ -3,7 +3,7 @@
       <div class="flex justfity-start px-8 pt-8">
         <%= image_tag 'logo_transparent.png', class: 'bg-transparent object-contain h-64 w-64', alt: t('.alt') %>
       </div>
-      <div class="absolute right-5 bottom-20">
+      <div class="absolute right-20 bottom-20">
         <div @click.away="open = false" class="relative" x-data="{ open: false }">
           <button @click="open = !open" class="flex flex-row bg-white items-center w-full px-4 py-2 mt-2 text-md text-matte font-thin md:font-light text-left bg-transparent rounded-lg md:w-auto md:inline md:mt-0 md:ml-4 hover:text-matte focus:text-matte hover:bg-white focus:bg-white focus:outline-none focus:shadow-outline focus:text-opacity-50 transition duration-700" >
             <%= heroicon 'menu', class_name: 'h-10 w-10' %>
